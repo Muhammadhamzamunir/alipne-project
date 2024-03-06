@@ -463,7 +463,7 @@ export default function Portfolio() {
                         <img className=' object-cover h-full'
                             src={filteredData[startingIndex]?.vertical_image}
                             alt={""}
-                            style={{ width: "100%", display: "block", opacity: 0.5 }}
+                            style={{ width: "100%", display: "block",    }}
 
                         />
                         <div className="absolute bottom-[10px] h-[80px] text-white flex items-end justify-between w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100">
@@ -489,7 +489,7 @@ export default function Portfolio() {
                         <img className='object-cover h-full transition duration-500 ease-in-out hover:opacity-50'
                             src={filteredData[startingIndex + 1]?.horizontal_image}
                             alt={""}
-                            style={{ width: "100%", display: "block", opacity: 0.5 }}
+                            style={{ width: "100%", display: "block",    }}
 
                         />
                         <div className="absolute bottom-[10px] h-[80px] text-white flex items-end justify-between w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100">
@@ -515,7 +515,7 @@ export default function Portfolio() {
                         <img className=' object-cover h-full transition duration-500 ease-in-out hover:opacity-50'
                             src={filteredData[startingIndex + 2]?.horizontal_image}
                             alt={""}
-                            style={{ width: "100%", display: "block", opacity: 0.5 }}
+                            style={{ width: "100%", display: "block",    }}
 
                         />
                         <div className="absolute bottom-[10px] h-[80px] text-white flex items-end justify-between w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100">
@@ -542,7 +542,7 @@ export default function Portfolio() {
                         <img className='object-cover h-full transition duration-500 ease-in-out hover:opacity-50'
                             src={filteredData[startingIndex + 3]?.horizontal_image}
                             alt={""}
-                            style={{ width: "100%", display: "block", opacity: 0.5 }}
+                            style={{ width: "100%", display: "block",    }}
 
                         />
                         <div className="absolute bottom-[10px] h-[80px] text-white flex items-end justify-between w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100">
@@ -567,7 +567,7 @@ export default function Portfolio() {
                         <img className='object-cover h-full transition duration-500 ease-in-out hover:opacity-50'
                             src={filteredData[startingIndex + 4]?.horizontal_image}
                             alt={""}
-                            style={{ width: "100%", display: "block", opacity: 0.5 }}
+                            style={{ width: "100%", display: "block",    }}
 
                         />
                         <div className="absolute bottom-[10px] h-[80px] text-white flex items-end justify-between w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100">
@@ -592,7 +592,7 @@ export default function Portfolio() {
                         <img className=' object-cover h-full'
                             src={filteredData[startingIndex + 5]?.vertical_image}
                             alt={""}
-                            style={{ width: "100%", display: "block", opacity: 0.5 }}
+                            style={{ width: "100%", display: "block",    }}
 
                         />
                         <div className="absolute bottom-[10px] h-[80px] text-white flex items-end justify-between w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100">
@@ -617,7 +617,7 @@ export default function Portfolio() {
                         <img className=' object-cover h-full'
                             src={filteredData[startingIndex + 6]?.vertical_image}
                             alt={""}
-                            style={{ width: "100%", display: "block", opacity: 0.5 }}
+                            style={{ width: "100%", display: "block",    }}
 
                         />
                         <div className="absolute bottom-[10px] h-[80px] text-white flex items-end justify-between w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100">
