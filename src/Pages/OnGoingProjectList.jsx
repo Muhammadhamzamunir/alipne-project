@@ -588,7 +588,7 @@ export default function OnGoingProjectList() {
                 }
                 {
                     filteredData[startingIndex + 5]?.vertical_image && (<div data-aos="fade-right" className=' w-full relative group lg:w-[48%] lg:h-[289px] h-[200px] transition duration-500 ease-in-out hover:opacity-50' style={{ position: 'relative', cursor: 'pointer' }} onClick={() => navigate(`/ongoing-project/${filteredData[startingIndex + 5]?.id}`)}>
-                        <img className=' object-cover h-full'
+                        <img className=' object-cover h-full transition duration-500 ease-in-out group-hover:opacity-50'
                             src={filteredData[startingIndex + 5]?.vertical_image}
                             alt={""}
                             style={{ width: "100%", display: "block",   }}
@@ -613,7 +613,7 @@ export default function OnGoingProjectList() {
                 }
                 {
                     filteredData[startingIndex + 6]?.vertical_image && (<div data-aos="fade-right" className=' w-full relative group lg:w-[48%] lg:h-[289px] h-[200px] transition duration-500 ease-in-out hover:opacity-50' style={{ position: 'relative', cursor: 'pointer' }} onClick={() => navigate(`/ongoing-project/${filteredData[startingIndex + 6]?.id}`)}>
-                        <img className=' object-cover h-full'
+                        <img className=' object-cover h-full transition duration-500 ease-in-out group-hover:opacity-50'
                             src={filteredData[startingIndex + 6]?.vertical_image}
                             alt={""}
                             style={{ width: "100%", display: "block",   }}

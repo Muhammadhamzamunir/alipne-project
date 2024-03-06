@@ -441,9 +441,9 @@ export default function Portfolio() {
                         </div>
                     </div>
                     ) : (<div className="flex lg:h-[613px] justify-center items-center m-auto pt-2">
-                    <img src="loader.gif" alt="" className='w-[300px] bg-blend-multiply my-44' />
-      
-                  </div>)
+                        <img src="loader.gif" alt="" className='w-[300px] bg-blend-multiply my-44' />
+
+                    </div>)
                 }
             </div>
         </>
@@ -484,40 +484,40 @@ export default function Portfolio() {
                         </div>
                     </div >)
                 } */}
-{filteredData[startingIndex]?.vertical_image && (
+                {filteredData[startingIndex]?.vertical_image && (
 
-<div
-    data-aos="fade-right"
-    className='w-full relative group lg:w-[67%] lg:h-[414px] h-[200px] '
-    style={{ position: 'relative', cursor: 'pointer' }}
-    onClick={() => navigate(`/project/${filteredData[startingIndex]?.id}`)}
->
-    <img
-        className='object-cover h-full transition duration-500 ease-in-out group-hover:opacity-50'
-        src={filteredData[startingIndex]?.vertical_image}
-        alt={""}
-        style={{ width: "100%", display: "block" }}
-    />
-    <div className="absolute bottom-[10px] h-[80px] text-white flex items-end justify-between w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100">
-        <h3 className="ml-2 w-[95%] text-[22px] break-all">{filteredData[startingIndex]?.project_name}</h3>
-        <span className='justify-end mr-2'>
-            <svg width="28" height="25" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="0.3" y="0.3" width="27.4" height="22.4588" rx="11.2294" stroke="white" strokeWidth="0.6" />
-                <g opacity="0.6">
-                    <path d="M8.75488 16.2073L16.7062 8.25594H11.7582V6.75427H19.2666V14.2626H17.7649V9.31461L9.81356 17.2659L8.75488 16.2073Z" fill="white" />
-                </g>
-            </svg>
-        </span>
-    </div>
-</div>
-)}
+                    <div
+                        data-aos="fade-right"
+                        className='w-full relative group lg:w-[67%] lg:h-[414px] h-[200px] '
+                        style={{ position: 'relative', cursor: 'pointer' }}
+                        onClick={() => navigate(`/project/${filteredData[startingIndex]?.id}`)}
+                    >
+                        <img
+                            className='object-cover h-full transition duration-500 ease-in-out group-hover:opacity-50'
+                            src={filteredData[startingIndex]?.vertical_image}
+                            alt={""}
+                            style={{ width: "100%", display: "block" }}
+                        />
+                        <div className="absolute bottom-[10px] h-[80px] text-white flex items-end justify-between w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100">
+                            <h3 className="ml-2 w-[95%] text-[22px] break-all">{filteredData[startingIndex]?.project_name}</h3>
+                            <span className='justify-end mr-2'>
+                                <svg width="28" height="25" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.3" y="0.3" width="27.4" height="22.4588" rx="11.2294" stroke="white" strokeWidth="0.6" />
+                                    <g opacity="0.6">
+                                        <path d="M8.75488 16.2073L16.7062 8.25594H11.7582V6.75427H19.2666V14.2626H17.7649V9.31461L9.81356 17.2659L8.75488 16.2073Z" fill="white" />
+                                    </g>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                )}
 
                 {
                     filteredData[startingIndex + 1]?.horizontal_image && (<div data-aos="fade-right" className="w-[47%] relative group lg:w-[30%] lg:h-[414px] h-[265px]" style={{ position: 'relative', cursor: 'pointer' }} onClick={() => navigate(`/project/${filteredData[startingIndex + 1]?.id}`)}>
                         <img className='object-cover h-full transition duration-500 ease-in-out hover:opacity-50'
                             src={filteredData[startingIndex + 1]?.horizontal_image}
                             alt={""}
-                            style={{ width: "100%", display: "block",    }}
+                            style={{ width: "100%", display: "block", }}
 
                         />
                         <div className="absolute bottom-[10px] h-[80px] text-white flex items-end justify-between w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100">
@@ -543,7 +543,7 @@ export default function Portfolio() {
                         <img className=' object-cover h-full transition duration-500 ease-in-out hover:opacity-50'
                             src={filteredData[startingIndex + 2]?.horizontal_image}
                             alt={""}
-                            style={{ width: "100%", display: "block",    }}
+                            style={{ width: "100%", display: "block", }}
 
                         />
                         <div className="absolute bottom-[10px] h-[80px] text-white flex items-end justify-between w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100">
@@ -570,7 +570,7 @@ export default function Portfolio() {
                         <img className='object-cover h-full transition duration-500 ease-in-out hover:opacity-50'
                             src={filteredData[startingIndex + 3]?.horizontal_image}
                             alt={""}
-                            style={{ width: "100%", display: "block",    }}
+                            style={{ width: "100%", display: "block", }}
 
                         />
                         <div className="absolute bottom-[10px] h-[80px] text-white flex items-end justify-between w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100">
@@ -595,7 +595,7 @@ export default function Portfolio() {
                         <img className='object-cover h-full transition duration-500 ease-in-out hover:opacity-50'
                             src={filteredData[startingIndex + 4]?.horizontal_image}
                             alt={""}
-                            style={{ width: "100%", display: "block",    }}
+                            style={{ width: "100%", display: "block", }}
 
                         />
                         <div className="absolute bottom-[10px] h-[80px] text-white flex items-end justify-between w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100">
@@ -617,10 +617,10 @@ export default function Portfolio() {
                 }
                 {
                     filteredData[startingIndex + 5]?.vertical_image && (<div data-aos="fade-right" className=' w-full relative group lg:w-[48%] lg:h-[289px] h-[200px] transition duration-500 ease-in-out hover:opacity-50' style={{ position: 'relative', cursor: 'pointer' }} onClick={() => navigate(`/project/${filteredData[startingIndex + 5]?.id}`)}>
-                        <img className=' object-cover h-full'
+                        <img className=' object-cover h-full transition duration-500 ease-in-out group-hover:opacity-50'
                             src={filteredData[startingIndex + 5]?.vertical_image}
                             alt={""}
-                            style={{ width: "100%", display: "block",    }}
+                            style={{ width: "100%", display: "block", }}
 
                         />
                         <div className="absolute bottom-[10px] h-[80px] text-white flex items-end justify-between w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100">
@@ -642,10 +642,10 @@ export default function Portfolio() {
                 }
                 {
                     filteredData[startingIndex + 6]?.vertical_image && (<div data-aos="fade-right" className=' w-full relative group lg:w-[48%] lg:h-[289px] h-[200px] transition duration-500 ease-in-out hover:opacity-50' style={{ position: 'relative', cursor: 'pointer' }} onClick={() => navigate(`/project/${filteredData[startingIndex + 6]?.id}`)}>
-                        <img className=' object-cover h-full'
+                        <img className=' object-cover h-full transition duration-500 ease-in-out group-hover:opacity-50'
                             src={filteredData[startingIndex + 6]?.vertical_image}
                             alt={""}
-                            style={{ width: "100%", display: "block",    }}
+                            style={{ width: "100%", display: "block", }}
 
                         />
                         <div className="absolute bottom-[10px] h-[80px] text-white flex items-end justify-between w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100">
