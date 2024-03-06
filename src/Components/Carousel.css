@@ -1,0 +1,87 @@
+/* .react-multiple-carousel__arrow .react-multiple-carousel__arrow--left{
+    --b: 1px;
+    --s: .45em;
+    --color: #C2C2C2;
+  
+    padding: calc(.5em + var(--s)) calc(.9em + var(--s)) !important;
+    color: var(--color);
+    --_p: var(--s);
+    background:
+      conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+      var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p)) !important;
+    transition: .3s linear, color 0s, background-color 0s !important;
+   
+    right:-20% !important;
+}
+
+.react-multiple-carousel__arrow  {
+    top: -80px !important;
+}
+.react-multiple-carousel__arrow  button{
+    z-index: 600000 !important;
+
+} */
+/* Carousel.css */
+.slick-slide {
+    padding: 0 10px; /* Adjust as needed */
+  }
+  
+  .custom-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 18px;
+    z-index: 10;
+  }
+  
+  
+  .slick-next::before{
+
+    font-family: Arial !important;
+    --b: 1px;
+    --s: .45em;
+    --color: #C2C2C2;
+  
+    padding: calc(.5em + var(--s)) calc(.9em + var(--s)) !important;
+    color: var(--color);
+    --_p: var(--s);
+    background:
+      conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+      var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p)) !important;
+    transition: .3s linear, color 0s, background-color 0s !important;
+
+}
+
+
+.slick-prev::before{
+
+  font-family: Arial !important;
+  --b: 1px;
+  --s: .45em;
+  --color: #C2C2C2;
+
+  padding: calc(.5em + var(--s)) calc(.9em + var(--s)) !important;
+  color: var(--color);
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p)) !important;
+  transition: .3s linear, color 0s, background-color 0s !important;
+
+}
+  .slick-prev{
+    
+    left: 77% ;
+    top: -40px;
+    
+  }
+
+  .slick-next{
+   
+    right: 10% ;
+    top: -40px;
+    
+  }
