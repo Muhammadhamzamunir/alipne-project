@@ -83,7 +83,9 @@ export default function Blogs() {
 
                   <img src={blog.hero_image} alt="" className='object-cover w-full h-full transition duration-500 ease-in-out hover:opacity-50' loading='lazy' />
                   <div className='absolute bottom-[10px] text-white flex items-center justify-between w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100'>
-                    <h3 className='ml-2 w-[95%] text-[22px]  break-all'>{blog.title}</h3>
+                    <h3 className='ml-2 w-[85%] text-[20px] break-all'>
+                      {blog.title.length > 20 ? blog.title.slice(0, 25) + '...' : blog.title}
+                    </h3>
                     <span className='mr-2  justify-end'>
                       <svg width="28" height="25" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="0.3" y="0.3" width="27.4" height="22.4588" rx="11.2294" stroke="white" strokeWidth="0.6" />

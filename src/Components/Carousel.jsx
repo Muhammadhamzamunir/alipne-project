@@ -29,11 +29,11 @@ export default function Carousel_Diversity(props) {
     console.log(uniqueCategories);
     if (uniqueCategories.length > 0) {
       let data;
-      if (page === "ongoingProject") { 
-       data = await fetchData(`ongoingproject?category_id=${uniqueCategories[0].id}`);
-     }else{
-       data = await fetchData(`portfolio?category_id=${uniqueCategories[0].id}`);
-     }
+      if (page === "ongoingProject") {
+        data = await fetchData(`ongoingproject?category_id=${uniqueCategories[0].id}`);
+      } else {
+        data = await fetchData(`portfolio?category_id=${uniqueCategories[0].id}`);
+      }
 
 
       setCategoriesData(data)
@@ -101,13 +101,13 @@ export default function Carousel_Diversity(props) {
           {
             categoriesData.map((category) => (
               <div
-  className='w-full lg:w-[32%] h-[190px] lg:h-[203px] relative group cursor-pointer'
-  onClick={() => navigate(page === "ongoingProject" ? `/ongoing-project/${category.id}` : `/project/${category.id}`)}
->
+                className='w-full lg:w-[32%] h-[190px] lg:h-[203px] relative group cursor-pointer'
+                onClick={() => navigate(page === "ongoingProject" ? `/ongoing-project/${category.id}` : `/project/${category.id}`)}
+              >
                 <img src={category.horizontal_image[0]?.url} alt="" className='object-cover w-full h-full transition duration-500 ease-in-out hover:opacity-50' loading='lazy' />
                 <div className='absolute bottom-[10px] text-white flex justify-between items-center w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100'>
                   <h3 className='ml-2 text-[22px] '>{category.project_name}</h3>
-                  <svg width="28" height="25" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg width="28" className='mr-2' height="25" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect x="0.3" y="0.3" width="27.4" height="22.4588" rx="11.2294" stroke="white" strokeWidth="0.6" />
                     <g opacity="0.6">
                       <path d="M8.75488 16.2073L16.7062 8.25594H11.7582V6.75427H19.2666V14.2626H17.7649V9.31461L9.81356 17.2659L8.75488 16.2073Z" fill="white" />

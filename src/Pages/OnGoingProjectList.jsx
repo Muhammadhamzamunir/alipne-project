@@ -403,9 +403,9 @@ export default function OnGoingProjectList() {
             <div className='relative  lg:bottom-24 md:bottom-1 bottom-0 sm:bottom-5'>
                 <div className="md:flex justify-center items-center w-full mb-4  ">
                     <div className="md:w-3/4 sm:w-full px-6 md:px-3">
-                        <h1 data-aos="fade-down" className='font-audiowide text-3xl pb-6 uppercase'>Portfolio</h1>
+                        <h1 data-aos="fade-down" className='font-audiowide text-3xl pb-6 uppercase'>Ongoing projects</h1>
                         <p data-aos="fade-down" className='font-light leading-10 tracking-wider'>
-                            At Alpine, our diverse portfolio reflects architectural excellence, blending innovation and sustainability. From commercial designs to residential spaces, each project showcases our commitment to client satisfaction. Explore our portfolio—A fusion of creativity and functionality defining our passion for inspiring and enduring spaces                    </p>
+                            Unveil the secrets of design with us—a journey from blueprints to vibrant stories, celebrating architectural brilliance. Join our odyssey of creativity, where innovation shapes spaces, and every line drawn is a brushstroke on the canvas of urban artistry. Welcome to a realm where passion for design comes to life! </p>
                     </div>
                 </div>
 
@@ -456,22 +456,23 @@ export default function OnGoingProjectList() {
 
         return (
             <div className='flex gap-2 mb-4 flex-wrap'>
-                {
-                    filteredData[startingIndex]?.vertical_image && (<div data-aos="fade-right" className=' w-full relative group lg:w-[67%] lg:h-[414px] h-[200px] transition duration-500 ease-in-out hover:opacity-50' style={{ position: 'relative', cursor: 'pointer' }
-                    } onClick={() => navigate(`/ongoing-project/${filteredData[startingIndex]?.id}`)
-                    }>
-                        <img className=' object-cover h-full'
+                {filteredData[startingIndex]?.vertical_image && (
+
+                    <div
+                        data-aos="fade-right"
+                        className='w-full relative group lg:w-[67%] lg:h-[414px] h-[200px] '
+                        style={{ position: 'relative', cursor: 'pointer' }}
+                        onClick={() => navigate(`/ongoing-project/${filteredData[startingIndex]?.id}`)}
+                    >
+                        <img
+                            className='object-cover h-full transition duration-500 ease-in-out hover:opacity-0'
                             src={filteredData[startingIndex]?.vertical_image}
                             alt={""}
                             style={{ width: "100%", display: "block", opacity: 0.5 }}
-
                         />
                         <div className="absolute bottom-[10px] h-[80px] text-white flex items-end justify-between w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100">
-
-                            <h3 className="ml-2 w-[95%] text-[22px]  break-all">{filteredData[startingIndex]?.project_name}</h3>
-
-
-                            <span className=' justify-end'>
+                            <h3 className="ml-2 w-[95%] text-[22px] break-all">{filteredData[startingIndex]?.project_name}</h3>
+                            <span className='justify-end mr-2'>
                                 <svg width="28" height="25" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect x="0.3" y="0.3" width="27.4" height="22.4588" rx="11.2294" stroke="white" strokeWidth="0.6" />
                                     <g opacity="0.6">
@@ -479,11 +480,9 @@ export default function OnGoingProjectList() {
                                     </g>
                                 </svg>
                             </span>
-
                         </div>
-                    </div >)
-                }
-
+                    </div>
+                )}
                 {
                     filteredData[startingIndex + 1]?.horizontal_image && (<div data-aos="fade-right" className="w-[47%] relative group lg:w-[30%] lg:h-[414px] h-[265px]" style={{ position: 'relative', cursor: 'pointer' }} onClick={() => navigate(`/ongoing-project/${filteredData[startingIndex + 1]?.id}`)}>
                         <img className='object-cover h-full transition duration-500 ease-in-out hover:opacity-50'
@@ -497,7 +496,7 @@ export default function OnGoingProjectList() {
                             <h3 className="ml-2 w-[95%] text-[22px]  break-all">{filteredData[startingIndex + 1]?.project_name}</h3>
 
 
-                            <span className=' justify-end'>
+                            <span className=' justify-end mr-2'>
                                 <svg width="28" height="25" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect x="0.3" y="0.3" width="27.4" height="22.4588" rx="11.2294" stroke="white" strokeWidth="0.6" />
                                     <g opacity="0.6">
@@ -523,7 +522,7 @@ export default function OnGoingProjectList() {
                             <h3 className="ml-2 w-[95%] text-[22px]  break-all">{filteredData[startingIndex + 2]?.project_name}</h3>
 
 
-                            <span className=' justify-end'>
+                            <span className=' justify-end mr-2'>
                                 <svg width="28" height="25" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect x="0.3" y="0.3" width="27.4" height="22.4588" rx="11.2294" stroke="white" strokeWidth="0.6" />
                                     <g opacity="0.6">
@@ -550,7 +549,7 @@ export default function OnGoingProjectList() {
                             <h3 className="ml-2 w-[95%] text-[22px]  break-all">{filteredData[startingIndex + 3]?.project_name}</h3>
 
 
-                            <span className=' justify-end'>
+                            <span className=' justify-end mr-2'>
                                 <svg width="28" height="25" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect x="0.3" y="0.3" width="27.4" height="22.4588" rx="11.2294" stroke="white" strokeWidth="0.6" />
                                     <g opacity="0.6">
@@ -575,7 +574,7 @@ export default function OnGoingProjectList() {
                             <h3 className="ml-2 w-[95%] text-[22px]  break-all">{filteredData[startingIndex + 4]?.project_name}</h3>
 
 
-                            <span className=' justify-end'>
+                            <span className=' justify-end mr-2'>
                                 <svg width="28" height="25" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect x="0.3" y="0.3" width="27.4" height="22.4588" rx="11.2294" stroke="white" strokeWidth="0.6" />
                                     <g opacity="0.6">
@@ -600,7 +599,7 @@ export default function OnGoingProjectList() {
                             <h3 className="ml-2 w-[95%] text-[22px]  break-all">{filteredData[startingIndex + 5]?.project_name}</h3>
 
 
-                            <span className=' justify-end'>
+                            <span className=' justify-end mr-2'>
                                 <svg width="28" height="25" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect x="0.3" y="0.3" width="27.4" height="22.4588" rx="11.2294" stroke="white" strokeWidth="0.6" />
                                     <g opacity="0.6">
@@ -625,7 +624,7 @@ export default function OnGoingProjectList() {
                             <h3 className="ml-2 w-[95%] text-[22px]  break-all">{filteredData[startingIndex + 6]?.project_name}</h3>
 
 
-                            <span className=' justify-end'>
+                            <span className=' justify-end mr-2'>
                                 <svg width="28" height="25" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect x="0.3" y="0.3" width="27.4" height="22.4588" rx="11.2294" stroke="white" strokeWidth="0.6" />
                                     <g opacity="0.6">

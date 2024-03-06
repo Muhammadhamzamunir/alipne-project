@@ -471,7 +471,7 @@ export default function Portfolio() {
                             <h3 className="ml-2 w-[95%] text-[22px]  break-all">{filteredData[startingIndex]?.project_name}</h3>
 
 
-                            <span className=' justify-end'>
+                            <span className=' justify-end mr-2'>
                                 <svg width="28" height="25" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect x="0.3" y="0.3" width="27.4" height="22.4588" rx="11.2294" stroke="white" strokeWidth="0.6" />
                                     <g opacity="0.6">
@@ -497,7 +497,7 @@ export default function Portfolio() {
                             <h3 className="ml-2 w-[95%] text-[22px]  break-all">{filteredData[startingIndex + 1]?.project_name}</h3>
 
 
-                            <span className=' justify-end'>
+                            <span className=' justify-end mr-2'>
                                 <svg width="28" height="25" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect x="0.3" y="0.3" width="27.4" height="22.4588" rx="11.2294" stroke="white" strokeWidth="0.6" />
                                     <g opacity="0.6">
@@ -523,7 +523,7 @@ export default function Portfolio() {
                             <h3 className="ml-2 w-[95%] text-[22px]  break-all">{filteredData[startingIndex + 2]?.project_name}</h3>
 
 
-                            <span className=' justify-end'>
+                            <span className=' justify-end mr-2'>
                                 <svg width="28" height="25" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect x="0.3" y="0.3" width="27.4" height="22.4588" rx="11.2294" stroke="white" strokeWidth="0.6" />
                                     <g opacity="0.6">
@@ -550,7 +550,7 @@ export default function Portfolio() {
                             <h3 className="ml-2 w-[95%] text-[22px]  break-all">{filteredData[startingIndex + 3]?.project_name}</h3>
 
 
-                            <span className=' justify-end'>
+                            <span className=' justify-end mr-2'>
                                 <svg width="28" height="25" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect x="0.3" y="0.3" width="27.4" height="22.4588" rx="11.2294" stroke="white" strokeWidth="0.6" />
                                     <g opacity="0.6">
@@ -575,7 +575,7 @@ export default function Portfolio() {
                             <h3 className="ml-2 w-[95%] text-[22px]  break-all">{filteredData[startingIndex + 4]?.project_name}</h3>
 
 
-                            <span className=' justify-end'>
+                            <span className=' justify-end mr-2'>
                                 <svg width="28" height="25" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect x="0.3" y="0.3" width="27.4" height="22.4588" rx="11.2294" stroke="white" strokeWidth="0.6" />
                                     <g opacity="0.6">
@@ -600,7 +600,7 @@ export default function Portfolio() {
                             <h3 className="ml-2 w-[95%] text-[22px]  break-all">{filteredData[startingIndex + 5]?.project_name}</h3>
 
 
-                            <span className=' justify-end'>
+                            <span className=' justify-end mr-2'>
                                 <svg width="28" height="25" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect x="0.3" y="0.3" width="27.4" height="22.4588" rx="11.2294" stroke="white" strokeWidth="0.6" />
                                     <g opacity="0.6">
@@ -625,7 +625,7 @@ export default function Portfolio() {
                             <h3 className="ml-2 w-[95%] text-[22px]  break-all">{filteredData[startingIndex + 6]?.project_name}</h3>
 
 
-                            <span className=' justify-end'>
+                            <span className=' justify-end mr-2'>
                                 <svg width="28" height="25" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect x="0.3" y="0.3" width="27.4" height="22.4588" rx="11.2294" stroke="white" strokeWidth="0.6" />
                                     <g opacity="0.6">

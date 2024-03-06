@@ -63,7 +63,8 @@ export default function BlogDetailPage() {
 
     return (
         <>
-            {blogData > 0 ? (
+            {blogData && blogData.length>0
+             ? (
                 <div className="md:flex justify-center items-center w-full relative lg:bottom-24 md:bottom-1 bottom-0 sm:bottom-5 md:mb-0">
                     <div className="md:w-3/4 sm:w-full px-6 md:px-0">
                         <h6 className='mb-2 text-amber-600 text-[#C1AE69]'>Home &gt; Blog list &gt; Blog detail</h6>
