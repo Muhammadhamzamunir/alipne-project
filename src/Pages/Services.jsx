@@ -24,6 +24,8 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 export default function Services() {
   const [heroImages, setHeroImages] = useState([]);
+  const [byTheNumber, setByTheNumber] = useState([]);
+  const [testimonials, setTestimonials] = useState([]);
   const { fetchData } = API_Call();
   let imagesArray = [];
 
@@ -31,6 +33,8 @@ export default function Services() {
     const getData = async () => {
       try {
         const data = await fetchData("banner?page=services");
+        const byTheNumberData = await fetchData("byTheNumber");
+        const testimonialData = await fetchData("testimonial");
         // const data = [
         //   {
         //     "id": 3,
@@ -85,7 +89,8 @@ export default function Services() {
         //     ]
         //   }
         // ]
-        console.log(("daa", data));
+        setByTheNumber(byTheNumberData)
+        setTestimonials(testimonialData)
         data.forEach(element => {
           element.images.forEach((image) => {
             imagesArray.push(image.url)
@@ -210,7 +215,7 @@ export default function Services() {
       galleryElement.scrollLeft = scrollLeft - walk;
     });
   }, []);
- 
+
 
   const renderImages = () => {
     return (
@@ -520,37 +525,39 @@ export default function Services() {
           <h1 className="font-audiowide text-3xl pb-6 uppercase">
             By the Numbers
           </h1>
-          <div className="  flex flex-col md:flex-row justify-between mb-50 flex-wrap ">
-            <div className=" p-4  md:w-[30%] w-full flex flex-col items-center">
-              <h3 className="font-audiowide text-1xl  uppercase text-[#C1AE69]">
-                20lacs sq ft
-              </h3>
+          {
+            byTheNumber?.length > 0 && (<div className="  flex flex-col md:flex-row justify-between mb-50 flex-wrap ">
+              <div className=" p-4  md:w-[30%] w-full flex flex-col items-center">
+                <h3 className="font-audiowide text-1xl  uppercase text-[#C1AE69]">
+                  {byTheNumber[0].complete_project_area}
+                </h3>
 
-              <h6 className="font-light text-[20px]   tracking-wider text-center">
-                Sq Carpet Area Of Completed Projects
-              </h6>
-            </div>
+                <h6 className="font-light text-[20px]   tracking-wider text-center">
+                  Sq Carpet Area Of Completed Projects
+                </h6>
+              </div>
 
-            <div className=" p-4  md:w-[30%] w-full flex flex-col items-center">
-              <h3 className="font-audiowide text-1xl uppercase text-[#C1AE69]">
-                14 years
-              </h3>
+              <div className=" p-4  md:w-[30%] w-full flex flex-col items-center">
+                <h3 className="font-audiowide text-1xl uppercase text-[#C1AE69]">
+                  {byTheNumber[0].experience}
+                </h3>
 
-              <h6 className="font-light text-[20px]   tracking-wider text-center">
-                Years Of Experience
-              </h6>
-            </div>
+                <h6 className="font-light text-[20px]   tracking-wider text-center">
+                  Years Of Experience
+                </h6>
+              </div>
 
-            <div className=" p-4  md:w-[30%] w-full flex flex-col items-center">
-              <h3 className="font-audiowide text-1xl uppercase text-[#C1AE69]">
-                50 lacs sq ft
-              </h3>
+              <div className=" p-4  md:w-[30%] w-full flex flex-col items-center">
+                <h3 className="font-audiowide text-1xl uppercase text-[#C1AE69]">
+                  {byTheNumber[0].ongoing_project_area}
+                </h3>
 
-              <h6 className="font-light text-[20px]   tracking-wider text-center">
-                Sq Carpet Area Of Ongoing Projects
-              </h6>
-            </div>
-          </div>
+                <h6 className="font-light text-[20px]   tracking-wider text-center">
+                  Sq Carpet Area Of Ongoing Projects
+                </h6>
+              </div>
+            </div>)
+          }
           <div className="flex flex-wrap -mx-4 md:-mx-4 lg:-mx-4 mt-8">
             <div
               data-aos="fade-left"
@@ -641,43 +648,47 @@ export default function Services() {
           </div>
         </div>
       </div>
+
+
       <div className="bg-contain" style={{ backgroundImage: ` url(${services_crousal_bg})`, backgroundPosition: "left", backgroundRepeat: "no-repeat", }}>
         <div className="md:flex flex-col justify-start  items-center w-[90%] md:w-[80%] m-auto mt-4 " >
           <h1 className="self-start md:ml-32 font-audiowide text-3xl   uppercase mb-5">Our CLient Say</h1>
-          <Carousel_review
-            swipeable={true}
-            draggable={true}
-            showDots={false}
-            keyBoardControl={true}
-            // customTransition="all .5"
-            transitionDuration={3000}
-            status={false}
-            responsive={responsive_reviews}
-          >
-            {Reviews.map((review, index) => (
-              <div
-                key={index}
-                className="w-full h-auto lg:h-[200px] md:w-[80%] overflow-y-hidden lg:overflow-y-auto m-auto  review"
-
+          {
+            testimonials.length > 0 && (
+              <Carousel_review
+                swipeable={true}
+                draggable={true}
+                showDots={false}
+                keyBoardControl={true}
+                // customTransition="all .5"
+                transitionDuration={3000}
+                status={false}
+                responsive={responsive_reviews}
               >
-                <div className="p-5 bg-secondary" >
-                  <h1 className="font-audiowide text-left text-2xl pb-2 uppercase">
-                    {review.heading}
-                  </h1>
-                  <h3 className="font-light text-left leading-loose tracking-wider">
-                    {review.subersubHeading}
-                  </h3>
-                  <h3 className="font-light text-left leading-loose tracking-wider">
-                    {review.subHeading}
-                  </h3>
-                  <p className="font-light leading-loose tracking-wider">
-                    {review.body}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </Carousel_review>
+                {testimonials.map((review, index) => (
+                  <div
+                    key={index}
+                    className="w-full h-auto lg:h-[200px] md:w-[80%]  overflow-y-hidden lg:overflow-y-auto m-auto  review"
 
+                  >
+                    <div className="p-5 bg-secondary  min-h-80" >
+                      <h1 className="font-audiowide text-left text-2xl pb-2 uppercase">
+                        {review.client_name}
+                      </h1>
+                      <h3 className="font-light text-left leading-loose tracking-wider">
+                        {review.client_designation}
+                      </h3>
+
+                      <p className="font-light leading-loose tracking-wider">
+                        {review.feedback}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </Carousel_review>
+
+            )
+          }
 
         </div>
       </div>

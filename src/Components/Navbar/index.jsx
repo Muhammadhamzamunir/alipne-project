@@ -97,7 +97,7 @@ export default function Navbar() {
     // Define menu items and their corresponding routes
     const menuItems = [
         { text: "HOME", route: "/" },
-        { text: "ABOUT US", route: "/about-us" },
+        { text: "ABOUT US", route: "/aboutus" },
         { text: "SERVICES", route: "/services" },
         { text: "PORTFOLIO", route: "/portfolio" },
         { text: "ONGOING PROJECTS", route: "/on-going-project-list" },
