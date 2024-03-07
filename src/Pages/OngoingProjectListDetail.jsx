@@ -111,12 +111,13 @@ export default function OngoingProjectListDetail() {
                         {projectData[0].location}                  </p>
 
                     <style>{
-                        ` .carousel-image{
+                        ` @media screen and (min-width: 860px) {
+                        .carousel-image{
     width: 450px !important;
     height: 638px !important;
     object-fit: cover;
     border-radius: 0px !important;
-  }`
+  }}`
                     }
                     </style>
 

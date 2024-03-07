@@ -110,13 +110,16 @@ export default function ProjectDetailPage() {
                         {projectData[0].location}                  </p>
 
                     <style>{
-                        ` .carousel-image{
+
+                        ` 
+                        @media screen and (min-width: 860px) {
+                        .carousel-image{
                             max-width: auto;
     width: 1130px !important;
     height: 600px !important;
     object-fit: cover;
     border-radius: 0px !important;
-  }`
+  }}`
                     }
                     </style>
 
@@ -196,7 +199,7 @@ export default function ProjectDetailPage() {
                                 ))}
                             </AliceCarousel>
                         )}
-                      
+
                         <Carousel_Diversity category={projectData[0].category} page="projectdetail" />
                     </div>
 
