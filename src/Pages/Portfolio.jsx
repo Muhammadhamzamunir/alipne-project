@@ -13,7 +13,7 @@ export default function Portfolio() {
     const categories = ["All"];
     const navigate = useNavigate();
     const getData = async () => {
-        const data = await fetchData("portfolio");
+         const data = await fetchData("portfolio");
         // const data = [
         //     {
         //         "id": 4,
@@ -355,7 +355,7 @@ export default function Portfolio() {
             });
 
             setUniqueCategories(categories);
-            setAllImages(allDataImages);
+            setAllImages(allDataImages.sort((a, b) => b.id - a.id));
             setFilteredData(allDataImages);
         }
     }

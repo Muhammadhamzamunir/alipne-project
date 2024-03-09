@@ -18,7 +18,7 @@ export default function Portfolio() {
   let allPortofolioData = [];
 
   const getData = async () => {
-    const data = await fetchData("portfolio");
+     const data = await fetchData("portfolio");
 
     //filtering the categories 
     data.forEach((item, index) => {
@@ -83,7 +83,7 @@ export default function Portfolio() {
       }
     });
 
-    setFilteredData(filteredPortfolioData);
+    setFilteredData(filteredPortfolioData.sort((a, b) => b.id - a.id));
 
   }, [activeCategory, alldata]);
 

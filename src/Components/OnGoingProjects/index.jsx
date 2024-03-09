@@ -13,6 +13,7 @@ export default function OnGoingProjects() {
   const navigate = useNavigate();
   const getData = async () => {
     const data = await fetchData("ongoingproject");
+
     return data;
   }
 
@@ -103,7 +104,7 @@ export default function OnGoingProjects() {
                 transitionDuration={500}
 
               >
-                {ongoingProjects.slice(0, 5).map((project, index) => (
+                {ongoingProjects.slice(0, 5).sort((a, b) => b.id - a.id).map((project, index) => (
                   <div key={index} className="w-[508px] h-[336px] relative group cursor-pointer">
                     <Link to={`/ongoing-project/${project.id}`}>
                       <img

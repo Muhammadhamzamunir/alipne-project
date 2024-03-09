@@ -17,7 +17,8 @@ export default function Blogs() {
     const getData = async () => {
       try {
         const data = await fetchData("blog");
-        setBlogs(data);
+
+        setBlogs(data.sort((a, b) => b.id - a.id));
       } catch (error) {
         console.error("Error fetching data:", error);
       }

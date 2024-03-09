@@ -267,10 +267,10 @@ export default function Gallery() {
 
                     allDataImages.push({ "category": item.category, "vertical_image": item.verticle_image[0]?.url, "horizontal_image": item.horizontal_image[0]?.url, "id": item.id })
                 });
-
+                console.log(allDataImages);
             }
             setUniqueCategories(categories);
-            setGalleryData(allDataImages);
+            setGalleryData(allDataImages.sort((a, b) => b.id - a.id));
         } catch (error) {
             console.error("Error fetching data:", error);
         }
