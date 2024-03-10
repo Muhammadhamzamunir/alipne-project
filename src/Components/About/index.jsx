@@ -52,6 +52,7 @@ const About = () => {
         <div className="flex flex-col items-center justify-center h-[100%] lg:w-[40%] W-[100%] md:flex-col lg:flex-row  md:pb-10 pt-4">
           <div className="relative w-full rounded md:pr-6   md:pb-16   ">
             <ReactPlayer url={video_url} width={"100%"} height={"251px"} controls />
+
           </div>
 
         </div>
