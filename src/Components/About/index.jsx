@@ -13,8 +13,8 @@ const About = () => {
   const { fetchData, loader } = API_Call();
 
   const getData = async () => {
-    const data = await fetchData("homePageVideo");
-    setVideo_url(data.video_url);
+    const data = await fetchData("home");
+    setVideo_url(data[0].url);
 
   }
   useEffect(() => {
