@@ -61,7 +61,7 @@ const HeroSectionSlider = ({ slides }) => {
         <>
             {heroImages.length > 0 ? (
                 <AutoplaySlider
-                    className="my-slider w-full lg:h-[85vh] md:h-[350px] h-[220px] object-fill mt-3 lg:mt-0"
+                    className="my-slider w-full lg:h-[85vh] md:h-[350px] h-[220px]  mt-3 lg:mt-0"
                     bullets={true}
                     buttons={false}
                     play={true}
@@ -72,7 +72,8 @@ const HeroSectionSlider = ({ slides }) => {
                     ))}
                 </AutoplaySlider>
             ) : (
-                <div className="w-full flex justify-center items-center"><p className="text-center m-auto mt-4 w-auto">Loading...</p></div>
+                <div className="w-full flex justify-center items-center"><p className="text-center m-auto mt-4 w-auto">              <img src="loading-gif.gif" alt="" className='w-[70px] bg-blend-multiply my-44' />
+                </p></div>
             )}
         </>
     );

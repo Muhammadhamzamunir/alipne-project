@@ -13,7 +13,7 @@ export default function Portfolio() {
     const categories = ["All"];
     const navigate = useNavigate();
     const getData = async () => {
-         const data = await fetchData("portfolio");
+        const data = await fetchData("portfolio");
         // const data = [
         //     {
         //         "id": 4,
@@ -441,7 +441,7 @@ export default function Portfolio() {
                         </div>
                     </div>
                     ) : (<div className="flex lg:h-[613px] justify-center items-center m-auto pt-2">
-                        <img src="loader.gif" alt="" className='w-[300px] bg-blend-multiply my-44' />
+                        <img src="loading-gif.gif" alt="" className='w-[100px] bg-blend-multiply my-44' />
 
                     </div>)
                 }

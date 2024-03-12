@@ -12,8 +12,8 @@ export default function Blog() {
     // Fetching data 
     const getData = async () => {
         try {
-             const data = await fetchData("blog");
-         
+            const data = await fetchData("blog");
+
 
             setBlogData(data);
             console.log(data);
@@ -84,7 +84,7 @@ export default function Blog() {
                                     ))
                             ) : (
                                 <div className="flex h-[50vh] justify-center items-center m-auto pt-[10px]">
-                                    <img src="loader.gif" alt="" className='w-[300px] md:py-44 md:my-44' />
+                                    <img src="loading-gif.gif" alt="" className='w-[100px] md:py-44 md:my-44' />
                                 </div>
                             )
                         }
@@ -102,7 +102,7 @@ export default function Blog() {
                                 </Link>
                             </div>
                         )) : (<div className="flex h-[50vh]  justify-center items-center m-auto pt-[10px]">
-                            <img src="loader.gif" alt="" className='w-[300px] md:py-44 md:my-44' />
+                            <img src="loading-gif.gif" alt="" className='w-[300px] md:py-44 md:my-44' />
                         </div>)
                         } */}
                     </div>

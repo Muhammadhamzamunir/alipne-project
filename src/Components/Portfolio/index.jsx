@@ -18,7 +18,7 @@ export default function Portfolio() {
   let allPortofolioData = [];
 
   const getData = async () => {
-     const data = await fetchData("portfolio");
+    const data = await fetchData("portfolio");
 
     //filtering the categories 
     data.forEach((item, index) => {
@@ -171,7 +171,7 @@ export default function Portfolio() {
                     {filteredData[0]?.url && (
                       <div className='relative group w-full h-[179px] lg:h-[240px] cursor-pointer' onClick={() => navigate(`/project/${filteredData[0].id}`)}
                       >
-                        <img src={filteredData[0]?.url} alt="No Data" className='object-cover w-full h-full transition duration-500 ease-in-out hover:opacity-50' loading='lazy' />
+                        <img src={filteredData[0]?.url} alt="No Data" className='object-fill w-full h-full transition duration-500 ease-in-out hover:opacity-50' loading='lazy' />
                         <div className='absolute bottom-[10px]  text-white flex items-center justify-between w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100'>
                           <h3 className='ml-2 w-[95%] text-[22px]  break-all '>{filteredData[0]?.project_name}</h3>
                           <span className='mr-2  justify-end'>
@@ -194,7 +194,7 @@ export default function Portfolio() {
                           <img
                             src={filteredData[1]?.url}
                             alt="No Data"
-                            className="object-cover w-full h-full lg:h-full transition duration-500 ease-in-out hover:opacity-50"
+                            className="object-fill w-full h-full lg:h-full transition duration-500 ease-in-out hover:opacity-50"
                             loading="lazy"
                           />
                           <div className="absolute bottom-[10px] h-[80px] text-white flex items-end justify-between w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100">
@@ -216,8 +216,8 @@ export default function Portfolio() {
                       }
 
                       {
-                        filteredData[2]?.url && (<div className='relative group  w-[50%] lg:h-[360px] h-[259px] object-cover cursor-pointer' onClick={() => navigate(`/project/${filteredData[2].id}`)}>
-                          <img src={filteredData[2]?.url} alt="No Data" className='object-cover w-full h-full lg:h-full transition duration-500 ease-in-out hover:opacity-50' loading='lazy' />
+                        filteredData[2]?.url && (<div className='relative group  w-[50%] lg:h-[360px] h-[259px] object-fill cursor-pointer' onClick={() => navigate(`/project/${filteredData[2].id}`)}>
+                          <img src={filteredData[2]?.url} alt="No Data" className='object-fill w-full h-full lg:h-full transition duration-500 ease-in-out hover:opacity-50' loading='lazy' />
 
                           <div className='absolute bottom-[10px]  text-white flex items-center justify-between w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100'>
                             <h3 className='ml-2 w-[95%] text-[22px]  break-all'>{filteredData[2]?.project_name}</h3>
@@ -239,7 +239,7 @@ export default function Portfolio() {
 
                   {filteredData[3]?.url && (<div className='lg:basis-[358px] h-[179px] lg:h-full cursor-pointer ' onClick={() => navigate(`/project/${filteredData[3].id}`)}>
                     <div className='relative group'>
-                      <img src={filteredData[3]?.url} alt="No Data" className='object-cover w-full h-[216px] lg:h-[613PX] transition duration-500 ease-in-out hover:opacity-50' loading='lazy' />
+                      <img src={filteredData[3]?.url} alt="No Data" className='object-fill w-full h-[216px] lg:h-[613PX] transition duration-500 ease-in-out hover:opacity-50' loading='lazy' />
                       <div className='absolute bottom-[10px] text-white flex items-center justify-between w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100'>
                         <h3 className='ml-2 w-[ 95%] text-[22px]  break-all'>{filteredData[3]?.project_name}</h3>
                         <span className='  justify-end'>
@@ -264,7 +264,7 @@ export default function Portfolio() {
 
               </div>
             ) : (<div className="flex lg:h-[613px] justify-center items-center m-auto pt-2">
-              <img src="loader.gif" alt="" className='w-[300px] bg-blend-multiply my-44' />
+              <img src="loading-gif.gif" alt="" className='w-[100px] bg-blend-multiply my-44' />
 
             </div>)
           }

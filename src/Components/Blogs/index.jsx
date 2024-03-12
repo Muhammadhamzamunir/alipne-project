@@ -82,7 +82,7 @@ export default function Blogs() {
 
                 <div key={index} className='w-full lg:w-[32%] h-[190px] border-none lg:h-[203px] relative group cursor-pointer' onClick={() => navigate(`/blog/${blog?.id}`)}>
 
-                  <img src={blog.hero_image} alt="" className='object-cover w-full h-full transition duration-500 ease-in-out hover:opacity-50' loading='lazy' />
+                  <img src={blog.hero_image} alt="" className='object-fill w-full h-full transition duration-500 ease-in-out hover:opacity-50' loading='lazy' />
                   <div className='absolute bottom-[10px] text-white flex items-center justify-between w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100'>
                     <h3 className='ml-2 w-[85%] text-[20px] break-all'>
                       {blog.title.length > 20 ? blog.title.slice(0, 25) + '...' : blog.title}
@@ -100,7 +100,7 @@ export default function Blogs() {
               ))}
             </Slider>
           ) : (<div className="flex h-32 justify-center items-center m-auto p-[120px]">
-            <img src="loader.gif" alt="" className='w-[200px]  my-44 bg-blend-darken' />
+            <img src="loading-gif.gif" alt="" className='w-[70px]  my-44 bg-blend-darken' />
 
           </div>)}
 

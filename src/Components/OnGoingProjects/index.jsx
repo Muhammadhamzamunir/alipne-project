@@ -127,7 +127,7 @@ export default function OnGoingProjects() {
                   </div>
                 ))}
               </Carousel>) : (<div className="flex h-32 justify-center items-center m-auto p-[150px]">
-                <img src="loader.gif" alt="" className='w-[200px]  my-44' />
+                <img src="loading-gif.gif" alt="" className='w-[50px]  my-44' />
 
               </div>)
           }

@@ -33,6 +33,9 @@ p{
 }
 
 
+.awssld__content > img, .awssld__content > video{
+  object-fit: fill !important;
+}
 .font-audiowide{
   font-family: Audiowide;
 }

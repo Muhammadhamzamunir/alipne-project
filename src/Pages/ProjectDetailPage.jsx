@@ -160,7 +160,7 @@ export default function ProjectDetailPage() {
 
                         ) : (
                             <div className="flex h-[50vh]  justify-center items-center m-auto pt-[40px]">
-                                <img src="loader.gif" alt="" className='w-[300px] md:pt-44 md:my-44' />
+                                <img src="loading-gif.gif" alt="" className='w-[100px] md:pt-44 md:my-44' />
 
                             </div>)}
 
@@ -206,7 +206,7 @@ export default function ProjectDetailPage() {
 
                 </div>
             </>) : (<div className="flex lg:h-[613px] justify-center items-center m-auto pt-2">
-                <img src="loader.gif" alt="" className='w-[300px] bg-blend-multiply my-44' />
+                <img src="loading-gif.gif" alt="" className='w-[300px] bg-blend-multiply my-44' />
 
             </div>)}
         </>

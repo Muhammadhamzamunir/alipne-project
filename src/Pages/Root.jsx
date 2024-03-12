@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import { useLocation } from 'react-router-dom';
-// import loader from './loader.gif'
+// import loader from './loading-gif.gif'
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer'
 export default function Root() {
@@ -9,7 +9,7 @@ export default function Root() {
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
     setIsLoading(true)
-    
+
     setTimeout(() => {
       setIsLoading(false)
     }, 4000)

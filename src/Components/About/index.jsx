@@ -74,8 +74,8 @@ const About = () => {
               </p>
             </div>
             <div className="md:text-right flex flex-col justify-end items-end md:mb-10">
-              <div className='mb-5'>
-                <Link to="/about-us"> <Button text={"Read More"} /></Link>
+              <div className='mb-5 z-50'>
+                <Link to="/aboutus"> <Button text={"Read More"} /></Link>
               </div>
 
               <h3 className='text-gray-800 font-bold tracking-widest text-[70px] lg:text-[115px]  uppercase opacity-5 absolute bottom-3 md:-bottom-16 md:-right-9 font-audiowide'>

@@ -317,8 +317,8 @@ export default function Gallery() {
                         </div>}
                     </div>
                 </div>
-            </div>) : (<div className="flex h-32 justify-center items-center pt-20">
-                <img src="loader.gif" alt="" className='w-[300px]   my-44' />
+            </div>) : (<div className="flex h-32 justify-center items-center py-20">
+                <img src="loading-gif.gif" alt="" className='w-[100px]   my-44' />
 
             </div>)
 
