@@ -52,10 +52,10 @@ export default function Button({ text, onClick, to }) {
       <Link to={to}>
         <button
           className="button uppercase tracking-wider whitespace-normal "
-          onClick={onClick}
+          onClick={onClick} style={{ fontFamily: "Genos" }}
         >
           {isHtmlEntity ? (
-            <span className='text-center pl-1' dangerouslySetInnerHTML={{ __html: text }} />
+            <span className='text-center pl-1 ' dangerouslySetInnerHTML={{ __html: text }} />
           ) : (
             text
           )}
@@ -65,11 +65,12 @@ export default function Button({ text, onClick, to }) {
   } else {
     return (
       <button
-        className="button uppercase tracking-widest "
+        className="button uppercase tracking-widest  "
         onClick={onClick}
+        style={{ fontFamily: "Genos" }}
       >
         {isHtmlEntity ? (
-          <span className='text-center pl-1 text-[20px]' dangerouslySetInnerHTML={{ __html: text }} />
+          <span className='text-center pl-1 text-[20px] ' dangerouslySetInnerHTML={{ __html: text }} />
         ) : (
           text
         )}

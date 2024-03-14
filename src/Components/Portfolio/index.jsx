@@ -120,7 +120,7 @@ export default function Portfolio() {
 
   return (
     <div>
-      <div className="outer-cont pt-2 lg:pt-24">
+      <div className="outer-cont pt-2 lg:pt-24 pb-12">
         <div className="md:w-[80%] w-[90%] gap-6 flex flex-col flex-wrap items-start justify-between md:flex-row sm:px-6  inner-cont" data-aos="fade-left">
           <div className='lg:w-[20%] w-full '   >
             <h2 className="text-3xl custom-font leading-10 tracking-tight sm:text-5xl sm:leading-none md:text-4xl uppercase">
@@ -133,7 +133,7 @@ export default function Portfolio() {
               At the heart of Alpine Architect lies a simple yet profound belief: architecture is not static. As society progresses, so too must our buildings and spaces. The firm places a premium on continuously upgrading its design ethos, always staying attuned to the shifting sands of societal needs, technological advancements, and aesthetic sensibilities.
             </p>
             <div className='btn-fix mt-3'>
-              <Link to="/portfolio"> <Button text={" explore "} /></Link>
+              <Link > <Button text={"explore"} to="/portfolio" /></Link>
 
             </div>
           </div>
@@ -268,7 +268,7 @@ export default function Portfolio() {
 
 
                 <div className="md:text-right  mt-4 lg:-mt-8 flex justify-end lg:pr-1">
-                  <Link to="/portfolio"> <Button text={"View All"} /></Link>
+                  <Button text={"View All"} to="/portfolio" />
                 </div>
 
               </div>

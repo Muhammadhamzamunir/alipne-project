@@ -65,12 +65,12 @@ export default function Blogs() {
           </div>
           <div className="w-4/5 ">
             <div className="md:text-right mt-4 md:mt-0 btn-fix">
-              <Link to="/blogs"><Button text={"View All"} /></Link>
+              <Link><Button text={"View All"} to="/blogs" /></Link>
             </div>
           </div>
         </div>
         <div className="sm:px-6 lg:w-[80%] w-[90%] m-auto">
-          <div className='text-lg text-gray-200 font-light py-4 pb-4 '>
+          <div className='text-lg text-gray-200 font-light py-4 pb-12 '>
             <p>
               Explore our Blogs at Alpine Architect. Delve into insightful content offering a unique perspective on design, trends, and industry updates. Immerse yourself in a world where each read enhances your connection with our architectural vision.
             </p>
@@ -106,8 +106,8 @@ export default function Blogs() {
           </div>)}
 
           <div className="flex justify-end btm-btn pt-7">
-            <Link to="/blogs">
-              <Button text={"View All"} />
+            <Link >
+              <Button text={"View All"} to="/blogs" />
             </Link>
           </div>
         </div>

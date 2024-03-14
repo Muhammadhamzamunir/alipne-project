@@ -114,9 +114,9 @@ export default function Gallery() {
             Gallery
           </h2>
           <div className="md:text-left mt-4 md:mt-0 btn-fix lg:pr-1">
-            <Link to="/gallery">
-              <Button text={"View All"} />
-            </Link>
+           
+              <Button text={"View All"} to="/gallery" />
+            
           </div>
         </div>
 
@@ -146,9 +146,9 @@ export default function Gallery() {
 
 
         <div className="flex justify-end btm-btn pr-6 pt-4">
-          <Link to="/gallery">
-            <Button text={"View All"} />
-          </Link>
+          
+            <Button text={"View All"} to="/gallery"/>
+         
         </div>
       </div>
     </div>

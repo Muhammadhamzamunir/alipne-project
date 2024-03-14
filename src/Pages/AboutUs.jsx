@@ -536,7 +536,7 @@ export default function AboutUs() {
               {
                 studioImages?.studio_images.map((image) => (
 
-                  <div data-src={image.url} className="w-full h-full my-6 " loading="lazy" />
+                  <div data-src={image.url} className="w-full h-full my-6 object-fill " loading="lazy" />
 
                 )
 
