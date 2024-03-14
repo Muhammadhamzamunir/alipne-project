@@ -121,13 +121,13 @@ export default function Portfolio() {
   return (
     <div>
       <div className="outer-cont pt-2 lg:pt-24">
-        <div className="md:w-[80%] w-[90%]  flex flex-col flex-wrap items-start justify-between md:flex-row sm:px-6  inner-cont" data-aos="fade-left">
-          <div className='lg:w-1/5 w-full '   >
+        <div className="md:w-[80%] w-[90%] gap-6 flex flex-col flex-wrap items-start justify-between md:flex-row sm:px-6  inner-cont" data-aos="fade-left">
+          <div className='lg:w-[20%] w-full '   >
             <h2 className="text-3xl custom-font leading-10 tracking-tight sm:text-5xl sm:leading-none md:text-4xl uppercase">
               Portfolio
             </h2>
           </div>
-          <div className="  text-lg text-gray-200  md:text-xl  leading-10 font-light tracking-tight  w-full lg:w-[70%] md:mb-10  ">
+          <div className="flex-1   text-lg text-gray-200  md:text-xl  leading-10 font-light tracking-tight  w-full lg:w-[70%] md:mb-10  ">
 
             <p className='lg:pr-2'>
               At the heart of Alpine Architect lies a simple yet profound belief: architecture is not static. As society progresses, so too must our buildings and spaces. The firm places a premium on continuously upgrading its design ethos, always staying attuned to the shifting sands of societal needs, technological advancements, and aesthetic sensibilities.
@@ -170,59 +170,13 @@ export default function Portfolio() {
                 <div className='flex flex-col lg:flex-row w-full gap-3 gap-y-2 mb-12 lg:h-[613px]'>
                   <div className='w-full flex flex-col-reverse lg:flex-col gap-3  lg:basis-[429px]  '>
                     {filteredData[0]?.url && (
-                      <div className='relative group w-full h-[179px] lg:h-[240px] cursor-pointer' onClick={() => navigate(`/project/${filteredData[0].id}`)}
+                      <div className='relative group w-full h-[179px] lg:h-[240px] cursor-pointer'
                       >
-                        <img src={filteredData[0]?.url} alt="No Data" className='object-fill w-full h-full transition duration-500 ease-in-out hover:opacity-50' loading='lazy' />
-                        <div className='absolute bottom-[10px]  text-white flex items-center justify-between w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100'>
-                          <h3 className='ml-2 w-[95%] text-[22px]  break-all '>{filteredData[0]?.project_name}</h3>
-                          <span className='mr-2  justify-end'>
-                            <svg width="28" height="25" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <rect x="0.3" y="0.3" width="27.4" height="22.4588" rx="11.2294" stroke="white" stroke-width="0.6" />
-                              <g opacity="0.6">
-                                <path d="M8.75488 16.2073L16.7062 8.25594H11.7582V6.75427H19.2666V14.2626H17.7649V9.31461L9.81356 17.2659L8.75488 16.2073Z" fill="white" />
-                              </g>
-                            </svg>
-
-                          </span>
-                        </div>
-                      </div>)}
-
-                    <div className='flex gap-3 w-full'>
-
-
-                      {
-                        filteredData[1]?.url && (<div className="relative group  w-[50%] lg:h-[360px] h-[259px] cursor-pointer" onClick={() => navigate(`/project/${filteredData[1].id}`)}>
-                          <img
-                            src={filteredData[1]?.url}
-                            alt="No Data"
-                            className="object-fill w-full h-full lg:h-full transition duration-500 ease-in-out hover:opacity-50"
-                            loading="lazy"
-                          />
-                          <div className="absolute bottom-[10px] h-[80px] text-white flex items-end justify-between w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100">
-
-                            <h3 className="ml-2 w-[ 95%] text-[22px]  break-all">{filteredData[1]?.project_name}</h3>
-
-
-                            <span className='  justify-end'>
-                              <svg width="28" height="25" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="0.3" y="0.3" width="27.4" height="22.4588" rx="11.2294" stroke="white" strokeWidth="0.6" />
-                                <g opacity="0.6">
-                                  <path d="M8.75488 16.2073L16.7062 8.25594H11.7582V6.75427H19.2666V14.2626H17.7649V9.31461L9.81356 17.2659L8.75488 16.2073Z" fill="white" />
-                                </g>
-                              </svg>
-                            </span>
-
-                          </div>
-                        </div>)
-                      }
-
-                      {
-                        filteredData[2]?.url && (<div className='relative group  w-[50%] lg:h-[360px] h-[259px] object-fill cursor-pointer' onClick={() => navigate(`/project/${filteredData[2].id}`)}>
-                          <img src={filteredData[2]?.url} alt="No Data" className='object-fill w-full h-full lg:h-full transition duration-500 ease-in-out hover:opacity-50' loading='lazy' />
-
+                        <Link to={`/project/${filteredData[0].id}`}>
+                          <img src={filteredData[0]?.url} alt="No Data" className='object-fill w-full h-full transition duration-500 ease-in-out hover:opacity-50' loading='lazy' />
                           <div className='absolute bottom-[10px]  text-white flex items-center justify-between w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100'>
-                            <h3 className='ml-2 w-[95%] text-[22px]  break-all'>{filteredData[2]?.project_name}</h3>
-                            <span className='mr-2   justify-end'>
+                            <h3 className='ml-2 w-[95%] text-[22px]  break-all '>{filteredData[0]?.project_name}</h3>
+                            <span className='mr-2  justify-end'>
                               <svg width="28" height="25" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect x="0.3" y="0.3" width="27.4" height="22.4588" rx="11.2294" stroke="white" stroke-width="0.6" />
                                 <g opacity="0.6">
@@ -232,6 +186,58 @@ export default function Portfolio() {
 
                             </span>
                           </div>
+                        </Link>
+                      </div>)}
+
+                    <div className='flex gap-3 w-full'>
+
+
+                      {
+                        filteredData[1]?.url && (<div className="relative group  w-[50%] lg:h-[360px] h-[259px] cursor-pointer" >
+                          <Link to={`/project/${filteredData[1].id}`}>
+                            <img
+                              src={filteredData[1]?.url}
+                              alt="No Data"
+                              className="object-fill w-full h-full lg:h-full transition duration-500 ease-in-out hover:opacity-50"
+                              loading="lazy"
+                            />
+                            <div className="absolute bottom-[10px] h-[80px] text-white flex items-end justify-between w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100">
+
+                              <h3 className="ml-2 w-[ 95%] text-[22px]  break-all">{filteredData[1]?.project_name}</h3>
+
+
+                              <span className='  justify-end'>
+                                <svg width="28" height="25" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <rect x="0.3" y="0.3" width="27.4" height="22.4588" rx="11.2294" stroke="white" strokeWidth="0.6" />
+                                  <g opacity="0.6">
+                                    <path d="M8.75488 16.2073L16.7062 8.25594H11.7582V6.75427H19.2666V14.2626H17.7649V9.31461L9.81356 17.2659L8.75488 16.2073Z" fill="white" />
+                                  </g>
+                                </svg>
+                              </span>
+
+                            </div>
+                          </Link>
+                        </div>)
+                      }
+
+                      {
+                        filteredData[2]?.url && (<div className='relative group  w-[50%] lg:h-[360px] h-[259px] object-fill cursor-pointer' onClick={() => navigate(`/project/${filteredData[2].id}`)}>
+                          <Link to={`/project/${filteredData[2].id}`}>
+                            <img src={filteredData[2]?.url} alt="No Data" className='object-fill w-full h-full lg:h-full transition duration-500 ease-in-out hover:opacity-50' loading='lazy' />
+
+                            <div className='absolute bottom-[10px]  text-white flex items-center justify-between w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100'>
+                              <h3 className='ml-2 w-[95%] text-[22px]  break-all'>{filteredData[2]?.project_name}</h3>
+                              <span className='mr-2   justify-end'>
+                                <svg width="28" height="25" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <rect x="0.3" y="0.3" width="27.4" height="22.4588" rx="11.2294" stroke="white" stroke-width="0.6" />
+                                  <g opacity="0.6">
+                                    <path d="M8.75488 16.2073L16.7062 8.25594H11.7582V6.75427H19.2666V14.2626H17.7649V9.31461L9.81356 17.2659L8.75488 16.2073Z" fill="white" />
+                                  </g>
+                                </svg>
+
+                              </span>
+                            </div>
+                          </Link>
                         </div>)
                       }
 
@@ -240,18 +246,20 @@ export default function Portfolio() {
 
                   {filteredData[3]?.url && (<div className='lg:basis-[358px] h-[179px] lg:h-full cursor-pointer ' onClick={() => navigate(`/project/${filteredData[3].id}`)}>
                     <div className='relative group'>
-                      <img src={filteredData[3]?.url} alt="No Data" className='object-fill w-full h-[216px] lg:h-[613PX] transition duration-500 ease-in-out hover:opacity-50' loading='lazy' />
-                      <div className='absolute bottom-[10px] text-white flex items-center justify-between w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100'>
-                        <h3 className='ml-2 w-[ 95%] text-[22px]  break-all'>{filteredData[3]?.project_name}</h3>
-                        <span className='  justify-end'>
-                          <svg width="28" height="25" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="0.3" y="0.3" width="27.4" height="22.4588" rx="11.2294" stroke="white" stroke-width="0.6" />
-                            <g opacity="0.6">
-                              <path d="M8.75488 16.2073L16.7062 8.25594H11.7582V6.75427H19.2666V14.2626H17.7649V9.31461L9.81356 17.2659L8.75488 16.2073Z" fill="white" />
-                            </g>
-                          </svg>
+                      <Link to={`/project/${filteredData[3].id}`}>
+                        <img src={filteredData[3]?.url} alt="No Data" className='object-fill w-full h-[216px] lg:h-[613PX] transition duration-500 ease-in-out hover:opacity-50' loading='lazy' />
+                        <div className='absolute bottom-[10px] text-white flex items-center justify-between w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100'>
+                          <h3 className='ml-2 w-[ 95%] text-[22px]  break-all'>{filteredData[3]?.project_name}</h3>
+                          <span className='  justify-end'>
+                            <svg width="28" height="25" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <rect x="0.3" y="0.3" width="27.4" height="22.4588" rx="11.2294" stroke="white" stroke-width="0.6" />
+                              <g opacity="0.6">
+                                <path d="M8.75488 16.2073L16.7062 8.25594H11.7582V6.75427H19.2666V14.2626H17.7649V9.31461L9.81356 17.2659L8.75488 16.2073Z" fill="white" />
+                              </g>
+                            </svg>
 
-                        </span>                  </div>
+                          </span> </div>
+                      </Link>
                     </div>
                   </div>)}
 
