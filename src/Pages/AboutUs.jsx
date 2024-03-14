@@ -599,7 +599,7 @@ export default function AboutUs() {
                   <img
                     src={data.featured_imaged}
                     alt="Featured"
-                    className="w-full object-cover h-full pr-2 md:pr-0  opacity-100 transition duration-300 ease-in-out group-hover:opacity-30"
+                    className="w-full object-fill h-full pr-2 md:pr-0  opacity-100 transition duration-300 ease-in-out group-hover:opacity-30"
                   />
                   <div className='absolute bottom-[50px] md:bottom-[26px] text-white flex justify-between w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100'>
                     <h3 className='font-light ml-2 bottom-2'>{data.thumbnail_description}</h3>
@@ -630,7 +630,7 @@ export default function AboutUs() {
                     <img
                       src={featured.length > 0 ? featured[currentPhotoIndex]?.featured_imaged || "" : ""}
                       alt="Modal"
-                      className="max-w-full w-[100%] lg:w-[85%]  md:h-[85vh] h-[270px] z-50  object-fill"
+                      className="max-w-full w-[90%] lg:w-[30%]  md:h-[85vh] h-[350px] z-50  object-fill"
                     />
                     <span className='absolute right-3 md:right-6 z-40 hidden lg:block'>
                       <Button text={"→"} onClick={nextPhoto} />

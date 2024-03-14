@@ -12,9 +12,9 @@ export default function Gallery() {
   //fetching data 
   const getData = async () => {
     try {
-       const data = await fetchData("gallery");
+      const data = await fetchData("gallery");
 
-      
+
 
 
       console.log(galleryData);
@@ -113,7 +113,7 @@ export default function Gallery() {
           <h2 className="text-3xl custom-font leading-10 tracking-tight sm:text-5xl sm:leading-none md:text-4xl uppercase">
             Gallery
           </h2>
-          <div className="md:text-left mt-4 md:mt-0 btn-fix">
+          <div className="md:text-left mt-4 md:mt-0 btn-fix lg:pr-1">
             <Link to="/gallery">
               <Button text={"View All"} />
             </Link>

@@ -10,7 +10,8 @@ import { useParams } from 'react-router-dom';
 import Carousel_Diversity from '../Components/Carousel';
 import API_Call from '../Components/API_Call';
 import { useMediaQuery } from 'react-responsive';
-
+import { useSwipeable } from "react-swipeable";
+import { Modal } from 'flowbite-react';
 export default function OngoingProjectListDetail() {
     const isMobile = useMediaQuery({ maxWidth: 767 });
     const { id } = useParams();
@@ -18,6 +19,8 @@ export default function OngoingProjectListDetail() {
     const [projectData, setProjectData] = useState();
     const [verticalImagesData, setverticalImagesData] = useState([]);
     const [horizontalImageData, setHorizontalImageData] = useState([]);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
     let verticalImages = [];
     let horiontalImages = [];
     const getData = async () => {
@@ -96,6 +99,33 @@ export default function OngoingProjectListDetail() {
         setCurrentIndex(index);
     };
 
+    const openModal = (index) => {
+
+        setCurrentPhotoIndex(index);
+
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+    };
+
+    const nextPhoto = () => {
+
+        setCurrentPhotoIndex((prevIndex) => (prevIndex + 1) % horizontalImageData.length);
+
+
+    };
+
+    const prevPhoto = () => {
+
+        setCurrentPhotoIndex((prevIndex) => (prevIndex - 1 + horizontalImageData.length) % horizontalImageData.length);
+
+    };
+    const handlers = useSwipeable({
+        onSwipedLeft: () => nextPhoto(),
+        onSwipedRight: () => prevPhoto(),
+    });
 
 
     return (
@@ -187,10 +217,11 @@ export default function OngoingProjectListDetail() {
                                     <div key={index} className='flex flex-wrap justify-center items-center gap-y-3 md:ml-8'>
                                         {horizontalImageData.slice(index * (isMobile ? 4 : 6), (index + 1) * (isMobile ? 4 : 6)).map((data, imgIndex) => (
                                             <img
+                                                onClick={() => openModal(imgIndex)}
                                                 key={imgIndex}
                                                 src={data.image}
                                                 alt={`Image ${index * (isMobile ? 4 : 6) + imgIndex + 1}`}
-                                                className={`w-[${isMobile ? '40%' : '30%'}] md:w-[30%] h-[89px]  md:h-[186px] object-cover mr-4`}
+                                                className={`w-[${isMobile ? '40%' : '30%'}] md:w-[30%] h-[89px] cursor-pointer  md:h-[186px] object-fill mr-4`}
                                             />
                                         ))}
                                     </div>
@@ -198,7 +229,7 @@ export default function OngoingProjectListDetail() {
                             </AliceCarousel>
                         )}
 
-                        <Carousel_Diversity category={projectData[0].category} page="ongoingProject" />
+                        <Carousel_Diversity category={projectData[0].category} id={projectData[0].id} page="ongoingProject" />
                     </div>
 
 
@@ -207,6 +238,30 @@ export default function OngoingProjectListDetail() {
                 <img src="loading-gif.gif" alt="" className='w-[100px] bg-blend-multiply my-44' />
 
             </div>)}
+
+            <Modal show={isModalOpen} onClose={closeModal} size="4xl" className="backdrop-blur-lg min-h-[100vh] z-50 padding-0" {...handlers}>
+                <Modal.Body>
+                    <div className="relative padding-0">
+                        <span className='absolute top-0 right-0 z-50 p-2 '><Button text={"✕"} onClick={closeModal} /></span>
+                        <div className="lg:pt-0 pt-36 flex flex-col items-center justify-center space-y-4">
+                            <div className="flex items-center justify-center  w-full mt-8 top-22">
+                                <span className='absolute left-3 md:left-6 z-40 hidden lg:block '><Button text={"←"} onClick={prevPhoto} /></span>
+
+
+
+                                <img src={horizontalImageData[currentPhotoIndex]?.image} alt="Modal" className="max-w-full w-[100%] lg:w-[85%]  md:h-[85vh] h-[270px]  object-fill" />
+
+
+                                <span className=' absolute right-3 md:right-6 z-40 hidden lg:block'><Button text={"→"} onClick={nextPhoto} /></span>
+                            </div>
+                            <div className="text-center">
+
+                                {currentPhotoIndex + 1} / {horizontalImageData.length}
+                            </div>
+                        </div>
+                    </div>
+                </Modal.Body>
+            </Modal>
         </>
     );
 }

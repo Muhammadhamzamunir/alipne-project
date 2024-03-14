@@ -29,7 +29,7 @@ export default function Portfolio() {
     });
 
 
-    data.forEach((section) => {
+    data.sort((a, b) => b.id - a.id).forEach((section) => {
       // checking horizontal image stored or not  
       const horizontalImageStored = allPortofolioData.find(data => (data.category === section.category && data.horizontal_image == true));
       // checking how many vertical image stored  
@@ -47,8 +47,9 @@ export default function Portfolio() {
         }
       }
     })
-    setAllData(allPortofolioData)
+    setAllData(allPortofolioData);
     setAllCategories(filteredCategories);
+    console.log(allPortofolioData);
   }
 
 
@@ -83,7 +84,7 @@ export default function Portfolio() {
       }
     });
 
-    setFilteredData(filteredPortfolioData.sort((a, b) => b.id - a.id));
+    setFilteredData(filteredPortfolioData);
 
   }, [activeCategory, alldata]);
 
@@ -128,7 +129,7 @@ export default function Portfolio() {
           </div>
           <div className="  text-lg text-gray-200  md:text-xl  leading-10 font-light tracking-tight  w-full lg:w-[70%] md:mb-10  ">
 
-            <p>
+            <p className='lg:pr-2'>
               At the heart of Alpine Architect lies a simple yet profound belief: architecture is not static. As society progresses, so too must our buildings and spaces. The firm places a premium on continuously upgrading its design ethos, always staying attuned to the shifting sands of societal needs, technological advancements, and aesthetic sensibilities.
             </p>
             <div className='btn-fix mt-3'>
@@ -258,7 +259,7 @@ export default function Portfolio() {
                 </div>
 
 
-                <div className="md:text-right  mt-4 lg:-mt-8 flex justify-end">
+                <div className="md:text-right  mt-4 lg:-mt-8 flex justify-end lg:pr-1">
                   <Link to="/portfolio"> <Button text={"View All"} /></Link>
                 </div>
 

@@ -43,13 +43,13 @@ export default function OnGoingProjects() {
   };
   return (
     <div className="bg-secondary bg-cover bg-left bg-no-repeat" style={{ backgroundImage: `url(${OnGoingProject_bg})`, backgroundSize: 'auto', backgroundPosition: 'left' }}>
-      <div className="  is-flex flex-wrap md:pl-[110px] pt-10 md:pb-20" >
-        <div data-aos="slide-left" className='w-full lg:w-[35%] flex flex-col px-5 lg:px-7 md:gap-y-16 '>
-          <h1 className="lg:pl-1 text-3xl custom-font leading-10 tracking-tight  sm:leading-none md:text-4xl uppercase ">
+      <div className="  is-flex flex-wrap md:pl-[10%] pt-10 md:pb-20" >
+        <div data-aos="slide-left" className='w-full lg:w-[35%] flex flex-col px-5 lg:px-0 lg:pl-7 md:gap-y-16 '>
+          <h1 className=" text-3xl custom-font leading-10 tracking-tight  sm:leading-none md:text-4xl uppercase ">
             Ongoing Projects
           </h1>
           <div className=" mx-auto text-lg lg:pr-12 text-gray-200 md:text-xl md:max-w-3xl leading-10 font-light tracking-tight mb-4">
-            <p className='lg:pl-1'>
+            <p className=''>
               "Beyond Walls: Architectural Facades as Statements of Style and Substance."
             </p>
           </div>
@@ -58,9 +58,9 @@ export default function OnGoingProjects() {
 
             {
               ongoingProjects ? (ongoingProjects.slice(0, 3).map((project, index) => (
-                <div key={index} className="w-full h-[236px] relative group cursor-pointer" onClick={() => navigate(`/ongoing-project/${project?.id}`)}>
+                <div key={index} className="w-full h-[236px] relative group cursor-pointer" >
 
-
+<Link to={`/ongoing-project/${project?.id}`}>
 
                   <img src={project.horizontal_image?.[0]?.url} alt="" className="w-full h-[236px] object-cover transition duration-500 ease-in-out hover:opacity-50" />
 
@@ -76,7 +76,7 @@ export default function OnGoingProjects() {
 
                     </span>
                   </div>
-
+                  </Link>
                 </div>
 
               ))) : ""
@@ -84,6 +84,11 @@ export default function OnGoingProjects() {
 
 
           </div>
+
+
+
+
+
           <div className="md:text-left mt-4 md:mt-0 btn-fix lg:pl-1">
             <Link to="/on-going-project-list"> <Button text={"View All"} /></Link>
           </div>

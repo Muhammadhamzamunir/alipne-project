@@ -39,7 +39,7 @@ const Home = () => {
 
 
             <div className="md:flex justify-center z-0   w-full  absolute  lg:top-12 top-28  lg:pr-8  ">
-                <div className="lg:w-[76%] m-auto w-[90%] bg-black mb-24  ">
+                <div className="lg:w-[76%] m-auto  bg-transparent mb-24  ">
                     <HeroSectionSlider slides={slidesData} />
                 </div>
             </div>

@@ -339,7 +339,7 @@ export default function Portfolio() {
         //     }
         // ]
         if (data) {
-            const allDataImages = data.map((item) => {
+            const allDataImages = data.sort((a, b) => b.id - a.id).map((item) => {
                 const existedCategory = categories.find(category => category === item.category);
                 if (!existedCategory) {
                     categories.push(item.category);
@@ -355,7 +355,7 @@ export default function Portfolio() {
             });
 
             setUniqueCategories(categories);
-            setAllImages(allDataImages.sort((a, b) => b.id - a.id));
+            setAllImages(allDataImages);
             setFilteredData(allDataImages);
         }
     }
@@ -484,7 +484,7 @@ export default function Portfolio() {
                         </div>
                     </div >)
                 } */}
-                {filteredData[startingIndex]?.vertical_image && (
+                {filteredData[startingIndex]?.horizontal_image && (
 
                     <div
                         data-aos="fade-right"
@@ -494,7 +494,7 @@ export default function Portfolio() {
                     >
                         <img
                             className='object-cover h-full transition duration-500 ease-in-out group-hover:opacity-50'
-                            src={filteredData[startingIndex]?.vertical_image}
+                            src={filteredData[startingIndex]?.horizontal_image}
                             alt={""}
                             style={{ width: "100%", display: "block" }}
                         />
@@ -513,9 +513,9 @@ export default function Portfolio() {
                 )}
 
                 {
-                    filteredData[startingIndex + 1]?.horizontal_image && (<div data-aos="fade-right" className="w-[47%] relative group lg:w-[30%] lg:h-[414px] h-[265px]" style={{ position: 'relative', cursor: 'pointer' }} onClick={() => navigate(`/project/${filteredData[startingIndex + 1]?.id}`)}>
+                    filteredData[startingIndex + 1]?.vertical_image && (<div data-aos="fade-right" className="w-[47%] relative group lg:w-[30%] lg:h-[414px] h-[265px]" style={{ position: 'relative', cursor: 'pointer' }} onClick={() => navigate(`/project/${filteredData[startingIndex + 1]?.id}`)}>
                         <img className='object-cover h-full transition duration-500 ease-in-out hover:opacity-50'
-                            src={filteredData[startingIndex + 1]?.horizontal_image}
+                            src={filteredData[startingIndex + 1]?.vertical_image}
                             alt={""}
                             style={{ width: "100%", display: "block", }}
 
@@ -539,9 +539,9 @@ export default function Portfolio() {
                     </div >)
                 }
                 {
-                    filteredData[startingIndex + 2]?.horizontal_image && (<div data-aos="fade-right" className='w-[47%] relative group lg:w-[32%] lg:h-[479px] h-[265px] ' style={{ position: 'relative', cursor: 'pointer' }} onClick={() => navigate(`/project/${filteredData[startingIndex + 2]?.id}`)}>
+                    filteredData[startingIndex + 2]?.vertical_image && (<div data-aos="fade-right" className='w-[47%] relative group lg:w-[32%] lg:h-[479px] h-[265px] ' style={{ position: 'relative', cursor: 'pointer' }} onClick={() => navigate(`/project/${filteredData[startingIndex + 2]?.id}`)}>
                         <img className=' object-cover h-full transition duration-500 ease-in-out hover:opacity-50'
-                            src={filteredData[startingIndex + 2]?.horizontal_image}
+                            src={filteredData[startingIndex + 2]?.vertical_image}
                             alt={""}
                             style={{ width: "100%", display: "block", }}
 
@@ -566,9 +566,9 @@ export default function Portfolio() {
 
 
                 {
-                    filteredData[startingIndex + 3]?.horizontal_image && (<div data-aos="fade-right" className="w-full relative group lg:w-[32%] lg:h-[479px] h-[200px] " style={{ position: 'relative', cursor: 'pointer' }} onClick={() => navigate(`/project/${filteredData[startingIndex + 3]?.id}`)}>
+                    filteredData[startingIndex + 3]?.vertical_image && (<div data-aos="fade-right" className="w-full relative group lg:w-[32%] lg:h-[479px] h-[200px] " style={{ position: 'relative', cursor: 'pointer' }} onClick={() => navigate(`/project/${filteredData[startingIndex + 3]?.id}`)}>
                         <img className='object-cover h-full transition duration-500 ease-in-out hover:opacity-50'
-                            src={filteredData[startingIndex + 3]?.horizontal_image}
+                            src={filteredData[startingIndex + 3]?.vertical_image}
                             alt={""}
                             style={{ width: "100%", display: "block", }}
 
@@ -591,9 +591,9 @@ export default function Portfolio() {
                     </div>)
                 }
                 {
-                    filteredData[startingIndex + 4]?.horizontal_image && (<div data-aos="fade-right" className="w-full relative group lg:w-[32%] lg:h-[479px] h-[200px] " style={{ position: 'relative', cursor: 'pointer' }} onClick={() => navigate(`/project/${filteredData[startingIndex + 4]?.id}`)}>
+                    filteredData[startingIndex + 4]?.vertical_image && (<div data-aos="fade-right" className="w-full relative group lg:w-[32%] lg:h-[479px] h-[200px] " style={{ position: 'relative', cursor: 'pointer' }} onClick={() => navigate(`/project/${filteredData[startingIndex + 4]?.id}`)}>
                         <img className='object-cover h-full transition duration-500 ease-in-out hover:opacity-50'
-                            src={filteredData[startingIndex + 4]?.horizontal_image}
+                            src={filteredData[startingIndex + 4]?.vertical_image}
                             alt={""}
                             style={{ width: "100%", display: "block", }}
 
@@ -616,9 +616,9 @@ export default function Portfolio() {
                     </div>)
                 }
                 {
-                    filteredData[startingIndex + 5]?.vertical_image && (<div data-aos="fade-right" className=' w-full relative group lg:w-[48%] lg:h-[289px] h-[200px] transition duration-500 ease-in-out hover:opacity-50' style={{ position: 'relative', cursor: 'pointer' }} onClick={() => navigate(`/project/${filteredData[startingIndex + 5]?.id}`)}>
+                    filteredData[startingIndex + 5]?.horizontal_image && (<div data-aos="fade-right" className=' w-full relative group lg:w-[48%] lg:h-[289px] h-[200px] transition duration-500 ease-in-out hover:opacity-50' style={{ position: 'relative', cursor: 'pointer' }} onClick={() => navigate(`/project/${filteredData[startingIndex + 5]?.id}`)}>
                         <img className=' object-cover h-full transition duration-500 ease-in-out group-hover:opacity-50'
-                            src={filteredData[startingIndex + 5]?.vertical_image}
+                            src={filteredData[startingIndex + 5]?.horizontal_image}
                             alt={""}
                             style={{ width: "100%", display: "block", }}
 
@@ -641,9 +641,9 @@ export default function Portfolio() {
                     </div>)
                 }
                 {
-                    filteredData[startingIndex + 6]?.vertical_image && (<div data-aos="fade-right" className=' w-full relative group lg:w-[48%] lg:h-[289px] h-[200px] transition duration-500 ease-in-out hover:opacity-50' style={{ position: 'relative', cursor: 'pointer' }} onClick={() => navigate(`/project/${filteredData[startingIndex + 6]?.id}`)}>
+                    filteredData[startingIndex + 6]?.horizontal_image && (<div data-aos="fade-right" className=' w-full relative group lg:w-[48%] lg:h-[289px] h-[200px] transition duration-500 ease-in-out hover:opacity-50' style={{ position: 'relative', cursor: 'pointer' }} onClick={() => navigate(`/project/${filteredData[startingIndex + 6]?.id}`)}>
                         <img className=' object-cover h-full transition duration-500 ease-in-out group-hover:opacity-50'
-                            src={filteredData[startingIndex + 6]?.vertical_image}
+                            src={filteredData[startingIndex + 6]?.horizontal_image}
                             alt={""}
                             style={{ width: "100%", display: "block", }}
 
