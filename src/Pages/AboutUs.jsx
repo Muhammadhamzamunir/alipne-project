@@ -61,9 +61,7 @@ export default function AboutUs() {
   }, []);
 
 
-  useEffect(() => {
-    console.log(studioImages?.studio_images[0].url);
-  }, [studioImages])
+
 
 
 

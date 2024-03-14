@@ -17,7 +17,7 @@ const API_Call = () => {
             },
             body: body ? JSON.stringify(body) : null,
         };
-        const response = await fetch(`https://architecture.flashcitytours.com/api/user/${url}`, requestOptions);
+        const response = await fetch(`https://arc.shellcode.co.in/api/user/${url}`, requestOptions);
         const data = await response.json();
 
       
