@@ -66,7 +66,7 @@ export default function ProjectDetailPage() {
     useEffect(() => {
         handleUpArrowClick();
     }, [])
-   
+
 
 
     const responsive = {
@@ -132,8 +132,8 @@ export default function ProjectDetailPage() {
                 <div className="md:w-3/4 sm:w-full px-6 md:px-0">
                     <h6 className='mb-1 text-amber-600 text-[#C1AE69]'>Home &gt; Portfolio &gt; {projectData[0].project_name}</h6>
                     <div className='flex items-center m-0'>
-                        <h3 className='font-audiowide lg:text-2xl  uppercase mr-4'> {projectData[0].project_name}</h3>
-                        <p className='font-light flex items-center gap-3  leading-loose tracking-wider' style={{ marginBottom: "0px !important" }}><FaLocationDot /> {projectData[0].area}</p>
+                        <h3 className='font-audiowide lg:text-2xl text-1xl  uppercase md:mr-4 mr-2'> {projectData[0].project_name}</h3>
+                        <p className='font-light flex items-center md:gap-3 gap-1   leading-loose tracking-wider' style={{ marginBottom: "0px !important" }}><FaLocationDot /> {projectData[0].area}</p>
                     </div>
                     <p className='font-light leading-loose tracking-wider'>
                         {projectData[0].location}                  </p>
@@ -166,7 +166,7 @@ export default function ProjectDetailPage() {
                     <div style={{ textAlign: "center", marginBottom: "0px" }}>
                         {verticalImagesData.length > 0 ? (
                             <div style={{
-                                padding: "0 20px"
+                                padding: "0 0px"
                             }}>
                                 <Carousel
                                     data={verticalImagesData}
@@ -225,7 +225,7 @@ export default function ProjectDetailPage() {
                                 onSlideChanged={handleSlideChange}
                             >
                                 {[...Array(Math.ceil(horizontalImageData.length / (isMobile ? 4 : 6)))].map((_, index) => (
-                                    <div key={index} className='flex flex-wrap justify-center items-center gap-y-3 md:ml-8'>
+                                    <div key={index} className='flex flex-wrap justify-center items-center md:gap-y-3 gap-y-1 gap-x-1 lg:gap-x-2 '>
                                         {horizontalImageData.slice(index * (isMobile ? 4 : 6), (index + 1) * (isMobile ? 4 : 6)).map((data, imgIndex) => (
                                             <img
 
@@ -233,7 +233,7 @@ export default function ProjectDetailPage() {
                                                 key={imgIndex}
                                                 src={data.image}
                                                 alt={`Image ${index * (isMobile ? 4 : 6) + imgIndex + 1}`}
-                                                className={`w-[${isMobile ? '40%' : '30%'}] md:w-[30%] h-[89px] cursor-pointer  md:h-[186px] object-fill mr-4`}
+                                                className={`w-[48%] lg:w-[32%] h-[89px] cursor-pointer  md:h-[186px] object-fill `}
                                             />
                                         ))}
                                     </div>

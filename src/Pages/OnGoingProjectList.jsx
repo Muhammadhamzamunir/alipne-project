@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Button from '../Components/Button';
 import API_Call from '../Components/API_Call';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 export default function OnGoingProjectList() {
     const { fetchData } = API_Call();
     const [allImages, setAllImages] = useState([]);
@@ -14,330 +14,7 @@ export default function OnGoingProjectList() {
     const navigate = useNavigate();
     const getData = async () => {
         const data = await fetchData("ongoingproject");
-        // const data = [
-        //     {
-        //         "id": 4,
-        //         "category": "Institutional",
-        //         "project_name": "title",
-        //         "location": "dscsd",
-        //         "area": "sdcsdc",
-        //         "verticle_image": [
-        //             {
-        //                 "url": "https://architecture.flashcitytours.com/storage/67/vertical_demo_0.png"
-        //             }
-        //         ],
-        //         "horizontal_image": [
-        //             {
-        //                 "url": "https://architecture.flashcitytours.com/storage/68/horizontal_image_0.png"
-        //             }
-        //         ]
-        //     },
-        //     {
-        //         "id": 5,
-        //         "category": "Insdustrial & Infrastructure",
-        //         "project_name": "test2",
-        //         "location": "fsdfsdf",
-        //         "area": "sdfsdfsdf",
-        //         "verticle_image": [
-        //             {
-        //                 "url": "https://architecture.flashcitytours.com/storage/69/vertical_demo_0.png"
-        //             },
-        //             {
-        //                 "url": "https://architecture.flashcitytours.com/storage/70/vertical_demo_1.png"
-        //             }
-        //         ],
-        //         "horizontal_image": [
-        //             {
-        //                 "url": "https://architecture.flashcitytours.com/storage/71/horizontal_image_0.png"
-        //             },
-        //             {
-        //                 "url": "https://architecture.flashcitytours.com/storage/72/horizontal_image_1.png"
-        //             }
-        //         ]
-        //     },
-        //     {
-        //         "id": 6,
-        //         "category": "Landscape & Urbanism",
-        //         "project_name": "test1",
-        //         "location": "das",
-        //         "area": "adsasd",
-        //         "verticle_image": [
-        //             {
-        //                 "url": "https://architecture.flashcitytours.com/storage/85/vertical_demo_0.png"
-        //             }
-        //         ],
-        //         "horizontal_image": [
-        //             {
-        //                 "url": "https://architecture.flashcitytours.com/storage/86/horizontal_image_0.png"
-        //             }
-        //         ]
-        //     },
-        //     {
-        //         "id": 7,
-        //         "category": "Master Planning",
-        //         "project_name": "test",
-        //         "location": "daSD",
-        //         "area": "SDASD",
-        //         "verticle_image": [
-        //             {
-        //                 "url": "https://architecture.flashcitytours.com/storage/95/vertical_demo_0.png"
-        //             },
-        //             {
-        //                 "url": "https://architecture.flashcitytours.com/storage/96/vertical_demo_1.png"
-        //             },
-        //             {
-        //                 "url": "https://architecture.flashcitytours.com/storage/98/vertical_demo_0.png"
-        //             }
-        //         ],
-        //         "horizontal_image": [
-        //             {
-        //                 "url": "https://architecture.flashcitytours.com/storage/97/horizontal_image_0.png"
-        //             }
-        //         ]
-        //     },
-        //     {
-        //         "id": 15,
-        //         "category": "Residential",
-        //         "project_name": "rse",
-        //         "location": "rerwe",
-        //         "area": "werw",
-        //         "verticle_image": [
-        //             {
-        //                 "url": "https://architecture.flashcitytours.com/storage/569/vertical_demo_0.png"
-        //             }
-        //         ],
-        //         "horizontal_image": [
-        //             {
-        //                 "url": "https://architecture.flashcitytours.com/storage/570/horizontal_image_0.png"
-        //             }
-        //         ]
-        //     },
-        //     {
-        //         "id": 16,
-        //         "category": "Commercial",
-        //         "project_name": "wewrwrww",
-        //         "location": "erwerwe",
-        //         "area": "werwr",
-        //         "verticle_image": [
-        //             {
-        //                 "url": "https://architecture.flashcitytours.com/storage/571/vertical_demo_0.png"
-        //             }
-        //         ],
-        //         "horizontal_image": [
-        //             {
-        //                 "url": "https://architecture.flashcitytours.com/storage/572/horizontal_image_0.png"
-        //             }
-        //         ]
-        //     }, {
-        //         "id": 16,
-        //         "category": "Commercial",
-        //         "project_name": "wewrwrww",
-        //         "location": "erwerwe",
-        //         "area": "werwr",
-        //         "verticle_image": [
-        //             {
-        //                 "url": "https://architecture.flashcitytours.com/storage/571/vertical_demo_0.png"
-        //             }
-        //         ],
-        //         "horizontal_image": [
-        //             {
-        //                 "url": "https://architecture.flashcitytours.com/storage/572/horizontal_image_0.png"
-        //             }
-        //         ]
-        //     }, {
-        //         "id": 16,
-        //         "category": "Commercial",
-        //         "project_name": "wewrwrww",
-        //         "location": "erwerwe",
-        //         "area": "werwr",
-        //         "verticle_image": [
-        //             {
-        //                 "url": "https://architecture.flashcitytours.com/storage/571/vertical_demo_0.png"
-        //             }
-        //         ],
-        //         "horizontal_image": [
-        //             {
-        //                 "url": "https://architecture.flashcitytours.com/storage/572/horizontal_image_0.png"
-        //             }
-        //         ]
-        //     }, {
-        //         "id": 16,
-        //         "category": "Commercial",
-        //         "project_name": "wewrwrww",
-        //         "location": "erwerwe",
-        //         "area": "werwr",
-        //         "verticle_image": [
-        //             {
-        //                 "url": "https://architecture.flashcitytours.com/storage/571/vertical_demo_0.png"
-        //             }
-        //         ],
-        //         "horizontal_image": [
-        //             {
-        //                 "url": "https://architecture.flashcitytours.com/storage/572/horizontal_image_0.png"
-        //             }
-        //         ]
-        //     }, {
-        //         "id": 16,
-        //         "category": "Commercial",
-        //         "project_name": "wewrwrww",
-        //         "location": "erwerwe",
-        //         "area": "werwr",
-        //         "verticle_image": [
-        //             {
-        //                 "url": "https://architecture.flashcitytours.com/storage/571/vertical_demo_0.png"
-        //             }
-        //         ],
-        //         "horizontal_image": [
-        //             {
-        //                 "url": "https://architecture.flashcitytours.com/storage/572/horizontal_image_0.png"
-        //             }
-        //         ]
-        //     }, , {
-        //         "id": 16,
-        //         "category": "Commercial",
-        //         "project_name": "wewrwrww",
-        //         "location": "erwerwe",
-        //         "area": "werwr",
-        //         "verticle_image": [
-        //             {
-        //                 "url": "https://architecture.flashcitytours.com/storage/571/vertical_demo_0.png"
-        //             }
-        //         ],
-        //         "horizontal_image": [
-        //             {
-        //                 "url": "https://architecture.flashcitytours.com/storage/572/horizontal_image_0.png"
-        //             }
-        //         ]
-        //     }, {
-        //         "id": 16,
-        //         "category": "Commercial",
-        //         "project_name": "wewrwrww",
-        //         "location": "erwerwe",
-        //         "area": "werwr",
-        //         "verticle_image": [
-        //             {
-        //                 "url": "https://architecture.flashcitytours.com/storage/571/vertical_demo_0.png"
-        //             }
-        //         ],
-        //         "horizontal_image": [
-        //             {
-        //                 "url": "https://architecture.flashcitytours.com/storage/572/horizontal_image_0.png"
-        //             }
-        //         ]
-        //     }, {
-        //         "id": 16,
-        //         "category": "Commercial",
-        //         "project_name": "wewrwrww",
-        //         "location": "erwerwe",
-        //         "area": "werwr",
-        //         "verticle_image": [
-        //             {
-        //                 "url": "https://architecture.flashcitytours.com/storage/571/vertical_demo_0.png"
-        //             }
-        //         ],
-        //         "horizontal_image": [
-        //             {
-        //                 "url": "https://architecture.flashcitytours.com/storage/572/horizontal_image_0.png"
-        //             }
-        //         ]
-        //     }, {
-        //         "id": 16,
-        //         "category": "Commercial",
-        //         "project_name": "wewrwrww",
-        //         "location": "erwerwe",
-        //         "area": "werwr",
-        //         "verticle_image": [
-        //             {
-        //                 "url": "https://architecture.flashcitytours.com/storage/571/vertical_demo_0.png"
-        //             }
-        //         ],
-        //         "horizontal_image": [
-        //             {
-        //                 "url": "https://architecture.flashcitytours.com/storage/572/horizontal_image_0.png"
-        //             }
-        //         ]
-        //     }, {
-        //         "id": 16,
-        //         "category": "Commercial",
-        //         "project_name": "wewrwrww",
-        //         "location": "erwerwe",
-        //         "area": "werwr",
-        //         "verticle_image": [
-        //             {
-        //                 "url": "https://architecture.flashcitytours.com/storage/571/vertical_demo_0.png"
-        //             }
-        //         ],
-        //         "horizontal_image": [
-        //             {
-        //                 "url": "https://architecture.flashcitytours.com/storage/572/horizontal_image_0.png"
-        //             }
-        //         ]
-        //     }, {
-        //         "id": 16,
-        //         "category": "Commercial",
-        //         "project_name": "wewrwrww",
-        //         "location": "erwerwe",
-        //         "area": "werwr",
-        //         "verticle_image": [
-        //             {
-        //                 "url": "https://architecture.flashcitytours.com/storage/571/vertical_demo_0.png"
-        //             }
-        //         ],
-        //         "horizontal_image": [
-        //             {
-        //                 "url": "https://architecture.flashcitytours.com/storage/572/horizontal_image_0.png"
-        //             }
-        //         ]
-        //     }, {
-        //         "id": 16,
-        //         "category": "Commercial",
-        //         "project_name": "wewrwrww",
-        //         "location": "erwerwe",
-        //         "area": "werwr",
-        //         "verticle_image": [
-        //             {
-        //                 "url": "https://architecture.flashcitytours.com/storage/571/vertical_demo_0.png"
-        //             }
-        //         ],
-        //         "horizontal_image": [
-        //             {
-        //                 "url": "https://architecture.flashcitytours.com/storage/572/horizontal_image_0.png"
-        //             }
-        //         ]
-        //     }, {
-        //         "id": 16,
-        //         "category": "Commercial",
-        //         "project_name": "wewrwrww",
-        //         "location": "erwerwe",
-        //         "area": "werwr",
-        //         "verticle_image": [
-        //             {
-        //                 "url": "https://architecture.flashcitytours.com/storage/571/vertical_demo_0.png"
-        //             }
-        //         ],
-        //         "horizontal_image": [
-        //             {
-        //                 "url": "https://architecture.flashcitytours.com/storage/572/horizontal_image_0.png"
-        //             }
-        //         ]
-        //     }, {
-        //         "id": 16,
-        //         "category": "Commercial",
-        //         "project_name": "wewrwrww",
-        //         "location": "erwerwe",
-        //         "area": "werwr",
-        //         "verticle_image": [
-        //             {
-        //                 "url": "https://architecture.flashcitytours.com/storage/571/vertical_demo_0.png"
-        //             }
-        //         ],
-        //         "horizontal_image": [
-        //             {
-        //                 "url": "https://architecture.flashcitytours.com/storage/572/horizontal_image_0.png"
-        //             }
-        //         ]
-        //     }
-        // ]
+       
         if (data) {
             const allDataImages = data.map((item) => {
                 const existedCategory = categories.find(category => category === item.category);
@@ -462,8 +139,9 @@ export default function OnGoingProjectList() {
                         data-aos="fade-right"
                         className='w-full relative group lg:w-[67%] lg:h-[414px] h-[200px] '
                         style={{ position: 'relative', cursor: 'pointer' }}
-                        onClick={() => navigate(`/ongoing-project/${filteredData[startingIndex]?.id}`)}
+                       
                     >
+                        <Link to={`/ongoing-project/${filteredData[startingIndex]?.id}`}>
                         <img
                             className='object-cover h-full transition duration-500 ease-in-out group-hover:opacity-50'
                             src={filteredData[startingIndex]?.horizontal_image}
@@ -481,10 +159,12 @@ export default function OnGoingProjectList() {
                                 </svg>
                             </span>
                         </div>
+                        </Link>
                     </div>
                 )}
                 {
-                    filteredData[startingIndex + 1]?.vertical_image && (<div data-aos="fade-right" className="w-[47%] relative group lg:w-[30%] lg:h-[414px] h-[265px]" style={{ position: 'relative', cursor: 'pointer' }} onClick={() => navigate(`/ongoing-project/${filteredData[startingIndex + 1]?.id}`)}>
+                    filteredData[startingIndex + 1]?.vertical_image && (<div data-aos="fade-right" className="w-[47%] relative group lg:w-[30%] lg:h-[414px] h-[265px]" style={{ position: 'relative', cursor: 'pointer' }} >
+                        <Link to={`/ongoing-project/${filteredData[startingIndex + 1]?.id}`}>
                         <img className='object-cover h-full transition duration-500 ease-in-out hover:opacity-50'
                             src={filteredData[startingIndex + 1]?.vertical_image}
                             alt={""}
@@ -506,11 +186,13 @@ export default function OnGoingProjectList() {
                             </span>
 
                         </div>
-
+                        </Link>
                     </div >)
                 }
                 {
-                    filteredData[startingIndex + 2]?.vertical_image && (<div data-aos="fade-right" className='w-[47%] relative group lg:w-[32%] lg:h-[479px] h-[265px] ' style={{ position: 'relative', cursor: 'pointer' }} onClick={() => navigate(`/ongoing-project/${filteredData[startingIndex + 2]?.id}`)}>
+                    filteredData[startingIndex + 2]?.vertical_image && (<div data-aos="fade-right" className='w-[47%] relative group lg:w-[32%] lg:h-[479px] h-[265px] ' style={{ position: 'relative', cursor: 'pointer' }}   >
+            <Link to={`/ongoing-project/${filteredData[startingIndex + 2]?.id}`}>
+
                         <img className=' object-cover h-full transition duration-500 ease-in-out hover:opacity-50'
                             src={filteredData[startingIndex + 2]?.vertical_image}
                             alt={""}
@@ -532,12 +214,15 @@ export default function OnGoingProjectList() {
                             </span>
 
                         </div>
+                        </Link>
                     </div>)
                 }
 
 
                 {
-                    filteredData[startingIndex + 3]?.vertical_image && (<div data-aos="fade-right" className="w-full relative group lg:w-[32%] lg:h-[479px] h-[200px] " style={{ position: 'relative', cursor: 'pointer' }} onClick={() => navigate(`/ongoing-project/${filteredData[startingIndex + 3]?.id}`)}>
+                    filteredData[startingIndex + 3]?.vertical_image && (<div data-aos="fade-right" className="w-full relative group lg:w-[32%] lg:h-[479px] h-[200px] " style={{ position: 'relative', cursor: 'pointer' }}   >
+                        <Link to={`/ongoing-project/${filteredData[startingIndex + 3]?.id}`}>
+
                         <img className='object-cover h-full transition duration-500 ease-in-out hover:opacity-50'
                             src={filteredData[startingIndex + 3]?.vertical_image}
                             alt={""}
@@ -559,10 +244,12 @@ export default function OnGoingProjectList() {
                             </span>
 
                         </div>
+                        </Link>
                     </div>)
                 }
                 {
-                    filteredData[startingIndex + 4]?.vertical_image && (<div data-aos="fade-right" className="w-full relative group lg:w-[32%] lg:h-[479px] h-[200px] " style={{ position: 'relative', cursor: 'pointer' }} onClick={() => navigate(`/ongoing-project/${filteredData[startingIndex + 4]?.id}`)}>
+                    filteredData[startingIndex + 4]?.vertical_image && (<div data-aos="fade-right" className="w-full relative group lg:w-[32%] lg:h-[479px] h-[200px] " style={{ position: 'relative', cursor: 'pointer' }}   >
+                       <Link to={`/ongoing-project/${filteredData[startingIndex + 4]?.id}`}>
                         <img className='object-cover h-full transition duration-500 ease-in-out hover:opacity-50'
                             src={filteredData[startingIndex + 4]?.vertical_image}
                             alt={""}
@@ -584,10 +271,12 @@ export default function OnGoingProjectList() {
                             </span>
 
                         </div>
+                        </Link>
                     </div>)
                 }
                 {
-                    filteredData[startingIndex + 5]?.horizontal_image && (<div data-aos="fade-right" className=' w-full relative group lg:w-[48%] lg:h-[289px] h-[200px] transition duration-500 ease-in-out hover:opacity-50' style={{ position: 'relative', cursor: 'pointer' }} onClick={() => navigate(`/ongoing-project/${filteredData[startingIndex + 5]?.id}`)}>
+                    filteredData[startingIndex + 5]?.horizontal_image && (<div data-aos="fade-right" className=' w-full relative group lg:w-[48%] lg:h-[289px] h-[200px] transition duration-500 ease-in-out hover:opacity-50' style={{ position: 'relative', cursor: 'pointer' }}   >
+                       <Link to={`/ongoing-project/${filteredData[startingIndex + 5]?.id}`}>
                         <img className=' object-cover h-full transition duration-500 ease-in-out group-hover:opacity-50'
                             src={filteredData[startingIndex + 5]?.horizontal_image}
                             alt={""}
@@ -609,10 +298,12 @@ export default function OnGoingProjectList() {
                             </span>
 
                         </div>
+                        </Link>
                     </div>)
                 }
                 {
-                    filteredData[startingIndex + 6]?.horizontal_image && (<div data-aos="fade-right" className=' w-full relative group lg:w-[48%] lg:h-[289px] h-[200px] transition duration-500 ease-in-out hover:opacity-50' style={{ position: 'relative', cursor: 'pointer' }} onClick={() => navigate(`/ongoing-project/${filteredData[startingIndex + 6]?.id}`)}>
+                    filteredData[startingIndex + 6]?.horizontal_image && (<div data-aos="fade-right" className=' w-full relative group lg:w-[48%] lg:h-[289px] h-[200px] transition duration-500 ease-in-out hover:opacity-50' style={{ position: 'relative', cursor: 'pointer' }}   >
+                      <Link to={`/ongoing-project/${filteredData[startingIndex + 6]?.id}`}>
                         <img className=' object-cover h-full transition duration-500 ease-in-out group-hover:opacity-50'
                             src={filteredData[startingIndex + 6]?.horizontal_image}
                             alt={""}
@@ -634,6 +325,7 @@ export default function OnGoingProjectList() {
                             </span>
 
                         </div>
+                        </Link>
                     </div>)
                 }
 

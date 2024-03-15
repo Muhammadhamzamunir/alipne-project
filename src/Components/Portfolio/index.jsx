@@ -170,7 +170,7 @@ export default function Portfolio() {
                 <div className='flex flex-col lg:flex-row w-full gap-3 gap-y-2 mb-12 lg:h-[613px]'>
                   <div className='w-full flex flex-col-reverse lg:flex-col gap-3  lg:basis-[429px]  '>
                     {filteredData[0]?.url && (
-                      <div className='relative group w-full h-[179px] lg:h-[240px] cursor-pointer'
+                      <div className='relative group w-full h-[200px] lg:h-[240px] cursor-pointer'
                       >
                         <Link to={`/project/${filteredData[0].id}`}>
                           <img src={filteredData[0]?.url} alt="No Data" className='object-fill w-full h-full transition duration-500 ease-in-out hover:opacity-50' loading='lazy' />

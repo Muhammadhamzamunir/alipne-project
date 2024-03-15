@@ -3,7 +3,7 @@
   --s: .45em;
   --color: #C2C2C2;
 
-  padding: calc(.4em + var(--s)) calc(.8em + var(--s));
+  padding: calc(.4em + var(--s)) calc(.9em + var(--s));
   /* padding: 15px ; */
   color: var(--color);
   --_p: var(--s);
