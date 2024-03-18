@@ -140,7 +140,7 @@ export default function Navbar() {
                 backgroundPosition: "0px 15px",
                 backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(${nav_bg})`
             } : pathname === "/services" ? {
-                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(${Services_bg})`
+                // backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(${Services_bg})`
             } : {}}>
 
                 <div className="flex justify-between md:items-center lg:items-start px-2 md:pl-4 md:pr-0  ">

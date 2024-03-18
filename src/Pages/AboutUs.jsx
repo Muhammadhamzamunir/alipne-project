@@ -149,7 +149,7 @@ export default function AboutUs() {
               excellence.{" "}
             </p>
           </div>
-          <div className="flex mt-8 flex-wrap-reverse mt-16">
+          <div className="flex  flex-wrap-reverse mt-24">
             <div className=" md:pr-5 md:w-[65%]" data-aos="fade-left">
               <h1 className="font-audiowide text-3xl pb-4 uppercase">
                 Our Story
@@ -416,7 +416,7 @@ export default function AboutUs() {
               <img
                 src={male_owner}
                 alt="Owner Image"
-                className="w-[98%] m-auto   object-cover h-[400px] lg:h-auto"
+                className="w-[100%] m-auto   object-cover h-[400px] lg:h-auto"
               />
               <div className="p-4 ">
                 <h3 className="font-audiowide text-2xl  ">
@@ -472,7 +472,7 @@ export default function AboutUs() {
               <img
                 src={female_owner}
                 alt="Owner Image"
-                className="w-[98%] m-auto  object-cover h-[400px] lg:h-auto"
+                className="w-[100%] m-auto  object-cover h-[400px] lg:h-auto"
               />
               <div className="p-4">
                 <h3 className="font-audiowide text-2xl  ">

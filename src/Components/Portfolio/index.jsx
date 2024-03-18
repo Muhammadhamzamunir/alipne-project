@@ -49,7 +49,7 @@ export default function Portfolio() {
     })
     setAllData(allPortofolioData);
     setAllCategories(filteredCategories);
-    console.log(allPortofolioData);
+    // console.log(allPortofolioData);
   }
 
 
@@ -72,7 +72,7 @@ export default function Portfolio() {
 
   useEffect(() => {
     const filteredPortfolioData = alldata?.filter(data => data.category === activeCategory) || [];
-
+    console.log(filteredPortfolioData);
     // Sorting logic to prioritize horizontal_image
     filteredPortfolioData.sort((a, b) => {
       if (a.horizontal_image && !b.horizontal_image) {
