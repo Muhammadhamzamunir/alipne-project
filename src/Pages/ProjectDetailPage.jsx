@@ -5,7 +5,8 @@ import Button from '../Components/Button';
 import { FaLocationDot } from "react-icons/fa6";
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
-import about_bg from '../assets/images/about-bg.jpg';
+import detailPage_bg_1 from '../assets/images/DetailPage/detailPage-bg1.png';
+import detailPage_bg_2 from '../assets/images/DetailPage/detailPage-bg-2.png';
 import { useParams } from 'react-router-dom';
 import Carousel_Diversity from '../Components/Carousel';
 import API_Call from '../Components/API_Call';
@@ -128,17 +129,18 @@ export default function ProjectDetailPage() {
 
     return (
         <>
-            {projectData ? (<>     <div className="md:flex justify-center items-center w-full relative lg:bottom-36 md:bottom-1 bottom-0 sm:bottom-5  mb-2 md:mb-0  bg-cover bg-rigth py-3" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(${about_bg})`, backgroundRepeat: "no-repeat" }}>
-                <div className="md:w-3/4 sm:w-full px-6 md:px-0">
-                    <h6 className='mb-1 text-amber-600 text-[#C1AE69]'>Home &gt; Portfolio &gt; {projectData[0].project_name}</h6>
-                    <div className='flex items-center m-0'>
-                        <h3 className='font-audiowide lg:text-2xl text-1xl  uppercase md:mr-4 mr-2'> {projectData[0].project_name}</h3>
-                        <p className='font-light flex items-center md:gap-3 gap-1   leading-loose tracking-wider' style={{ marginBottom: "0px !important" }}><FaLocationDot /> {projectData[0].area}</p>
-                    </div>
-                    <p className='font-light leading-loose tracking-wider'>
-                        {projectData[0].location}                  </p>
+            {projectData ? (<>
+                <div className="md:flex justify-center   h-auto w-full relative lg:bottom-36 md:bottom-1 bottom-0 sm:bottom-5  mb-2 md:mb-0  bg-cover bg-rigth py-3" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.0), rgba(13, 13, 13, 0.9)), url(${detailPage_bg_1}),url(${detailPage_bg_2})`, backgroundRepeat: "no-repeat", backgroundPosition: "100% 100%", backgroundSize: "100% 100%", backgroundAttachment: "fixed", }}>
+                    <div className="md:w-3/4 sm:w-full px-6 md:px-0">
+                        <h6 className='mb-1 text-amber-600 text-[#C1AE69]'>Home &gt; Portfolio &gt; {projectData[0].project_name}</h6>
+                        <div className='flex items-center m-0'>
+                            <h3 className='font-audiowide lg:text-2xl text-1xl  uppercase md:mr-4 mr-2'> {projectData[0].project_name}</h3>
+                            <p className='font-light flex items-center md:gap-3 gap-1   leading-loose tracking-wider' style={{ marginBottom: "0px !important" }}><FaLocationDot /> {projectData[0].location}</p>
+                        </div>
+                        <p className='font-light leading-loose tracking-wider'>
+                            {projectData[0].area}                  </p>
 
-                    {/* <style>{
+                        {/* <style>{
 
                         ` 
                         @media screen and (min-width: 860px) {
@@ -151,69 +153,69 @@ export default function ProjectDetailPage() {
   }}`
                     }
                     </style> */}
-                    <style>{
-                        ` @media screen and (min-width: 860px) {
+                        <style>{
+                            ` @media screen and (min-width: 860px) {
                         .carousel-image{
     width: 450px !important;
     height: 638px !important;
     object-fit: cover;
     border-radius: 0px !important;
   }}`
-                    }
-                    </style>
+                        }
+                        </style>
 
 
-                    <div style={{ textAlign: "center", marginBottom: "0px" }}>
-                        {verticalImagesData.length > 0 ? (
-                            <div style={{
-                                padding: "0 0px"
-                            }}>
-                                <Carousel
-                                    data={verticalImagesData}
-                                    time={2000}
-                                    width="950px"
-                                    height="500px"
-                                    captionStyle={captionStyle}
-                                    radius="10px"
-                                    slideNumber={false}
-                                    slideNumberStyle={slideNumberStyle}
-                                    captionPosition="bottom"
-                                    automatic={false}
-                                    dots={true}
-                                    pauseIconColor="white"
-                                    pauseIconSize="40px"
-                                    slideBackgroundColor="darkgrey"
-                                    slideImageFit="cover"
-                                    thumbnails={true}
-                                    showNavBtn={true}
-                                    thumbnailWidth="100px" touchMoveDefaultEvents={true}
-                                    style={{
-                                        textAlign: "center",
-                                        maxWidth: "950px",
-                                        maxHeight: "500px",
-                                        margin: "40px auto",
-                                        borderRadius: "0px"
-                                    }}
-                                />
-                            </div>
+                        <div style={{ textAlign: "center", marginBottom: "0px" }}>
+                            {verticalImagesData.length > 0 ? (
+                                <div style={{
+                                    padding: "0 0px"
+                                }}>
+                                    <Carousel
+                                        data={verticalImagesData}
+                                        time={2000}
+                                        width="950px"
+                                        height="500px"
+                                        captionStyle={captionStyle}
+                                        radius="10px"
+                                        slideNumber={false}
+                                        slideNumberStyle={slideNumberStyle}
+                                        captionPosition="bottom"
+                                        automatic={false}
+                                        dots={true}
+                                        pauseIconColor="white"
+                                        pauseIconSize="40px"
+                                        slideBackgroundColor="darkgrey"
+                                        slideImageFit="cover"
+                                        thumbnails={true}
+                                        showNavBtn={true}
+                                        thumbnailWidth="100px" touchMoveDefaultEvents={true}
+                                        style={{
+                                            textAlign: "center",
+                                            maxWidth: "950px",
+                                            maxHeight: "500px",
+                                            margin: "40px auto",
+                                            borderRadius: "0px"
+                                        }}
+                                    />
+                                </div>
 
-                        ) : (
-                            <div className="flex h-[50vh]  justify-center items-center m-auto pt-[40px]">
-                                <img src="loading-gif.gif" alt="" className='w-[100px] md:pt-44 md:my-44' />
+                            ) : (
+                                <div className="flex h-[50vh]  justify-center items-center m-auto pt-[40px]">
+                                    <img src="loading-gif.gif" alt="" className='w-[100px] md:pt-44 md:my-44' />
 
-                            </div>)}
+                                </div>)}
+
+                        </div>
 
                     </div>
-
                 </div>
-            </div>
 
 
                 <div className="md:flex md:mt-32 justify-center items-center w-full  py-3" >
                     <div className="md:w-3/4 sm:w-full px-6 md:px-0  md:mt-44">
                         {horizontalImageData.length > 0 && (
                             <AliceCarousel
-                                autoPlay
+                                // autoPlay
                                 infinite
                                 activeIndex={0}
                                 autoPlayInterval={7000}

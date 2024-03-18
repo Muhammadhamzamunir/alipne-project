@@ -1,14 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import ServicesSliderIMG1 from "../assets/images/ServicesSliderIMG1.png";
-import ServicesSliderIMG2 from "../assets/images/ServicesSliderIMG2.png";
-import ServicesSliderIMG3 from "../assets/images/ServicesSliderIMG3.png";
-import ServicesSliderIMG4 from "../assets/images/ServicesSliderIMG4.png";
-import ServicesSliderIMG5 from "../assets/images/ServicesSliderIMG5.png";
-import ServicesSliderIMG6 from "../assets/images/ServicesSliderIMG6.png";
-import ServicesSliderIMG7 from "../assets/images/ServicesSliderIMG7.png";
-import Services_bg from "../assets/images/Services_bg.png";
+
 import services_crousal_bg from "../assets/images/services-crousal-bg.png";
 import './Services.css'
 import art from "../assets/images/art.jpeg";
@@ -35,60 +28,7 @@ export default function Services() {
         const data = await fetchData("banner?page=services");
         const byTheNumberData = await fetchData("byTheNumber");
         const testimonialData = await fetchData("testimonial");
-        // const data = [
-        //   {
-        //     "id": 3,
-        //     "page": "services",
-        //     "images": [
-        //       {
-        //         "id": 576,
-        //         "url": "https://architecture.flashcitytours.com/storage/576/WhatsApp-Image-2024-03-05-at-5.24.28-PM.jpeg"
-        //       },
-        //       {
-        //         "id": 577,
-        //         "url": "https://architecture.flashcitytours.com/storage/577/WhatsApp-Image-2024-03-05-at-5.24.29-PM.jpeg"
-        //       },
-        //       {
-        //         "id": 578,
-        //         "url": "https://architecture.flashcitytours.com/storage/578/WhatsApp-Image-2024-03-05-at-5.24.29-PM-(1).jpeg"
-        //       }
-        //     ]
-        //   }, {
-        //     "id": 3,
-        //     "page": "services",
-        //     "images": [
-        //       {
-        //         "id": 576,
-        //         "url": "https://architecture.flashcitytours.com/storage/576/WhatsApp-Image-2024-03-05-at-5.24.28-PM.jpeg"
-        //       },
-        //       {
-        //         "id": 577,
-        //         "url": "https://architecture.flashcitytours.com/storage/577/WhatsApp-Image-2024-03-05-at-5.24.29-PM.jpeg"
-        //       },
-        //       {
-        //         "id": 578,
-        //         "url": "https://architecture.flashcitytours.com/storage/578/WhatsApp-Image-2024-03-05-at-5.24.29-PM-(1).jpeg"
-        //       }
-        //     ]
-        //   }, {
-        //     "id": 3,
-        //     "page": "services",
-        //     "images": [
-        //       {
-        //         "id": 576,
-        //         "url": "https://architecture.flashcitytours.com/storage/576/WhatsApp-Image-2024-03-05-at-5.24.28-PM.jpeg"
-        //       },
-        //       {
-        //         "id": 577,
-        //         "url": "https://architecture.flashcitytours.com/storage/577/WhatsApp-Image-2024-03-05-at-5.24.29-PM.jpeg"
-        //       },
-        //       {
-        //         "id": 578,
-        //         "url": "https://architecture.flashcitytours.com/storage/578/WhatsApp-Image-2024-03-05-at-5.24.29-PM-(1).jpeg"
-        //       }
-        //     ]
-        //   }
-        // ]
+
         setByTheNumber(byTheNumberData)
         setTestimonials(testimonialData)
         data.forEach(element => {
@@ -106,15 +46,15 @@ export default function Services() {
 
   }, []);
 
-  //   const handleUpArrowClick = () => {
-  //     window.scrollTo({
-  //         top: 0,
-  //         behavior: "smooth",
-  //     });
-  // }
-  // useEffect(() => {
-  //     handleUpArrowClick();
-  // })
+  const handleUpArrowClick = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }
+  useEffect(() => {
+    handleUpArrowClick();
+  })
 
   // const responsive = {
   //   desktop: {
@@ -228,7 +168,7 @@ export default function Services() {
         {
           heroImages?.map((image, index) => (
 
-            <img src={image} alt="" className={`w-[184px] h-[245px] mr-5 ${index % 2 !== 0 ? "mt-20 " : ""}`} />
+            <img src={image} alt="" key={index} className={`w-[184px] h-[245px] mr-5 ${index % 2 !== 0 ? "mt-20 " : ""}`} />
 
           ))
         }
@@ -288,7 +228,7 @@ export default function Services() {
       <div className="bg-contain  relative  lg:bottom-28 md:bottom-1 bottom-5 sm:bottom-5" >
         <div className="md:flex  justify-center items-center w-full  p-1  mb-2 md:mb-0">
           <div className="md:w-3/4 sm:w-full px-6 md:px-0">
-            <h1 data-aos="fade-down" className="font-audiowide text-3xl  uppercase">Services</h1>
+            <h1 data-aos="fade-down" className="font-audiowide text-3xl  uppercase">Services</h1><br />
             <p data-aos="fade-down" className="font-light leading-loose tracking-wider">
               Embark on a journey of architectural transformation with Alpine
               Architect. Our specialized services breathe life into conceptual
@@ -342,7 +282,7 @@ export default function Services() {
 
               <div class="border-b border-gray-400 w-20 m-5 group-hover:text-[#C1AE69]"></div>
 
-              <h3 class="font-audiowide text-2xl pb-6 uppercase group-hover:text-[#C1AE69]">
+              <h3 class="font-audiowide text-2xl pb-4 uppercase group-hover:text-[#C1AE69]">
                 Residential
               </h3>
 
@@ -360,7 +300,7 @@ export default function Services() {
               </svg>
               <div className="border-b border-gray-400 w-20 m-5 group-hover:text-[#C1AE69]"></div>
 
-              <h3 className="font-audiowide text-2xl pb-6 uppercase group-hover:text-[#C1AE69]">
+              <h3 className="font-audiowide text-2xl pb-4 uppercase group-hover:text-[#C1AE69]">
                 Commercial
               </h3>
 
@@ -376,9 +316,9 @@ export default function Services() {
               <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M57.2935 45.9601L45.9601 57.2935L32.0935 43.4268L36.8135 38.7068L39.4801 41.3735L46.0668 34.7601L49.8535 38.5468L45.9601 42.3335L48.7868 45.0001L52.5735 41.2668L57.2935 45.9601ZM14.6268 25.8801L0.706787 12.0401L12.0401 0.706787L16.7335 5.42679L10.1468 12.0401L13.0001 14.8668L19.5601 8.25345L23.3468 12.0401L19.5601 15.8001L22.2268 18.4668L14.6268 25.8801ZM34.4935 21.0001L37.0001 23.4801L12.7868 47.6668H10.3335V45.2135L34.4935 21.0001ZM44.1201 5.00012C43.4535 5.00012 42.7601 5.24012 42.2268 5.77345L37.3201 10.6535L47.3201 20.6535L52.2268 15.6668C53.2668 14.6268 53.2668 13.0001 52.2268 11.9068L45.9868 5.77345C45.4801 5.26679 44.8135 5.00012 44.1201 5.00012ZM34.4935 13.4801L5.00012 43.0001V53.0001H15.0001L44.4935 23.4801L34.4935 13.4801Z" className="group-hover:fill-[#C1AE69]" fill="white" />
               </svg>
-              <div className="border-b border-gray-400 w-20 m-5 group-hover:text-[#C1AE69]"></div>
+              <div className="border-b border-gray-400 w-20 m-4 group-hover:text-[#C1AE69]"></div>
 
-              <h3 className="font-audiowide text-2xl pb-6 uppercase group-hover:text-[#C1AE69]">
+              <h3 className="font-audiowide text-2xl pb-4 uppercase group-hover:text-[#C1AE69]">
                 Hospitality
               </h3>
 
@@ -392,13 +332,13 @@ export default function Services() {
             <div
               data-aos="flip-up"
 
-              class="p-4  md:w-[32%] w-full hover:border-[#C1AE69] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col items-center group">
+              class="p-4  md:w-[32%] w-full hover:border-[#C1AE69] bg-white border border-gray-200  shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col items-center group">
               <svg width="51" height="54" viewBox="0 0 51 54" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12.3333 24.6667H6.99992V43.3334H12.3333V24.6667ZM28.3333 24.6667H22.9999V43.3334H28.3333V24.6667ZM50.9999 48.6667H0.333252V54.0001H50.9999V48.6667ZM44.3333 24.6667H38.9999V43.3334H44.3333V24.6667ZM25.6666 6.69341L39.5599 14.0001H11.7733L25.6666 6.69341ZM25.6666 0.666748L0.333252 14.0001V19.3334H50.9999V14.0001L25.6666 0.666748Z" className="group-hover:fill-[#C1AE69]" fill="white" />
               </svg>
               <div className="border-b border-gray-400 w-20 m-5 group-hover:text-[#C1AE69]"></div>
 
-              <h3 className="font-audiowide text-2xl pb-6 uppercase group-hover:text-[#C1AE69]">
+              <h3 className="font-audiowide text-2xl pb-4 uppercase group-hover:text-[#C1AE69]">
                 Institutional
               </h3>
 
@@ -415,7 +355,7 @@ export default function Services() {
               </svg>
               <div className="border-b border-gray-400 w-20 m-5 group-hover:text-[#C1AE69]"></div>
 
-              <h3 className="font-audiowide text-2xl pb-6 uppercase group-hover:text-[#C1AE69]">
+              <h3 className="font-audiowide text-2xl pb-4 uppercase group-hover:text-[#C1AE69]">
                 Master Planning
               </h3>
 
@@ -434,7 +374,7 @@ export default function Services() {
               </svg>
               <div className="border-b border-gray-400 w-20 m-5 group-hover:text-[#C1AE69]"></div>
 
-              <h3 className="font-audiowide text-2xl pb-6 uppercase group-hover:text-[#C1AE69]">
+              <h3 className="font-audiowide text-2xl pb-4 uppercase group-hover:text-[#C1AE69]">
                 Industrial &
                 Infrastructure
               </h3>
@@ -452,7 +392,7 @@ export default function Services() {
               </svg>
               <div className="border-b border-gray-400 w-20 m-5 group-hover:text-[#C1AE69]"></div>
 
-              <h3 className="font-audiowide text-2xl pb-6 uppercase group-hover:text-[#C1AE69]">
+              <h3 className="font-audiowide text-2xl pb-4 uppercase group-hover:text-[#C1AE69]">
                 Landscape &
                 Urbanism
               </h3>
@@ -475,7 +415,7 @@ export default function Services() {
 
               <div className="border-b border-gray-400 w-20 m-5 group-hover:text-[#C1AE69]"></div>
 
-              <h3 className="font-audiowide text-2xl pb-6 uppercase group-hover:text-[#C1AE69]">
+              <h3 className="font-audiowide text-2xl pb-4 uppercase group-hover:text-[#C1AE69]">
 
                 Redevelopment
                 Projects
@@ -500,7 +440,7 @@ export default function Services() {
 
               <div className="border-b border-gray-400 w-20 m-5 group-hover:text-[#C1AE69]"></div>
 
-              <h3 className="font-audiowide text-2xl pb-6 uppercase group-hover:text-[#C1AE69]">
+              <h3 className="font-audiowide text-2xl pb-4 uppercase group-hover:text-[#C1AE69]">
 
                 Exterior Façade
                 Design specialist
@@ -521,7 +461,7 @@ export default function Services() {
       <div data-aos="fade-down" className="md:flex justify-center items-center w-full relative md:bottom-12 bottom-6 sm:bottom-5  mb-2 md:mb-0">
         <div
 
-          className="md:w-3/4 sm:w-full px-6 md:px-0">
+          className="md:w-3/4 sm:w-full px-6 md:px-0 my-12">
           <h1 className="font-audiowide text-3xl pb-6 uppercase">
             By the Numbers
           </h1>
@@ -562,12 +502,12 @@ export default function Services() {
             <div
               data-aos="fade-left"
               className="p-4 md:w-1/2 lg:w-1/2">
-              <div className="relative">
+              <div className="relative h-[90%]">
                 {/* Larger image */}
                 <img
                   src={art}
                   alt=""
-                  className="w-[80%] h-[80%] object-cover"
+                  className="w-[80%] h-[100%] object-cover"
                 />
 
                 <img
@@ -584,7 +524,7 @@ export default function Services() {
               className="p-4 md:w-1/2 lg:w-1/2">
               <h1 className="font-audiowide leading-9 text-3xl mb-2 mt-4 md:mt-0">
                 14 Years of Architectural Artistry
-              </h1>
+              </h1><br />
               <p className="font-light mb-10">
                 With a legacy spanning over 14 years, Alpine Architect has been
                 a beacon of architectural innovation. Each year adds to our
@@ -651,7 +591,7 @@ export default function Services() {
 
 
       <div className="bg-contain" style={{ backgroundImage: ` url(${services_crousal_bg})`, backgroundPosition: "left", backgroundRepeat: "no-repeat", }}>
-        <div className="md:flex flex-col justify-start  items-center w-[90%] md:w-[80%] m-auto mt-4 " >
+        <div className="md:flex flex-col justify-start items-center w-[90%] md:w-[80%] m-auto mt-12 " >
           <h1 className="self-start md:ml-32 font-audiowide text-3xl   uppercase mb-5">Our CLient Say</h1>
           {
             testimonials.length > 0 && (
@@ -671,10 +611,10 @@ export default function Services() {
                     className="w-full h-auto lg:h-[200px] md:w-[80%]  overflow-y-hidden lg:overflow-y-auto m-auto  review"
 
                   >
-                    <div className="p-5 bg-secondary  min-h-80" >
-                      <h1 className="font-audiowide text-left text-2xl pb-2 uppercase">
+                    <div className="p-5 bg-[#242424]  min-h-80" >
+                      <h4 className="font-audiowide text-left text-2xl pb-2 uppercase">
                         {review.client_name}
-                      </h1>
+                      </h4>
                       <h3 className="font-light text-left leading-loose tracking-wider">
                         {review.client_designation}
                       </h3>

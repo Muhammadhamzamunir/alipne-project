@@ -19,7 +19,7 @@ export default function Root() {
   return (
     <>
       {isLoading ? (
-        <div className='h-[100vh] w-full  flex justify-center items-center'>
+        <div className='h-[100vh] w-full bg-[#000000] flex justify-center items-center'>
           <img src="loader.gif" alt="" className='w-[300px] ' />
         </div>
       ) : (

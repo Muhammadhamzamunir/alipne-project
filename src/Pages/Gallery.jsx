@@ -21,7 +21,7 @@ export default function Gallery() {
     const [contentList, setContentList] = useState([]);
     const [scrollPercent, setScrollPercent] = useState(0);
     const { fetchData } = API_Call();
-    const categories = ["All"];
+    const categories = ["All", "Residential", "Commercial", "Exterior Facade Design Specialist", "Master Planning", "Hospitality", "Institutional", "Insdustrial & Infrastructure", "Landscape & Urbanism", "Insdustrial & Infrastructure"];
 
     useEffect(() => {
         fetchDataFromAPI();
@@ -241,78 +241,78 @@ export default function Gallery() {
                 <div className="md:w-3/4 sm:w-full px-6 md:px-0" >
 
 
-                    <div className=' flex flex-row items-center justify-evenly  gap-[1%] mb-2 md:mb-5 '>
+                    <div className=' flex flex-row items-center justify-evenly  md:gap-3 gap-2 mb-2 md:mb-5 '>
                         {filtered_horizontal_images[horizontal_image_index] && <div className='w-1/2 lg:w-1/2 '>
-                            <img src={filtered_horizontal_images[horizontal_image_index].horizontal_image} alt="" className='md:h-[282px] h-[87px] object-cover w-full cursor-pointer ' onClick={() => openModal(horizontal_image_index, "horizontal")} />
+                            <img src={filtered_horizontal_images[horizontal_image_index].horizontal_image} alt="" className='md:h-[282px]  object-cover w-full cursor-pointer ' onClick={() => openModal(horizontal_image_index, "horizontal")} />
 
                         </div>}
                         {filtered_horizontal_images[horizontal_image_index + 1] && <div className='w-1/2 lg:w-1/2 '>
-                            <img src={filtered_horizontal_images[horizontal_image_index + 1]?.horizontal_image} alt="" className='  md:h-[282px] h-[87px] object-cover w-full cursor-pointer ' onClick={() => openModal(horizontal_image_index + 1, "horizontal")} />
+                            <img src={filtered_horizontal_images[horizontal_image_index + 1]?.horizontal_image} alt="" className='  md:h-[282px]  object-cover w-full cursor-pointer ' onClick={() => openModal(horizontal_image_index + 1, "horizontal")} />
 
                         </div>}
                     </div>
 
-                    <div className=' flex flex-row items-center justify-evenly  gap-[1%] mb-2 md:mb-5 '>
+                    <div className=' flex flex-row items-center justify-evenly  md:gap-3 gap-2  '>
                         {filtered_horizontal_images[horizontal_image_index + 2] && <div className='w-1/2 lg:w-1/2 ' onClick={() => openModal(horizontal_image_index + 2, "horizontal")}>
-                            <img src={filtered_horizontal_images[horizontal_image_index + 2]?.horizontal_image} alt="" className='md:h-[282px]  h-[87px] w-full cursor-pointer' />
+                            <img src={filtered_horizontal_images[horizontal_image_index + 2]?.horizontal_image} alt="" className='md:h-[282px]   w-full cursor-pointer mb-2 md:mb-5' />
 
                         </div>}
                         {filtered_horizontal_images[horizontal_image_index + 3] && <div className='w-1/2 lg:w-1/2 ' onClick={() => openModal(horizontal_image_index + 3, "horizontal")}>
-                            <img src={filtered_horizontal_images[horizontal_image_index + 3]?.horizontal_image} alt="" className='  md:h-[282px] h-[87px] w-full cursor-pointer' />
+                            <img src={filtered_horizontal_images[horizontal_image_index + 3]?.horizontal_image} alt="" className='  md:h-[282px]  w-full cursor-pointer mb-2 md:mb-5' />
 
                         </div>}
                     </div>
 
-                    <div className=' flex flex-row items-center justify-evenly  gap-[1%] mb-2 md:mb-5 '>
+                    <div className=' flex flex-row items-center justify-evenly md:gap-3 gap-2 '>
                         {filtered_verticle_images[verticle_image_index] && <div className='w-1/3 lg:w-1/3 cursor-pointer ' onClick={() => openModal(verticle_image_index, "verticle")}>
-                            <img src={filtered_verticle_images[verticle_image_index]?.vertical_image} alt="" className='md:h-[556px] h-[178px] md:w-[325px] cursor-pointer ' />
+                            <img src={filtered_verticle_images[verticle_image_index]?.vertical_image} alt="" className='md:h-[556px] h-[178px] w-[100%] cursor-pointer mb-2 md:mb-5 ' />
 
                         </div>}
                         {filtered_verticle_images[verticle_image_index + 1] && <div className='w-1/3 lg:w-1/3 cursor-pointer' onClick={() => openModal(verticle_image_index + 1, "verticle")}>
-                            <img src={filtered_verticle_images[verticle_image_index + 1]?.vertical_image} alt="" className='cursor-pointer h-[178px] md:h-[556px] md:w-[325px] ' />
+                            <img src={filtered_verticle_images[verticle_image_index + 1]?.vertical_image} alt="" className='cursor-pointer h-[178px] md:h-[556px] w-[100%] mb-2 md:mb-5 ' />
 
                         </div>}
                         {filtered_verticle_images[verticle_image_index + 2] && <div className='w-1/3 lg:w-1/3 cursor-pointer' onClick={() => openModal(verticle_image_index + 2, "verticle")}>
-                            <img src={filtered_verticle_images[verticle_image_index + 2]?.vertical_image} alt="" className='  md:h-[556px]  h-[178px] md:w-[325px] cursor-pointer' />
+                            <img src={filtered_verticle_images[verticle_image_index + 2]?.vertical_image} alt="" className='  md:h-[556px]  h-[178px] w-[100%] cursor-pointer mb-2 md:mb-5 ' />
 
                         </div>}
                     </div>
 
-                    <div className=' flex flex-row items-center justify-evenly  gap-[1%] mb-2 md:mb-5 '>
+                    <div className=' flex flex-row items-center justify-evenly  md:gap-3 gap-2  '>
                         {filtered_horizontal_images[horizontal_image_index + 4] && <div className='w-1/2 lg:w-1/2 cursor-pointer'>
-                            <img src={filtered_horizontal_images[horizontal_image_index + 4].horizontal_image} alt="" className='md:h-[282px]  h-[87px] w-full object-cover cursor-pointer ' onClick={() => openModal(horizontal_image_index + 4, "horizontal")} />
+                            <img src={filtered_horizontal_images[horizontal_image_index + 4].horizontal_image} alt="" className='md:h-[282px]   w-full object-cover cursor-pointer mb-2 md:mb-5' onClick={() => openModal(horizontal_image_index + 4, "horizontal")} />
 
                         </div>}
                         {filtered_horizontal_images[horizontal_image_index + 5] && <div className='w-1/2 lg:w-1/2 cursor-pointer'>
-                            <img src={filtered_horizontal_images[horizontal_image_index + 5]?.horizontal_image} alt="" className='  md:h-[282px] h-[87px] w-full object-cover cursor-pointer ' onClick={() => openModal(horizontal_image_index + 5, "horizontal")} />
+                            <img src={filtered_horizontal_images[horizontal_image_index + 5]?.horizontal_image} alt="" className='  md:h-[282px]  w-full object-cover cursor-pointer mb-2 md:mb-5' onClick={() => openModal(horizontal_image_index + 5, "horizontal")} />
 
                         </div>}
                     </div>
-                    <div className=' flex flex-row items-center justify-evenly  gap-[1%] mb-2 md:mb-5 '>
+                    <div className=' flex flex-row items-center justify-evenly  md:gap-3 gap-2 mb-2 md:mb-5 '>
                         {filtered_verticle_images[verticle_image_index + 3] && <div className='w-1/3 lg:w-1/3 cursor-pointer ' onClick={() => openModal(verticle_image_index + 3, "verticle")}>
-                            <img src={filtered_verticle_images[verticle_image_index + 3]?.vertical_image} alt="" className='md:h-[556px] h-[178px] md:w-[325px] cursor-pointer ' />
+                            <img src={filtered_verticle_images[verticle_image_index + 3]?.vertical_image} alt="" className='md:h-[556px] h-[178px] w-[100%] cursor-pointer ' />
 
                         </div>}
                         {filtered_verticle_images[verticle_image_index + 4] && <div className='w-1/3 lg:w-1/3 cursor-pointer' onClick={() => openModal(verticle_image_index + 4, "verticle")}>
-                            <img src={filtered_verticle_images[verticle_image_index + 4]?.vertical_image} alt="" className='cursor-pointer h-[178px]  md:h-[556px] md:w-[325px] ' />
+                            <img src={filtered_verticle_images[verticle_image_index + 4]?.vertical_image} alt="" className='cursor-pointer h-[178px]  md:h-[556px] w-[100%] ' />
 
                         </div>}
                         {filtered_verticle_images[verticle_image_index + 5] && <div className='w-1/3 lg:w-1/3 cursor-pointer' onClick={() => openModal(verticle_image_index + 5, "verticle")}>
-                            <img src={filtered_verticle_images[verticle_image_index + 5]?.vertical_image} alt="" className=' h-[178px]  md:h-[556px] md:w-[325px] cursor-pointer' />
+                            <img src={filtered_verticle_images[verticle_image_index + 5]?.vertical_image} alt="" className=' h-[178px]  md:h-[556px] w-[100%] cursor-pointer' />
 
                         </div>}
                     </div>
-                    <div className=' flex flex-row items-center justify-evenly  gap-[1%]  '>
+                    <div className=' flex flex-row items-center justify-evenly  md:gap-3 gap-2  '>
                         {filtered_verticle_images[verticle_image_index + 6] && <div className='w-1/3 lg:w-1/3 cursor-pointer ' onClick={() => openModal(verticle_image_index + 6, "verticle")}>
-                            <img src={filtered_verticle_images[verticle_image_index + 6]?.vertical_image} alt="" className='md:h-[556px] h-[178px] md:w-[325px] cursor-pointer ' />
+                            <img src={filtered_verticle_images[verticle_image_index + 6]?.vertical_image} alt="" className='md:h-[556px] h-[178px] w-[100%] cursor-pointer ' />
 
                         </div>}
                         {filtered_verticle_images[verticle_image_index + 7] && <div className='w-1/3 lg:w-1/3 cursor-pointer' onClick={() => openModal(verticle_image_index + 7, "verticle")}>
-                            <img src={filtered_verticle_images[verticle_image_index + 7]?.vertical_image} alt="" className='cursor-pointer h-[178px] md:h-[556px] md:w-[325px] ' />
+                            <img src={filtered_verticle_images[verticle_image_index + 7]?.vertical_image} alt="" className='cursor-pointer h-[178px] md:h-[556px] w-[100%] ' />
 
                         </div>}
                         {filtered_verticle_images[verticle_image_index + 8] && <div className='w-1/3 lg:w-1/3 cursor-pointer' onClick={() => openModal(verticle_image_index + 8, "verticle")}>
-                            <img src={filtered_verticle_images[verticle_image_index + 8]?.vertical_image} alt="" className='  md:h-[556px] h-[178px] md:w-[325px] cursor-pointer' />
+                            <img src={filtered_verticle_images[verticle_image_index + 8]?.vertical_image} alt="" className='  md:h-[556px] h-[178px] w-[100%] cursor-pointer' />
 
                         </div>}
                     </div>

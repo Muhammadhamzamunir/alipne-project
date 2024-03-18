@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import aboutUs_hero from "../assets/images/aboutUs-hero.png";
 import male_owner from "../assets/images/male-Owner.jpg";
 import female_owner from "../assets/images/female-Owner.jpg";
-import about_bg from "../assets/images/about-bg.jpg";
+import about_bg from "../assets/images/about-bg.png";
 import OnGoingProjects from "../Components/OnGoingProjects";
 import studio from "../assets/images/studio-aboutUsSeaction.jpg";
 import featured from "../assets/images/featured.jpg";
@@ -149,7 +149,7 @@ export default function AboutUs() {
               excellence.{" "}
             </p>
           </div>
-          <div className="flex mt-8 flex-wrap-reverse">
+          <div className="flex mt-8 flex-wrap-reverse mt-16">
             <div className=" md:pr-5 md:w-[65%]" data-aos="fade-left">
               <h1 className="font-audiowide text-3xl pb-4 uppercase">
                 Our Story
@@ -160,7 +160,7 @@ export default function AboutUs() {
                 functionality. From residential masterpieces to pioneering
                 commercial designs, our journey reflects growth, evolution, and
                 an unwavering commitment to excellence.
-              </p>
+              </p><br />
               <p className="font-light  tracking-wider">
                 {" "}
                 Alpine Architect isn't just a design firm; it's a catalyst for
@@ -171,7 +171,7 @@ export default function AboutUs() {
                 boundaries, we create harmonious architectural marvels. Ruby's
                 detail-oriented innovation and Nitesh's artistic vision form a
                 dynamic duo, leading a team of committed professionals.
-              </p>
+              </p><br />
               <p className="font-light  tracking-wider">
                 Together, we push boundaries, creating architectural excellence.
                 As we forge ahead, one thing is clear: the best is yet to come
@@ -402,7 +402,7 @@ export default function AboutUs() {
         data-aos="fade-down"
         className="md:flex justify-center items-center w-full bg-cover bg-no-repeat py-3"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url(${about_bg})`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.0), rgba(13, 13, 13, 0.1)), url(${about_bg})`,
           backgroundRepeat: "no-repeat",
         }}
       >
@@ -410,15 +410,16 @@ export default function AboutUs() {
           <h1 className="font-audiowide text-2xl md:text-3xl pb-6 uppercase">
             Meet the Team behind the Innovation!
           </h1>
-          <div className="flex flex-col md:flex-row mb-10">
-            <div className="w-full md:w-[45%] bg-secondary">
+          <br />
+          <div className="flex flex-col md:flex-row mb-16">
+            <div className="w-full md:w-[45%] bg-[#242424]">
               <img
                 src={male_owner}
                 alt="Owner Image"
-                className="w-full   object-cover h-[400px] lg:h-auto"
+                className="w-[98%] m-auto   object-cover h-[400px] lg:h-auto"
               />
-              <div className="px-4 mt-2">
-                <h3 className="font-audiowide text-2xl  uppercase">
+              <div className="p-4 ">
+                <h3 className="font-audiowide text-2xl  ">
                   Nitesh Kedare
                 </h3>
                 <p className="font-light leading-loose tracking-wider">
@@ -433,8 +434,8 @@ export default function AboutUs() {
                 establishing the foundation for a remarkable career. His
                 commitment to excellence is evident in thoughtfully curated
                 designs that seamlessly fulfill client aspirations.
-                <br />
-                <br />
+                <br /><br />
+
                 Nitesh Kedare's unique approach, marked by a deep aesthetic
                 appreciation, transformative capabilities, and unwavering
                 dedication, sets him apart in architecture. Each project he
@@ -458,8 +459,8 @@ export default function AboutUs() {
                 a distinguished career. Ruby's innovative designs balance
                 sensibility and functionality, creating visually captivating and
                 practically functional spaces.
-                <br />
-                <br />
+                <br /><br />
+
                 Her problem-solving skills in architectural design provide
                 innovative solutions, enhancing project feasibility. Enriching
                 experiences at Khareghat and Associates, alongside industry
@@ -467,14 +468,14 @@ export default function AboutUs() {
                 by practical knowledge and insights from diverse projects.
               </p>{" "}
             </div>
-            <div className="w-full md:w-[45%] bg-secondary">
+            <div className="w-full md:w-[45%] bg-[#242424]">
               <img
                 src={female_owner}
                 alt="Owner Image"
-                className="w-full  object-cover h-[400px] lg:h-auto"
+                className="w-[98%] m-auto  object-cover h-[400px] lg:h-auto"
               />
-              <div className="px-4 mt-2">
-                <h3 className="font-audiowide text-2xl  uppercase">
+              <div className="p-4">
+                <h3 className="font-audiowide text-2xl  ">
                   Ruby Kedare
                 </h3>
                 <p className="font-light leading-loose tracking-wider">
@@ -484,14 +485,14 @@ export default function AboutUs() {
             </div>
           </div>
 
-          <h1 className="font-audiowide text-2xl md:text-3xl mb-3 uppercase">
+          <h1 className="font-audiowide text-2xl mt-16 md:text-3xl mb-3 uppercase">
             Key team members
           </h1>
           <div
             data-aos="fade-down"
             className="flex flex-col gap-y-4 md:flex-row"
           >
-            <div className="p-4 basis-1/2 bg-secondary md:mr-4">
+            <div className="p-4 basis-1/2 bg-[#242424] md:mr-4">
               <h3 className="font-audiowide text-2xl  uppercase">
                 Ashish Patil
               </h3>
@@ -501,7 +502,7 @@ export default function AboutUs() {
                 crucial role in the seamless working under deadlines.
               </p>
             </div>
-            <div className="p-4 basis-1/2 bg-secondary">
+            <div className="p-4 basis-1/2 bg-[#242424]">
               <h3 className="font-audiowide text-2xl  uppercase">
                 Krunal Darji
               </h3>
@@ -516,10 +517,10 @@ export default function AboutUs() {
       </div>
       <div
         data-aos="fade-up"
-        className="md:flex justify-center items-center w-full bg-cover  py-3"
+        className="md:flex justify-center items-center w-full bg-cover bg-secondary  py-3"
       >
         <div className="lg:w-3/4 md:w-full w-full px-6 lg:px-0 ">
-          <div className="pl-4 border-l-2 mb-16 mt-12">
+          <div className="pl-4 border-l-2 mb-16 mt-16">
             <h1 className="font-audiowide text-3xl pb-4 uppercase">STUDIO</h1>
             <p className="font-light leading-loose tracking-wider">
               A Collaborative Haven of Creativity & Comfort{" "}
@@ -574,7 +575,7 @@ export default function AboutUs() {
             best.
           </p>
 
-          <h1 className="font-audiowide text-3xl py-4 uppercase">featured</h1>
+          <h1 className="font-audiowide text-3xl py-4 uppercase mt-16">featured</h1>
 
           <Carousel
             autoPlay={true}

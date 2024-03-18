@@ -269,7 +269,7 @@ export default function ContactUs() {
                 `}
                 </style>
                 <div className="md:w-[80%] sm:w-full px-6 md:px-0 flex flex-col-reverse md:flex-row">
-                    <div className="min-h-[90vh] md:w-[55%] w-full lg:p-5">
+                    <div className="min-h-[90vh] md:w-[60%] w-full lg:p-5">
                         <h1 className="font-audiowide text-3xl pb-6">Contact Us</h1>
                         <p className="font-light leading-loose tracking-wider">
                             Got a project on your mind?
@@ -370,7 +370,7 @@ export default function ContactUs() {
 
                         </div>
 
-                      
+
 
                     </div>
                 </div>

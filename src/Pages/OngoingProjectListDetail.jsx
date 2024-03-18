@@ -5,7 +5,8 @@ import Button from '../Components/Button';
 import { FaLocationDot } from "react-icons/fa6";
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
-import about_bg from '../assets/images/about-bg.jpg';
+import detailPage_bg_1 from '../assets/images/DetailPage/detailPage-bg1.png';
+import detailPage_bg_2 from '../assets/images/DetailPage/detailPage-bg-2.png';
 import { useParams } from 'react-router-dom';
 import Carousel_Diversity from '../Components/Carousel';
 import API_Call from '../Components/API_Call';
@@ -25,7 +26,7 @@ export default function OngoingProjectListDetail() {
     let horiontalImages = [];
     const getData = async () => {
         const data = await fetchData(`ongoingproject/${id}`, "POST");
-        console.log(data);
+     // console.log(data);
         return data;
     }
 
@@ -130,15 +131,16 @@ export default function OngoingProjectListDetail() {
 
     return (
         <>
-            {projectData ? (<>     <div className="md:flex justify-center items-center w-full relative lg:bottom-36 md:bottom-1 bottom-0 sm:bottom-5  mb-2 md:mb-0  bg-cover bg-rigth py-3" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(${about_bg})`, backgroundRepeat: "no-repeat" }}>
+            {projectData ? (<>     
+            <div className="md:flex justify-center   h-auto w-full relative lg:bottom-36 md:bottom-1 bottom-0 sm:bottom-5  mb-2 md:mb-0  bg-cover bg-rigth py-3" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.0), rgba(13, 13, 13, 0.9)), url(${detailPage_bg_1}),url(${detailPage_bg_2})`, backgroundRepeat: "no-repeat", backgroundPosition: "100% 100%", backgroundSize: "100% 100%",backgroundAttachment: "fixed" }}>
                 <div className="md:w-3/4 sm:w-full px-6 md:px-0">
                     <h6 className='mb-1 text-amber-600 text-[#C1AE69]'>Home &gt; Ongoing Project &gt; {projectData[0].project_name}</h6>
                     <div className='flex items-center m-0'>
                         <h3 className='font-audiowide lg:text-2xl  text-1xl  uppercase md:mr-4 mr-2'> {projectData[0].project_name}</h3>
-                        <p className='font-light flex items-center md:gap-3 gap-1  leading-loose tracking-wider' style={{ marginBottom: "0px !important" }}><FaLocationDot /> {projectData[0].area}</p>
+                        <p className='font-light flex items-center md:gap-3 gap-1  leading-loose tracking-wider' style={{ marginBottom: "0px !important" }}><FaLocationDot />  {projectData[0].location} </p>
                     </div>
                     <p className='font-light leading-loose tracking-wider'>
-                        {projectData[0].location}                  </p>
+                        {projectData[0].area}           </p>
 
                     <style>{
                         ` @media screen and (min-width: 860px) {
