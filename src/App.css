@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,500;1,500&family=Kalam:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Genos:wght@300&family=Montserrat:wght@700&display=swap");
 * {
-  max-width: 1680px;
+  max-width: 1580px;
+  margin: auto;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -12,7 +13,7 @@ body {
   /* background-color: #000000; */
   font-family: Genos;
 }
-@media screen and (min-width: 2170px) {
+@media screen and (min-width: 1680px) {
   * {
     /* max-width: 1680px; */
     margin: 0 auto;
@@ -155,6 +156,9 @@ p {
   .contact-form {
     padding-right: 10px;
   }
+  .carousel.carousel-slider .control-arrow {
+    display: none;
+  }
 }
 @media only screen and (max-width: 768px) {
   .carousel .slide {
@@ -204,7 +208,9 @@ p {
 }
 
 /* about us page steps card borde style */
-
+.alice-carousel__dots-item .__active {
+  width: 100px !important;
+}
 .border-style.left-bottom {
   background-image: repeating-linear-gradient(
       60deg,
@@ -410,9 +416,17 @@ p {
   width: 100px;
 }
 
-.alice-carousel__dots-item {
-  height: 1px !important;
-  width: 3px !important;
+.alice-carousel__dots-item,
+.alice-carousel__dots-item:not(.__custom) {
+  height: 3px !important;
+  border-radius: 10px !important;
+  width: 1px !important;
+  min-width: auto !important;
+  background-color: #424040;
+}
+.alice-carousel__dots-item:not(.__custom).__active {
+  background-color: white;
+  width: 0px !important;
 }
 .alice-carousel__dots {
   margin-top: 0 !important;

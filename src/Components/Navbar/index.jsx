@@ -83,6 +83,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import nav_bg from '../../assets/images/hero-bg.png';
+import nav_bg2 from '../../assets/images/hero-bg2.png';
 import logo from '../../assets/images/LOGO.png';
 import Button from '../Button';
 import "./index.css";
@@ -136,29 +137,32 @@ export default function Navbar() {
 
     return (
         <>
-            <div className={pathname === "/" ? "lg:bg-contain lg:bg-left  bg-top  bg-cover md:h-[370px] h-[230px] lg:h-[105vh] bg-no-repeat bg-[#000000] px-3 relative" : "px-3 bg-cover "} style={pathname === "/" ? {
-                backgroundPosition: "0px 15px",
-                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(${nav_bg})`
-            } : pathname === "/services" ? {
-                // backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(${Services_bg})`
-            } : {}}>
+            <div className={pathname === "/" ? "lg:bg-contain   bg-top  bg-cover md:h-[370px] h-[230px] lg:h-[105vh] bg-no-repeat bg-[#000000] px-3 relative" : "px-3 bg-cover "}
+                style={pathname === "/" ? {
+                    backgroundPosition: "right top, left top",
+                    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)), url(${nav_bg}), url(${nav_bg2})`
+                } : pathname === "/services" ? {
+                    // backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(${Services_bg})`
+                } : {}}
 
-                <div className="flex justify-between md:items-center lg:items-start px-2 md:pl-4 md:pr-0  ">
+            >
 
-                    <span className='mt-8 z-50 md:mt-10'><Button text={"Menu"} onClick={toggleMenuBar} /></span>
+                <div className="flex justify-between md:items-center lg:items-start px-2 md:pl-4 md:pr-0   2xl:w-[100%] ">
 
-                    <img src={logo} alt="" className="z-50 mt-6  md:pt-1 lg:mt-0 w-[58px] h-[98px] lg:w-[144px] lg:h-[238px] bg-blend-multiply logo " />
+                    <span className='mt-8 xl:ml-0 z-50 md:mt-10'><Button text={"Menu"} onClick={toggleMenuBar} /></span>
+
+                    <img src={logo} alt="" className="z-50 mt-6 xl:ml-[80%]   md:pt-1 lg:mt-0 w-[58px] h-[98px] lg:w-[144px] lg:h-[238px] bg-blend-multiply logo " />
                 </div>
 
                 <div ref={menuBar} className={`menu-bar px-2 absolute left-32 top-8 z-50 transition-opacity duration-700 opacity-0 ${!menuOpen ? "hidden" : "block"}`}>
                     <div className="pl-4 border-l-2 pb-3">
-                        <img src={logo} alt="" className="pt-2 h-20" />
+                        <img src={logo} alt="" className="pt-2 h-20 xl:mx-0" />
                         <div className="flex flex-col">
                             {menuItems.map((item) => (
                                 <Link
                                     key={item.route}
                                     to={item.route}
-                                    className={`my-1 text-[18px] lg:text[19px] cursor-pointer ${pathname === item.route ? "font-bold text-[19px] lg:text[29px]" : ""}`}
+                                    className={`my-1 xl:mx-0 text-[18px] lg:text[19px] cursor-pointer ${pathname === item.route ? "font-bold text-[19px] lg:text[29px]" : ""}`}
                                     onClick={closeMenuBar}
                                 >
                                     {item.text}

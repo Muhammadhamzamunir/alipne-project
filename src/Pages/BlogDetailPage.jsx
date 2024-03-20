@@ -72,8 +72,8 @@ export default function BlogDetailPage() {
                             <p className='font-light leading-loose tracking-wider'>
                                 {getContentSlice(0, 1)}
                             </p>
-                            {blogData[0].horizontal_image[0] && (
-                                <img src={blogData[0].horizontal_image[0].url} alt="NO Image" className='w-full lg:h-[500px] h-[180px] object-cover aspect-square my-8' />
+                            {blogData[0].hero_image && (
+                                <img src={blogData[0].hero_image} alt="NO Image" className='w-full lg:h-[500px] h-[180px] object-cover aspect-square my-8' />
                             )}
 
                             <div className='bg-cover' style={{ backgroundImage: ` url(${background_image})` }}>
@@ -82,14 +82,14 @@ export default function BlogDetailPage() {
                                 </p>
 
                                 <div className="flex flex-col lg:flex-row gap-y-8 my-12">
-                                    {blogData[0].horizontal_image[1] && (
+                                    {blogData[0].horizontal_image[0] && (
                                         <div className='lg:w-[50%] w-full h-[213px]lg:h-[334px] lg:mr-3'>
-                                            <img src={blogData[0].horizontal_image[1].url} alt="" className='w-full h-full object-cover' />
+                                            <img src={blogData[0].horizontal_image[0].url} alt="" className='w-full h-full object-cover' />
                                         </div>
                                     )}
-                                    {blogData[0].horizontal_image[2] && (
+                                    {blogData[0].horizontal_image[1] && (
                                         <div className='lg:w-[50%] w-full h-[213px] lg:h-[334px] object-cover '>
-                                            <img src={blogData[0].horizontal_image[2].url} alt="" className='w-full h-full' />
+                                            <img src={blogData[0].horizontal_image[1]?.url} alt="" className='w-full h-full' />
                                         </div>
                                     )}
                                 </div>

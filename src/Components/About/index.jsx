@@ -48,7 +48,7 @@ const About = () => {
     <div
       className='bg-secondary bg-contain bg-left bg-no-repeat  ' style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(${About_bg})`, backgroundPosition: "left" }}
     >
-      <div className=" md:w-[75%] w-[90%] relative flex mt-[144px] lg:mt-0 flex-col items-center lg:flex-row  inner-cont" >
+      <div className=" md:w-[80%] sm:px-6 w-[90%] relative flex mt-[180px] md:mt-6 flex-col items-center lg:flex-row  inner-cont" >
         <div className="flex flex-col items-center justify-center h-[100%] lg:w-[40%] W-[100%] md:flex-col lg:flex-row  md:pb-10 pt-4">
           <div className="relative w-full rounded md:pr-6   md:pb-16   ">
             <ReactPlayer url={video_url} width={"100%"} height={"251px"} controls />
@@ -63,22 +63,28 @@ const About = () => {
             </h2>
             <div className="max-w-md mx-auto text-lg text-gray-200  md:text-xl md:max-w-3xl leading-10 font-light tracking-tight">
               <p>
-                Alpine Architect: Pioneering Tomorrow's Cityscape
+                Alpine Architects: Pioneering Tomorrow's Cityscape
               </p>
 
               <p className='leading-8 pt-3'>
-                In the ever-evolving world of architecture, where buildings stand as timeless monuments to human innovation and creativity, Alpine Architect emerges as a beacon of avant-garde design principles. The firm is not just about brick and mortar; it's a symphony of creativity, functionality, and futuristic thinking.
+                In the ever-evolving world of Architecture, where buildings stand as timeless monuments to human innovation and creativity, Alpine Architects emerges as a beacon of avant-garde design principles. The firm is not just about brick and mortar; it's a symphony of creativity, functionality, and futuristic thinking.
               </p><br />
               <p className='hidden md:block leading-8' >
-                At the heart of Alpine Architect lies a simple yet profound belief: architecture is not static. As society progresses, so too must our buildings and spaces. The firm places a premium on continuously upgrading its design ethos, always staying attuned to the shifting sands of societal needs, technological advancements, and aesthetic sensibilities.
+                At the heart of Alpine Architects lies a simple yet profound belief: Architecture is not static. As society progresses, so too must our buildings and spaces. The firm places a premium on continuously upgrading its design ethos, always staying attuned to the shifting sands of societal needs, technological advancements, and aesthetic sensibilities.
               </p>
             </div>
             <div className="md:text-right flex flex-col justify-end items-end md:mb-10">
-              <div className='mb-9 z-50'>
+
+
+              <div className="container md:text-center z-50 mb-9  flex justify-end lg:pr-1 ">
+                <div className='flex-1'>
+
+                </div>
                 <Link> <Button text={"Read More"} to="/aboutus" /></Link>
+
               </div>
 
-              <h3 className='text-gray-800 font-bold tracking-widest text-[70px] lg:text-[115px]  uppercase opacity-5 absolute bottom-3 md:-bottom-16 md:-right-9 font-audiowide'>
+              <h3 className='text-gray-800 font-bold tracking-widest text-[70px] lg:text-[115px]  uppercase opacity-5 absolute bottom-8 md:-bottom-16 md:-right-9 -right-[0%] font-audiowide'>
                 About
               </h3>
             </div>

@@ -14,7 +14,7 @@ export default function OnGoingProjectList() {
     const navigate = useNavigate();
     const getData = async () => {
         const data = await fetchData("ongoingproject");
-       
+
         if (data) {
             const allDataImages = data.map((item) => {
                 const existedCategory = categories.find(category => category === item.category);
@@ -82,7 +82,7 @@ export default function OnGoingProjectList() {
                     <div className="md:w-3/4 sm:w-full px-6 md:px-3">
                         <h1 data-aos="fade-down" className='font-audiowide text-3xl pb-6 uppercase'>Ongoing projects</h1>
                         <p data-aos="fade-down" className='font-light leading-10 tracking-wider'>
-                            Unveil the secrets of design with us—a journey from blueprints to vibrant stories, celebrating architectural brilliance. Join our odyssey of creativity, where innovation shapes spaces, and every line drawn is a brushstroke on the canvas of urban artistry. Welcome to a realm where passion for design comes to life! </p>
+                            Unveil the secrets of design with us—a journey from blueprints to vibrant stories, celebrating Architectural brilliance. Join our odyssey of creativity, where innovation shapes spaces, and every line drawn is a brushstroke on the canvas of urban artistry. Welcome to a realm where passion for design comes to life! </p>
                     </div>
                 </div>
 
@@ -139,7 +139,7 @@ export default function OnGoingProjectList() {
     //                     data-aos="fade-right"
     //                     className='w-full relative group lg:w-[67%] lg:h-[414px] h-[200px] '
     //                     style={{ position: 'relative', cursor: 'pointer' }}
-                       
+
     //                 >
     //                     <Link to={`/ongoing-project/${filteredData[startingIndex]?.id}`}>
     //                     <img
@@ -501,7 +501,7 @@ export default function OnGoingProjectList() {
                     </div>
 
                     {/* Second Image */}
-                    <div data-aos="fade-right" className='w-full relative group lg:w-[48.6%] lg:h-[289px] h-[200px] transition duration-500 ease-in-out hover:opacity-50' style={{ position: 'relative', cursor: 'pointer' }}>
+                    <div data-aos="fade-right" className='w-full relative group lg:w-[48.5%] lg:h-[289px] h-[200px] transition duration-500 ease-in-out hover:opacity-50' style={{ position: 'relative', cursor: 'pointer' }}>
                         <Link to={`/ongoing-project/${filteredData[startingIndex + 6]?.id}`}>
                             <img className='object-cover  transition w-full h-full duration-500 ease-in-out group-hover:opacity-50' src={filteredData[startingIndex + 6]?.horizontal_image} alt={""} style={{ width: "100%", display: "block" }} />
                             <div className="absolute bottom-[10px] h-[80px] text-white flex items-end justify-between w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100">

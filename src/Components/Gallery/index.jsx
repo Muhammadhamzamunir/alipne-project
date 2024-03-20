@@ -110,13 +110,13 @@ export default function Gallery() {
     <div>
       <div className="bg-secondary pt-10 lg:pb-28  pb-1" data-aos="fade-up">
         <div className="inner-cont sm:px-6 is-flex md:w-[80%] w-[90%]">
-          <h2 className="text-3xl custom-font leading-10 tracking-tight sm:text-5xl sm:leading-none md:text-4xl uppercase">
+          <h2 className="text-3xl xl:flex-1 custom-font leading-10 tracking-tight sm:text-5xl sm:leading-none md:text-4xl uppercase">
             Gallery
           </h2>
           <div className="md:text-left mt-4 md:mt-0 btn-fix lg:pr-1">
-           
-              <Button text={"View All"} to="/gallery" />
-            
+
+            <Button text={"View All"} to="/gallery" />
+
           </div>
         </div>
 
@@ -146,9 +146,9 @@ export default function Gallery() {
 
 
         <div className="flex justify-end btm-btn pr-6 pt-4">
-          
-            <Button text={"View All"} to="/gallery"/>
-         
+
+          <Button text={"View All"} to="/gallery" />
+
         </div>
       </div>
     </div>

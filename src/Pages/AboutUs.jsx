@@ -34,19 +34,19 @@ export default function AboutUs() {
         // const featuredData = [{
         //   "id": 20,
         //   "thumbnail_description": "Edit Featured",
-        //   "featured_imaged": "https://architecture.flashcitytours.com/storage/497/9e9abdb2-6c21-4d0d-8eb6-e4b82c3c476c'"
+        //   "featured_imaged": "https://Architecture.flashcitytours.com/storage/497/9e9abdb2-6c21-4d0d-8eb6-e4b82c3c476c'"
         // }, {
         //   "id": 20,
         //   "thumbnail_description": "Edit Featured",
-        //   "featured_imaged": "https://architecture.flashcitytours.com/storage/497/9e9abdb2-6c21-4d0d-8eb6-e4b82c3c476c'"
+        //   "featured_imaged": "https://Architecture.flashcitytours.com/storage/497/9e9abdb2-6c21-4d0d-8eb6-e4b82c3c476c'"
         // }, {
         //   "id": 20,
         //   "thumbnail_description": "Edit Featured",
-        //   "featured_imaged": "https://architecture.flashcitytours.com/storage/497/9e9abdb2-6c21-4d0d-8eb6-e4b82c3c476c'"
+        //   "featured_imaged": "https://Architecture.flashcitytours.com/storage/497/9e9abdb2-6c21-4d0d-8eb6-e4b82c3c476c'"
         // }, {
         //   "id": 20,
         //   "thumbnail_description": "Edit Featured",
-        //   "featured_imaged": "https://architecture.flashcitytours.com/storage/497/9e9abdb2-6c21-4d0d-8eb6-e4b82c3c476c'"
+        //   "featured_imaged": "https://Architecture.flashcitytours.com/storage/497/9e9abdb2-6c21-4d0d-8eb6-e4b82c3c476c'"
         // }]
         setStudioImages(data);
         setfeatured(featuredData);
@@ -136,16 +136,16 @@ export default function AboutUs() {
               data-aos="fade-down"
               className="font-light leading-loose tracking-wider"
             >
-              Alpine Architect: Shaping Future Cityscapes In the dynamic realm
-              of architecture, where structures echo innovation and creativity,
-              Alpine Architect stands as a pioneer in avant-garde design. Beyond
+              Alpine Architects: Shaping Future Cityscapes In the dynamic realm
+              of Architecture, where structures echo innovation and creativity,
+              Alpine Architects stands as a pioneer in avant-garde design. Beyond
               bricks and mortar, it's a fusion of creativity, functionality, and
-              forward-thinking. Central to Alpine Architect is a fundamental
-              belief: architecture is dynamic. As society advances, our
+              forward-thinking. Central to Alpine Architects is a fundamental
+              belief: Architecture is dynamic. As society advances, our
               buildings must evolve. The firm prioritizes constant refinement of
               its design ethos, aligning with evolving societal needs,
               technological progress, and aesthetic trends. Welcome to a
-              visionary world, where each project embodies architectural
+              visionary world, where each project embodies Architectural
               excellence.{" "}
             </p>
           </div>
@@ -163,19 +163,19 @@ export default function AboutUs() {
               </p><br />
               <p className="font-light  tracking-wider">
                 {" "}
-                Alpine Architect isn't just a design firm; it's a catalyst for
+                Alpine Architects isn't just a design firm; it's a catalyst for
                 change. Crafting buildings ahead of their time, we contribute to
                 cityscapes, community engagement, and economic growth. Our
                 designs thrive, adding value and enriching lives. With technical
                 prowess, creative genius, and a commitment to pushing
-                boundaries, we create harmonious architectural marvels. Ruby's
+                boundaries, we create harmonious Architectural marvels. Ruby's
                 detail-oriented innovation and Nitesh's artistic vision form a
                 dynamic duo, leading a team of committed professionals.
               </p><br />
               <p className="font-light  tracking-wider">
-                Together, we push boundaries, creating architectural excellence.
+                Together, we push boundaries, creating Architectural excellence.
                 As we forge ahead, one thing is clear: the best is yet to come
-                from Alpine Architect.
+                from Alpine Architects.
               </p>
             </div>
             <div data-aos="fade-right" className="md:w-[35%] ">
@@ -186,10 +186,10 @@ export default function AboutUs() {
           <div className="pl-4 border-l-2 mb-16 mt-8" data-aos="fade-right">
             <h1 className="font-audiowide text-3xl pb-4 uppercase">Vision</h1>
             <p className="font-light leading-loose tracking-wider">
-              Our vision is to be a transformative force in the architectural
+              Our vision is to be a transformative force in the Architectural
               landscape, crafting buildings that enrich urban life and stand as
-              symbols of progress. Alpine Architect envisions a future where it
-              remains at the forefront of architectural innovation.
+              symbols of progress. Alpine Architects envisions a future where it
+              remains at the forefront of Architectural innovation.
             </p>
           </div>
           <div className="pl-4 border-l-2 mb-10" data-aos="fade-left">
@@ -197,7 +197,7 @@ export default function AboutUs() {
               DESIGN PROCESS
             </h1>
             <p className="font-light leading-loose tracking-wider">
-              The architectural design process is a multifaceted journey that
+              The Architectural design process is a multifaceted journey that
               involves a series of steps, considerations, and iterations to
               transform a concept into a tangible structure.{" "}
             </p>
@@ -423,13 +423,13 @@ export default function AboutUs() {
                   Nitesh Kedare
                 </h3>
                 <p className="font-light leading-loose tracking-wider">
-                  Principal Architect
+                  Principal Architects
                 </p>
               </div>
             </div>
             <div className="w-full md:w[55%] md:pl-8">
               <p className="font-light leading-loose tracking-wider">
-                Nitesh Kedare began his architectural journey in Mumbai at The
+                Nitesh Kedare began his Architectural journey in Mumbai at The
                 Academy of Architecture in 2011, honing his skills and
                 establishing the foundation for a remarkable career. His
                 commitment to excellence is evident in thoughtfully curated
@@ -438,10 +438,10 @@ export default function AboutUs() {
 
                 Nitesh Kedare's unique approach, marked by a deep aesthetic
                 appreciation, transformative capabilities, and unwavering
-                dedication, sets him apart in architecture. Each project he
+                dedication, sets him apart in Architecture. Each project he
                 guides showcases innovation and impactful outcomes. Early
-                collaborations with Architect Hafeez Contractor enriched his
-                expertise, contributing significantly to various architectural
+                collaborations with Architects Hafeez Contractor enriched his
+                expertise, contributing significantly to various Architectural
                 endeavors.
               </p>
             </div>
@@ -453,7 +453,7 @@ export default function AboutUs() {
           >
             <div className="w-full md:w[55%] md:pr-8">
               <p className="font-light leading-loose tracking-wider">
-                Ruby Kedare's architectural journey began at The Academy of
+                Ruby Kedare's Architectural journey began at The Academy of
                 Architecture, Mumbai, in 2011. Honing foundational skills and
                 cultivating an acute eye for detail, she laid the groundwork for
                 a distinguished career. Ruby's innovative designs balance
@@ -461,10 +461,10 @@ export default function AboutUs() {
                 practically functional spaces.
                 <br /><br />
 
-                Her problem-solving skills in architectural design provide
+                Her problem-solving skills in Architectural design provide
                 innovative solutions, enhancing project feasibility. Enriching
                 experiences at Khareghat and Associates, alongside industry
-                veterans, have shaped her unique architectural style influenced
+                veterans, have shaped her unique Architectural style influenced
                 by practical knowledge and insights from diverse projects.
               </p>{" "}
             </div>
@@ -559,7 +559,7 @@ export default function AboutUs() {
             className="w-full my-6 aspect-auto"
           /> */}
           <p className="font-light leading-loose tracking-wider">
-            A Nexus of Innovation and Comfort At the core of Alpine Architect is
+            A Nexus of Innovation and Comfort At the core of Alpine Architects is
             its cutting-edge studio, not merely a workplace but a haven for
             creativity, collaboration, and camaraderie. Conceived to transcend
             the conventional office setting, the studio embodies a second home,

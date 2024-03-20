@@ -20,15 +20,15 @@ export default function ContactUs() {
                 //         "images": [
                 //             {
                 //                 "id": 576,
-                //                 "url": "https://architecture.flashcitytours.com/storage/576/WhatsApp-Image-2024-03-05-at-5.24.28-PM.jpeg"
+                //                 "url": "https://Architecture.flashcitytours.com/storage/576/WhatsApp-Image-2024-03-05-at-5.24.28-PM.jpeg"
                 //             },
                 //             {
                 //                 "id": 577,
-                //                 "url": "https://architecture.flashcitytours.com/storage/577/WhatsApp-Image-2024-03-05-at-5.24.29-PM.jpeg"
+                //                 "url": "https://Architecture.flashcitytours.com/storage/577/WhatsApp-Image-2024-03-05-at-5.24.29-PM.jpeg"
                 //             },
                 //             {
                 //                 "id": 578,
-                //                 "url": "https://architecture.flashcitytours.com/storage/578/WhatsApp-Image-2024-03-05-at-5.24.29-PM-(1).jpeg"
+                //                 "url": "https://Architecture.flashcitytours.com/storage/578/WhatsApp-Image-2024-03-05-at-5.24.29-PM-(1).jpeg"
                 //             }
                 //         ]
                 //     }, {
@@ -37,15 +37,15 @@ export default function ContactUs() {
                 //         "images": [
                 //             {
                 //                 "id": 576,
-                //                 "url": "https://architecture.flashcitytours.com/storage/576/WhatsApp-Image-2024-03-05-at-5.24.28-PM.jpeg"
+                //                 "url": "https://Architecture.flashcitytours.com/storage/576/WhatsApp-Image-2024-03-05-at-5.24.28-PM.jpeg"
                 //             },
                 //             {
                 //                 "id": 577,
-                //                 "url": "https://architecture.flashcitytours.com/storage/577/WhatsApp-Image-2024-03-05-at-5.24.29-PM.jpeg"
+                //                 "url": "https://Architecture.flashcitytours.com/storage/577/WhatsApp-Image-2024-03-05-at-5.24.29-PM.jpeg"
                 //             },
                 //             {
                 //                 "id": 578,
-                //                 "url": "https://architecture.flashcitytours.com/storage/578/WhatsApp-Image-2024-03-05-at-5.24.29-PM-(1).jpeg"
+                //                 "url": "https://Architecture.flashcitytours.com/storage/578/WhatsApp-Image-2024-03-05-at-5.24.29-PM-(1).jpeg"
                 //             }
                 //         ]
                 //     }, {
@@ -54,15 +54,15 @@ export default function ContactUs() {
                 //         "images": [
                 //             {
                 //                 "id": 576,
-                //                 "url": "https://architecture.flashcitytours.com/storage/576/WhatsApp-Image-2024-03-05-at-5.24.28-PM.jpeg"
+                //                 "url": "https://Architecture.flashcitytours.com/storage/576/WhatsApp-Image-2024-03-05-at-5.24.28-PM.jpeg"
                 //             },
                 //             {
                 //                 "id": 577,
-                //                 "url": "https://architecture.flashcitytours.com/storage/577/WhatsApp-Image-2024-03-05-at-5.24.29-PM.jpeg"
+                //                 "url": "https://Architecture.flashcitytours.com/storage/577/WhatsApp-Image-2024-03-05-at-5.24.29-PM.jpeg"
                 //             },
                 //             {
                 //                 "id": 578,
-                //                 "url": "https://architecture.flashcitytours.com/storage/578/WhatsApp-Image-2024-03-05-at-5.24.29-PM-(1).jpeg"
+                //                 "url": "https://Architecture.flashcitytours.com/storage/578/WhatsApp-Image-2024-03-05-at-5.24.29-PM-(1).jpeg"
                 //             }
                 //         ]
                 //     }
@@ -102,7 +102,7 @@ export default function ContactUs() {
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        fetch('https://architecture.flashcitytours.com/api/user/contact', {
+        fetch('https://Architecture.flashcitytours.com/api/user/contact', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -269,7 +269,7 @@ export default function ContactUs() {
                 `}
                 </style>
                 <div className="md:w-[80%] sm:w-full px-6 md:px-0 flex flex-col-reverse md:flex-row">
-                    <div className="min-h-[90vh] md:w-[60%] w-full lg:p-5">
+                    <div className="min-h-[90vh] md:w-[56%] w-full lg:p-5">
                         <h1 className="font-audiowide text-3xl pb-6">Contact Us</h1>
                         <p className="font-light leading-loose tracking-wider">
                             Got a project on your mind?
@@ -280,8 +280,8 @@ export default function ContactUs() {
                             <br />
                             Let’s discuss in detail.
                         </p>
-                        <form className="contact-form mt-4" >
-                            <div className="form-group mb-7">
+                        <form className="contact-form mt-4 " >
+                            <div className="form-group mb-7 xl:mx-0">
                                 <input
                                     type="text"
                                     id="name"
@@ -292,7 +292,7 @@ export default function ContactUs() {
                                     required
                                 />
                             </div>
-                            <div className="form-group mb-7">
+                            <div className="form-group mb-7 xl:mx-0">
                                 <input
                                     type="tel"
                                     id="phone"
@@ -303,7 +303,7 @@ export default function ContactUs() {
                                     required
                                 />
                             </div>
-                            <div className="form-group mb-7">
+                            <div className="form-group mb-7 xl:mx-0">
                                 <input
                                     type="email"
                                     id="email"
@@ -314,7 +314,7 @@ export default function ContactUs() {
                                     required
                                 />
                             </div>
-                            <div className="form-group mb-7">
+                            <div className="form-group mb-7 xl:mx-0">
                                 <textarea
                                     id="message"
                                     name="message"
@@ -324,7 +324,7 @@ export default function ContactUs() {
                                     required
                                 ></textarea>
                             </div>
-                            <div className="mt-5 m-auto lg:m-0">
+                            <div className="mt-5 m-auto lg:m-0 xl:mx-0">
                                 <Button text={"Submit"} onClick={handleSubmit} />
                             </div>
                         </form>
@@ -332,7 +332,7 @@ export default function ContactUs() {
 
 
                     {/* Large screen Sliders */}
-                    <div className="md:w-[40%] hidden lg:flex  relative justify-around  h-[700px] top-[-40px]  overflow-y-auto overflow-x-visible no-scrollbar">
+                    <div className="md:w-[41%] hidden lg:flex  relative justify-around  h-[700px] top-[-40px]  overflow-y-auto overflow-x-visible no-scrollbar">
                         <div className="flex flex-col  gap-y-1 mb-2 md:mb-5  scrolling-images w-[45%]">
 
                             {

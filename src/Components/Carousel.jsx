@@ -92,38 +92,44 @@ export default function Carousel_Diversity(props) {
   };
 
   return (
-    
-      categoriesData.length>0 &&(<div className='mt-6 z-0 relative'>
-      <h1 className='font-audiowide text-2xl md:text-3xl uppercase mr-4 relative z-10'>Project diversity</h1>
-      <p className='font-light leading-loose tracking-wider relative z-0'>"Discover Our Passion for Creating Timeless and Innovative Designs"</p>
 
-      {
-        categoriesData.length > 0 ? (<Slider {...settings}>
+    categoriesData.length > 0 && (
+      <>
+        <div className=' w-[85%] md:w-[73%] m-auto'>   <h1 className='font-audiowide text-2xl md:text-3xl uppercase mr-4 mb-6 relative z-10 '>Project diversity</h1>
+          <p className='font-light leading-loose tracking-wider  relative z-0 '>"Discover Our Passion for Creating Timeless and Innovative Designs"</p>
+        </div>
+        <div className='mt-6 mb-10 pl-8 px-3 md:px-0 md:ml-[14%] z-0 relative'>
 
           {
-            categoriesData.length > 0 && categoriesData.sort((a, b) => b.id - a.id).map((category) => (
-              <div className='w-full lg:w-[32%] h-[190px] lg:h-[203px] relative group cursor-pointer'>
-                <Link to={page === "ongoingProject" ? `/ongoing-project/${category.id}` : `/project/${category.id}`}>
-                  <img src={category.horizontal_image[0]?.url} alt="" className='object-fill w-full h-full transition duration-500 ease-in-out hover:opacity-50' loading='lazy' />
-                  <div className='absolute bottom-[10px] text-white flex justify-between items-center w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100'>
-                    <h3 className='ml-2 text-[22px]'>{category.project_name}</h3>
-                    <svg width="28" className='mr-2' height="25" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect x="0.3" y="0.3" width="27.4" height="22.4588" rx="11.2294" stroke="white" strokeWidth="0.6" />
-                      <g opacity="0.6">
-                        <path d="M8.75488 16.2073L16.7062 8.25594H11.7582V6.75427H19.2666V14.2626H17.7649V9.31461L9.81356 17.2659L8.75488 16.2073Z" fill="white" />
-                      </g>
-                    </svg>
+            categoriesData.length > 0 ? (<Slider {...settings}>
+
+              {
+                categoriesData.length > 0 && categoriesData.sort((a, b) => b.id - a.id).map((category) => (
+                  <div className='w-full lg:w-[32%] h-[190px] lg:h-[203px] relative group cursor-pointer'>
+                    <Link to={page === "ongoingProject" ? `/ongoing-project/${category.id}` : `/project/${category.id}`}>
+                      <img src={category.horizontal_image[0]?.url} alt="" className='object-fill w-full h-full transition duration-500 ease-in-out hover:opacity-50' loading='lazy' />
+                      <div className='absolute bottom-[10px] text-white flex justify-between items-center w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100'>
+                        <h3 className='ml-2 text-[22px]'>{category.project_name}</h3>
+                        <svg width="28" className='mr-2' height="25" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect x="0.3" y="0.3" width="27.4" height="22.4588" rx="11.2294" stroke="white" strokeWidth="0.6" />
+                          <g opacity="0.6">
+                            <path d="M8.75488 16.2073L16.7062 8.25594H11.7582V6.75427H19.2666V14.2626H17.7649V9.31461L9.81356 17.2659L8.75488 16.2073Z" fill="white" />
+                          </g>
+                        </svg>
+                      </div>
+                    </Link>
                   </div>
-                </Link>
-              </div>
 
 
-            ))
+                ))
+              }
+
+            </Slider>) : ("Loading Data")
           }
+        </div>
 
-        </Slider>) : ("Loading Data")
-      }
-    </div>)
-    
+      </>
+    )
+
   );
 }

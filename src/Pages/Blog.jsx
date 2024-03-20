@@ -63,7 +63,7 @@ export default function Blog() {
                 <div className="md:w-3/4 sm:w-full px-6 md:px-0">
                     <h1 className='font-audiowide text-3xl pb-6 uppercase'>Blogs</h1>
                     <p className='font-light leading-loose tracking-wider'>
-                        Delve deeper into the world of design with our insightful blogs. Each post is a window into our commitment to creativity, functionality, and staying ahead in design. Join us in exploring the nuances of architectural and interior innovation, enriching your understanding of the art we passionately pursue.
+                        Delve deeper into the world of design with our insightful blogs. Each post is a window into our commitment to creativity, functionality, and staying ahead in design. Join us in exploring the nuances of Architectural and interior innovation, enriching your understanding of the art we passionately pursue.
                     </p>
                     <div className='flex flex-wrap -mx-4 md:-mx-4 lg:-mx-4 mt-8'>
                         {

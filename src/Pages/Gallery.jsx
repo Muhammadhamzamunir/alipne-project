@@ -173,12 +173,12 @@ export default function Gallery() {
                     <div className="md:w-3/4 sm:w-full px-6 md:px-0">
                         <h1 data-aos="fade-down" className='font-audiowide text-3xl pb-6 uppercase'>Gallery</h1>
                         <p data-aos="fade-down" className='font-light leading-loose tracking-wider'>
-                            Dive into our rich portfolio unveiling the artistry of architectural and interior design. Each image narrates a distinctive tale of our transformative touch, spanning modern residences to groundbreaking commercial spaces. Immerse yourself in inspiration as you envision your project materializing. Explore our gallery, where creativity, functionality, and aesthetic allure converge in every captivating design and exquisite detail, defining the hallmark of our projects.
+                            Dive into our rich portfolio unveiling the artistry of Architectural and interior design. Each image narrates a distinctive tale of our transformative touch, spanning modern residences to groundbreaking commercial spaces. Immerse yourself in inspiration as you envision your project materializing. Explore our gallery, where creativity, functionality, and aesthetic allure converge in every captivating design and exquisite detail, defining the hallmark of our projects.
                         </p>
                     </div>
                 </div>
 
-                <div className="flex  overflow-x-auto  no-scrollbar md:ml-[14%] mb-8 ml-5" style={{ whiteSpace: 'nowrap', overflowX: 'auto' }}>
+                <div className="flex  overflow-x-auto  no-scrollbar md:ml-[12%] pl-2 mb-8 ml-5" style={{ whiteSpace: 'nowrap', overflowX: 'auto' }}>
                     {uniqueCategories?.map((category, index) => (
                         <div key={index} style={{ fontSize: "22px" }} className={`cursor-pointer mr-8 pb-2 font-light  ${activeCategory === category ? " border-b-2 border-white-500" : ""}`} onClick={() => setActiveCategory(category)}>
                             {category}
@@ -241,7 +241,7 @@ export default function Gallery() {
                 <div className="md:w-3/4 sm:w-full px-6 md:px-0" >
 
 
-                    <div className=' flex flex-row items-center justify-evenly  md:gap-3 gap-2 mb-2 md:mb-5 '>
+                    <div className=' flex flex-row items-center justify-evenly  md:gap-4 gap-2 mb-2 md:mb-5 '>
                         {filtered_horizontal_images[horizontal_image_index] && <div className='w-1/2 lg:w-1/2 '>
                             <img src={filtered_horizontal_images[horizontal_image_index].horizontal_image} alt="" className='md:h-[282px]  object-cover w-full cursor-pointer ' onClick={() => openModal(horizontal_image_index, "horizontal")} />
 
@@ -252,7 +252,7 @@ export default function Gallery() {
                         </div>}
                     </div>
 
-                    <div className=' flex flex-row items-center justify-evenly  md:gap-3 gap-2  '>
+                    <div className=' flex flex-row items-center justify-evenly  md:gap-4 gap-2  '>
                         {filtered_horizontal_images[horizontal_image_index + 2] && <div className='w-1/2 lg:w-1/2 ' onClick={() => openModal(horizontal_image_index + 2, "horizontal")}>
                             <img src={filtered_horizontal_images[horizontal_image_index + 2]?.horizontal_image} alt="" className='md:h-[282px]   w-full cursor-pointer mb-2 md:mb-5' />
 
@@ -263,7 +263,7 @@ export default function Gallery() {
                         </div>}
                     </div>
 
-                    <div className=' flex flex-row items-center justify-evenly md:gap-3 gap-2 '>
+                    <div className=' flex flex-row items-center justify-evenly md:gap-4 gap-2 '>
                         {filtered_verticle_images[verticle_image_index] && <div className='w-1/3 lg:w-1/3 cursor-pointer ' onClick={() => openModal(verticle_image_index, "verticle")}>
                             <img src={filtered_verticle_images[verticle_image_index]?.vertical_image} alt="" className='md:h-[556px] h-[178px] w-[100%] cursor-pointer mb-2 md:mb-5 ' />
 
@@ -278,7 +278,7 @@ export default function Gallery() {
                         </div>}
                     </div>
 
-                    <div className=' flex flex-row items-center justify-evenly  md:gap-3 gap-2  '>
+                    <div className=' flex flex-row items-center justify-evenly  md:gap-4 gap-2  '>
                         {filtered_horizontal_images[horizontal_image_index + 4] && <div className='w-1/2 lg:w-1/2 cursor-pointer'>
                             <img src={filtered_horizontal_images[horizontal_image_index + 4].horizontal_image} alt="" className='md:h-[282px]   w-full object-cover cursor-pointer mb-2 md:mb-5' onClick={() => openModal(horizontal_image_index + 4, "horizontal")} />
 
@@ -288,7 +288,7 @@ export default function Gallery() {
 
                         </div>}
                     </div>
-                    <div className=' flex flex-row items-center justify-evenly  md:gap-3 gap-2 mb-2 md:mb-5 '>
+                    <div className=' flex flex-row items-center justify-evenly  md:gap-4 gap-2 mb-2 md:mb-5 '>
                         {filtered_verticle_images[verticle_image_index + 3] && <div className='w-1/3 lg:w-1/3 cursor-pointer ' onClick={() => openModal(verticle_image_index + 3, "verticle")}>
                             <img src={filtered_verticle_images[verticle_image_index + 3]?.vertical_image} alt="" className='md:h-[556px] h-[178px] w-[100%] cursor-pointer ' />
 
@@ -302,7 +302,7 @@ export default function Gallery() {
 
                         </div>}
                     </div>
-                    <div className=' flex flex-row items-center justify-evenly  md:gap-3 gap-2  '>
+                    <div className=' flex flex-row items-center justify-evenly  md:gap-4 gap-2 mb-2  '>
                         {filtered_verticle_images[verticle_image_index + 6] && <div className='w-1/3 lg:w-1/3 cursor-pointer ' onClick={() => openModal(verticle_image_index + 6, "verticle")}>
                             <img src={filtered_verticle_images[verticle_image_index + 6]?.vertical_image} alt="" className='md:h-[556px] h-[178px] w-[100%] cursor-pointer ' />
 

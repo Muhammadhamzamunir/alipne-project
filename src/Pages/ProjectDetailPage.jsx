@@ -130,15 +130,15 @@ export default function ProjectDetailPage() {
     return (
         <>
             {projectData ? (<>
-                <div className="md:flex justify-center   h-auto w-full relative lg:bottom-36 md:bottom-1 bottom-0 sm:bottom-5  mb-2 md:mb-0  bg-cover bg-rigth py-3" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.0), rgba(13, 13, 13, 0.9)), url(${detailPage_bg_1}),url(${detailPage_bg_2})`, backgroundRepeat: "no-repeat", backgroundPosition: "100% 100%", backgroundSize: "100% 100%", backgroundAttachment: "fixed", }}>
-                    <div className="md:w-3/4 sm:w-full px-6 md:px-0">
-                        <h6 className='mb-1 text-amber-600 text-[#C1AE69]'>Home &gt; Portfolio &gt; {projectData[0].project_name}</h6>
+                <div className="md:flex justify-center bg-top  lg:h-[1087px] md:h-[90vh] h-auto w-full relative lg:bottom-44 md:bottom-12 bottom-20 sm:bottom-5  mb-2 md:mb-0  bg-cover bg-rigth py-3" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.0), rgba(13, 13, 13, 0.1)), url(${detailPage_bg_1}),url(${detailPage_bg_2})`, backgroundRepeat: "no-repeat", backgroundPosition: "100% 100%", backgroundSize: "100% 100%" }}>
+                    <div className="md:w-3/4 sm:w-full px-6 pt-12 md:px-0">
+                        <h6 className='mb-3 mt-3 text-amber-600 text-[#C1AE69]'>Home &gt; Portfolio &gt; {projectData[0].project_name}</h6>
                         <div className='flex items-center m-0'>
-                            <h3 className='font-audiowide lg:text-2xl text-1xl  uppercase md:mr-4 mr-2'> {projectData[0].project_name}</h3>
-                            <p className='font-light flex items-center md:gap-3 gap-1   leading-loose tracking-wider' style={{ marginBottom: "0px !important" }}><FaLocationDot /> {projectData[0].location}</p>
+                            <h3 className='font-audiowide lg:text-2xl text-1xl  uppercase md:mr-8 mr-2'> {projectData[0].project_name}</h3>
+                            <p className='font-light flex items-center md:gap-[6px] gap-[2px]   leading-loose tracking-wider' style={{ marginBottom: "0px !important" }}><FaLocationDot /> {projectData[0].location}</p>
                         </div>
-                        <p className='font-light leading-loose tracking-wider'>
-                            {projectData[0].area}                  </p>
+                        <p className='font-light -mt-2 leading-loose tracking-wider'>
+                            AREA-    {projectData[0].area}                  </p>
 
                         {/* <style>{
 
@@ -160,7 +160,12 @@ export default function ProjectDetailPage() {
     height: 638px !important;
     object-fit: cover;
     border-radius: 0px !important;
-  }}`
+  }
+
+  .slick-slide {
+    padding: 0 15px; /* Adjust as needed */
+  }
+}`
                         }
                         </style>
 
@@ -212,7 +217,7 @@ export default function ProjectDetailPage() {
 
 
                 <div className="md:flex md:mt-32 justify-center items-center w-full  py-3" >
-                    <div className="md:w-3/4 sm:w-full px-6 md:px-0  md:mt-44">
+                    <div className="md:w-3/4 sm:w-full px-6 md:px-0 lg:-mt-64 ">
                         {horizontalImageData.length > 0 && (
                             <AliceCarousel
                                 // autoPlay
@@ -242,12 +247,12 @@ export default function ProjectDetailPage() {
                                 ))}
                             </AliceCarousel>
                         )}
-
-                        <Carousel_Diversity category={projectData[0].category} id={projectData[0].id} page="projectdetail" />
+                     
                     </div>
 
 
                 </div>
+                <Carousel_Diversity category={projectData[0].category} id={projectData[0].id} page="projectdetail" />
             </>) : (<div className="flex lg:h-[613px] justify-center items-center m-auto pt-2">
                 <img src="loading-gif.gif" alt="" className='w-[150px] bg-blend-multiply my-44' />
 

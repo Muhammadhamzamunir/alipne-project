@@ -83,7 +83,7 @@ export default function Portfolio() {
                     <div className="md:w-3/4 sm:w-full px-6 md:px-3">
                         <h1 data-aos="fade-down" className='font-audiowide text-3xl pb-6 uppercase'>Portfolio</h1>
                         <p data-aos="fade-down" className='font-light leading-10 tracking-wider'>
-                            At Alpine, our diverse portfolio reflects architectural excellence, blending innovation and sustainability. From commercial designs to residential spaces, each project showcases our commitment to client satisfaction. Explore our portfolio—A fusion of creativity and functionality defining our passion for inspiring and enduring spaces                    </p>
+                            At Alpine, our diverse portfolio reflects Architectural excellence, blending innovation and sustainability. From commercial designs to residential spaces, each project showcases our commitment to client satisfaction. Explore our portfolio—A fusion of creativity and functionality defining our passion for inspiring and enduring spaces                    </p>
                     </div>
                 </div>
 
@@ -296,7 +296,7 @@ export default function Portfolio() {
                     </div>
 
                     {/* Second Image */}
-                    <div data-aos="fade-right" className='w-full relative group lg:w-[48.6%] lg:h-[289px] h-[200px] transition duration-500 ease-in-out hover:opacity-50' style={{ position: 'relative', cursor: 'pointer' }}>
+                    <div data-aos="fade-right" className='w-full relative group lg:w-[48.5%] lg:h-[289px] h-[200px] transition duration-500 ease-in-out hover:opacity-50' style={{ position: 'relative', cursor: 'pointer' }}>
                         <Link to={`/project/${filteredData[startingIndex + 6]?.id}`}>
                             <img className='object-cover  transition w-full h-full duration-500 ease-in-out group-hover:opacity-50' src={filteredData[startingIndex + 6]?.horizontal_image} alt={""} style={{ width: "100%", display: "block" }} />
                             <div className="absolute bottom-[10px] h-[80px] text-white flex items-end justify-between w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100">

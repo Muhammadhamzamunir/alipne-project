@@ -68,7 +68,7 @@ const HeroSectionSlider = ({ slides }) => {
                     interval={2000}
                 >
                     {heroImages.map((image, index) => (
-                        <div key={index} data-src={image} className="w-full h-full my-6 " loading="lazy" />
+                        <div key={index} data-src={image} className="w-full h-full md:my-6 my-0 " loading="lazy" />
                     ))}
                 </AutoplaySlider>
             ) : (

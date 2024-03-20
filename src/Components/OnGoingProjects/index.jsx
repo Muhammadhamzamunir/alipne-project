@@ -89,8 +89,14 @@ export default function OnGoingProjects() {
 
 
 
-          <div className="md:text-left mt-4 md:mt-0 btn-fix lg:pl-1">
-             <Button text={"View All"}  to="/on-going-project-list"/>
+
+
+          <div className="container md:text-center mt-4 lg:-mt-8 flex justify-end  ">
+            <Button text={"View All"} to="/on-going-project-list" />
+            <div className='flex-1'>
+
+            </div>
+
           </div>
         </div>
 
@@ -143,7 +149,7 @@ export default function OnGoingProjects() {
       </div>
       {/* this Button will be show only on Mobile Screen  */}
       <div className="flex justify-end right-0 pr-6 pt-4  btm-btn ">
-         <Button text={"View All"} to="/on-going-project-list"/>
+        <Button text={"View All"} to="/on-going-project-list" />
       </div>
     </div>
   );
