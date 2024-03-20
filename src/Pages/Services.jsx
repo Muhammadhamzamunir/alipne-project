@@ -7,17 +7,17 @@ import './Services.css'
 import art from "../assets/images/art.jpeg";
 import art_small from "../assets/images/art_small.jpeg";
 import API_Call from '../Components/API_Call';
-
+import { useInView } from 'react-intersection-observer';
 
 
 import { Carousel as Carousel_review } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Services_bg from "../assets/images/Services_bg.png";
 
-
+import ByTheNumber from '../Components/ByTheNumbers'
 export default function Services() {
   const [heroImages, setHeroImages] = useState([]);
-  const [byTheNumber, setByTheNumber] = useState([]);
+
   const [testimonials, setTestimonials] = useState([]);
   const { fetchData } = API_Call();
   let imagesArray = [];
@@ -29,7 +29,7 @@ export default function Services() {
         const byTheNumberData = await fetchData("byTheNumber");
         const testimonialData = await fetchData("testimonial");
 
-        setByTheNumber(byTheNumberData)
+        // setByTheNumber(byTheNumberData)
         setTestimonials(testimonialData)
         data.forEach(element => {
           element.images.forEach((image) => {
@@ -130,7 +130,7 @@ export default function Services() {
       if (slideTimer) {
         scrollGallery();
       }
-      console.log("sttoped");
+
     });
 
     // Clear interval when component unmounts
@@ -155,6 +155,52 @@ export default function Services() {
       galleryElement.scrollLeft = scrollLeft - walk;
     });
   }, []);
+
+  const AnimatedString = ({ value }) => {
+    const [animatedText, setAnimatedText] = useState('');
+
+    useEffect(() => {
+      const interval = setInterval(() => {
+        let newText = '';
+        for (let i = 0; i < value.length; i++) {
+          if (isNaN(value[i])) {
+            // Handle letters
+            newText += animateLetter(animatedText[i], value[i]);
+          } else {
+            // Handle numbers
+            newText += animateNumber(animatedText[i], value[i]);
+          }
+        }
+        setAnimatedText(newText);
+      }, 50); // Adjust speed here
+
+      return () => clearInterval(interval);
+    }, [value]);
+
+    // Function to animate letters
+    const animateLetter = (currentChar, targetChar) => {
+      const startCharCode = currentChar ? currentChar.charCodeAt(0) : 65; // Start from 'A' if currentChar is undefined
+      const targetCharCode = targetChar.charCodeAt(0);
+      if (startCharCode < targetCharCode) {
+        return String.fromCharCode(startCharCode + 1);
+      }
+      return currentChar;
+    };
+
+    // Function to animate numbers
+    const animateNumber = (currentChar, targetChar) => {
+      const startChar = currentChar ? parseInt(currentChar) : 0; // Start from '0' if currentChar is undefined
+      const targetNum = parseInt(targetChar);
+      if (startChar < targetNum) {
+        return (parseInt(currentChar) + 1).toString();
+      }
+      return currentChar;
+    };
+
+    return <span>{animatedText}</span>;
+  };
+
+
 
 
   const renderImages = () => {
@@ -225,6 +271,7 @@ export default function Services() {
   return (
     <>
 
+      
       <div className="  relative bg-no-repeat  lg:bottom-48  md:bottom-20 bottom-20 sm:bottom-5 md:bg-center lg:bg-top bg-contain " style={{
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1 )), url(${Services_bg})`
       }}>
@@ -447,14 +494,16 @@ export default function Services() {
         <div
 
           className="md:w-3/4 sm:w-full px-6 md:px-0 my-16 ">
-          <h1 className="font-audiowide text-3xl pb-6 uppercase">
+          <h1 className="font-audiowide text-3xl pb-6 uppercase" >
             By the Numbers
+
           </h1>
-          {
+          <ByTheNumber />
+          {/* {
             byTheNumber?.length > 0 && (<div className="  flex flex-col md:flex-row justify-between mb-50 flex-wrap ">
               <div className=" p-4  md:w-[30%] w-full flex flex-col items-center">
                 <h3 className="font-audiowide text-1xl text-center  uppercase text-[#C1AE69]">
-                  {byTheNumber[0].complete_project_area}
+                  <AnimatedString value={byTheNumber[0].complete_project_area} />
                 </h3>
 
                 <h6 className="font-light text-[20px]   tracking-wider text-center">
@@ -482,7 +531,7 @@ export default function Services() {
                 </h6>
               </div>
             </div>)
-          }
+          } */}
           <div className="flex flex-wrap -mx-4 md:-mx-4 lg:-mx-4 mt-8">
             <div
               data-aos="fade-left"
@@ -535,7 +584,7 @@ export default function Services() {
                     />
                   </svg>
                 </div>
-                <p className="font-light mb-4 ">Innovative Designs</p>
+                <p className="font-light mb-4 xl:flex-1 ">Innovative Designs</p>
               </div>
               <div className="flex flex-row  gap-5 mb-2">
                 <svg
@@ -551,7 +600,7 @@ export default function Services() {
                     fill="#131313"
                   />
                 </svg>
-                <p className="font-light mb-4 ">Client-Centric Approach</p>
+                <p className="font-light mb-4 xl:flex-1 ">Client-Centric Approach</p>
               </div>
               <div className="flex flex-row  gap-5 mb-2">
                 <svg
@@ -567,7 +616,7 @@ export default function Services() {
                     fill="#131313"
                   />
                 </svg>
-                <p className="font-light mb-4">Aesthetics & Trends in Check!</p>
+                <p className="font-light mb-4 xl:flex-1">Aesthetics & Trends in Check!</p>
               </div>
             </div>
           </div>
@@ -619,4 +668,6 @@ export default function Services() {
       </div>
     </>
   );
+
+
 }
