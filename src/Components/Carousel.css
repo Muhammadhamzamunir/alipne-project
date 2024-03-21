@@ -23,7 +23,6 @@
 } */
 /* Carousel.css */
 
-
 .custom-arrow {
   position: absolute;
   top: 50%;
@@ -37,7 +36,9 @@
 /* .slick-slide {
   padding-right: 15px !important;
 } */
-
+.slick-list {
+  max-height: 203px;
+}
 .slick-next::before {
   font-family: Arial !important;
   --b: 1px;
