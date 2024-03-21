@@ -148,7 +148,7 @@ export default function OnGoingProjects() {
 
       </div>
       {/* this Button will be show only on Mobile Screen  */}
-      <div className="flex justify-end right-0 pr-6 pt-4 pb-10 btm-btn ">
+      <div className="flex justify-end right-0 pr-6 pt-10 pb-4 btm-btn ">
         <Button text={"View All"} to="/on-going-project-list" />
       </div>
     </div>
