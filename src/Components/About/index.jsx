@@ -48,7 +48,7 @@ const About = () => {
     <div
       className='bg-secondary bg-contain bg-left bg-no-repeat  ' style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(${About_bg})`, backgroundPosition: "left" }}
     >
-      <div className=" md:w-[80%] sm:px-6 w-[90%] relative flex mt-[180px] md:mt-6 flex-col items-center lg:flex-row  inner-cont" >
+      <div className=" md:w-[80%] sm:px-6 w-[90%] relative flex mt-[10px] md:mt-6 flex-col items-center lg:flex-row  inner-cont" >
         <div className="flex flex-col items-center justify-center h-[100%] lg:w-[40%] W-[100%] md:flex-col lg:flex-row  md:pb-10 pt-4">
           <div className="relative w-full rounded md:pr-6   md:pb-16   ">
             <ReactPlayer url={video_url} width={"100%"} height={"251px"} controls />

@@ -137,7 +137,7 @@ export default function Navbar() {
 
     return (
         <>
-            <div className={pathname === "/" ? "lg:bg-contain   bg-top  bg-cover md:h-[370px] h-[370px] lg:h-[105vh] bg-no-repeat bg-[#000000] px-3 relative" : "px-3 bg-cover "}
+            <div className={pathname === "/" ? "lg:bg-contain   bg-top  bg-cover md:h-[400px] h-[400px] lg:h-[105vh] bg-no-repeat bg-[#000000] px-3 relative" : "px-3 bg-cover "}
                 style={pathname === "/" ? {
                     backgroundPosition: "right top, left top",
                     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)), url(${nav_bg}), url(${nav_bg2})`
