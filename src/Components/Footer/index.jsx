@@ -34,7 +34,7 @@ export default function Footer() {
             <div data-aos="fade-left" className='flex items-center justify-center  flex-col h-[304px] md:h-[600px] '  >
                 <h3 className='md:text-2xl text-center font-audiowide px-2 lg:mt-4'  >Ready to transform visions into Architectural Marvels</h3>
                 <h3 className='md:mb-8 mb-5 text-gray-400 text-[19px] md:text-3xl  font-light tracking-wider' >Connect with us!</h3>
-                <Button text={"Lets Talk!"} to="/contact" />
+                <Button text={"Lets Talk!"} to="/contact"  />
 
             </div>
 
