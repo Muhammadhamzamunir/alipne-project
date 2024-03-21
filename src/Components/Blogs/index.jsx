@@ -37,27 +37,27 @@ export default function Blogs() {
     slidesToScroll: 1,
     arrows: false,
     autoplay: false,
-    // responsive: [
-    //   {
-    //     breakpoint: 1024,
-    //     settings: {
-    //       slidesToShow: 2
-    //     }
-    //   },
-    //   {
-    //     breakpoint: 1200, // xl
-    //     settings: {
-    //       slidesToShow: 1, // Show 3 items on xl screens
-    //       slidesToScroll: 1
-    //     }
-    //   },
-    //   {
-    //     breakpoint: 768,
-    //     settings: {
-    //       slidesToShow: 1
-    //     }
-    //   }
-    // ]
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 1200, // xl
+        settings: {
+          slidesToShow: 1, // Show 3 items on xl screens
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
   };
 
   return (
