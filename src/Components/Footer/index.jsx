@@ -107,14 +107,14 @@ export default function Footer() {
                 // style={windowWidth < 1000 ? { backgroundImage: `url(${footer2_Bg2})`, backgroundColor: "#131313", backgroundSize: 'contain', backgroundRepeat: "no-repeat", backgroundPosition: "center" } : {}}
                 >
                     <span className='pt-1  mr-1 text-[#828282]'> <FaCopyright /> </span>
-                    <h6 className='text-left mt-1 text-[13px] text-[#828282] lg:text-[13px] mb-2'> All Rights Reserved by Alpine Architects | Designed & Developed by Digilligent Marketing X Tech Solutions</h6>
+                    <h6 className='text-left mt-1 text-[13px] text-[#828282] lg:text-[13px] mb-2'> All Rights Reserved by Alpine Architects Pvt Ltd.| Designed & Developed by Digilligent Marketing X Tech Solutions</h6>
                 </div>
                 <div
                     className="flex lg:hidden pl-4 pt-[70px] pb-20 z-0 relative bottom-8 -left-2"
                     style={windowWidth < 1000 ? { backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.0)),url(${footer2_Bg2})`, backgroundColor: "#131313", backgroundSize: 'cover', backgroundRepeat: "no-repeat", backgroundPosition: "right" } : {}}
                 >
                     <span className='pt-1  mr-1 text-[#828282]'> <FaCopyright /> </span>
-                    <h6 className='text-left mt-1 text-[13px] text-[#828282] lg:text-[13px] mb-2'> All Rights Reserved by Alpine Architects | Designed & Developed by Digilligent Marketing X Tech Solutions</h6>
+                    <h6 className='text-left mt-1 text-[13px] text-[#828282] lg:text-[13px] mb-2'> All Rights Reserved by Alpine Architects Pvt Ltd.| Designed & Developed by Digilligent Marketing X Tech Solutions</h6>
                 </div>
             </div>
 
