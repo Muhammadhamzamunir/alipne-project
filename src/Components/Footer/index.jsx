@@ -5,6 +5,7 @@ import footer1_Bg from '../../assets/images/footer1-bg.png';
 import footer2_Bg2 from '../../assets/images/HomePage/footer2-bg2.png';
 import footer2_Bg1 from '../../assets/images/footer2-bg1.png';
 import logo from '../../assets/images/LOGO.png';
+import footer_logo from '../../assets/images/footer-logo.png';
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaInstagram, FaYoutube, FaPrint, FaFacebook, FaPalfed, FaCopyright, FaPinterest, FaLinkedin } from 'react-icons/fa'
 export default function Footer() {
     const handleUpArrowClick = () => {
@@ -71,13 +72,15 @@ export default function Footer() {
 
                 }}>
                     <div className="flex z-20 flex-col md:flex-row flex-1">
-                        <div className="md:basis-1/4 flex items-center md:justify-end pl-4">
+                        <div className="md:basis-1/4 flex items-center  md:justify-end md:pl-10 pl-3">
                             <Link to="/">
-                                <img src={logo} alt="" className="   h-60 bg-blend-multiply" />
+                                {/* <img src={logo} alt="" className="   h-60 bg-blend-multiply" /> */}
+                                <img src={footer_logo} alt="" className="mt-12 md:mt-4  h-40 bg-blend-multiply" />
+
                             </Link>
                         </div>
-                        <div className="text-left md:basis-3/4 flex justify-start items-center pl-2 pt-4">
-                            <div className='md:ml-8'>
+                        <div className="text-left md:basis-3/4 flex justify-start items-center pl-2 md:pl-0 pt-4">
+                            <div className='md:ml-6'>
                                 <div className='flex lg:gap-16 gap-y-4 flex-col md:flex-row'>
                                     <p className='flex items-center gap-2 text-[20px]'><FaPhoneAlt className='footer-icon-color' /> +91 9757417069 | +91 9664817975</p>
                                 </div>
