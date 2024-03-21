@@ -87,7 +87,7 @@ export default function index() {
                                 {byTheNumber[0].complete_project_area.match(/[a-zA-Z\s]+/)}
                             </h3>
                             <h6 className="font-light text-[20px] tracking-wider text-center">
-                                Sq Carpet Area Of Completed Projects
+                                Sq ft. Carpet Area Of Completed Projects
                             </h6>
                         </div>
                         <div className=" p-4  md:w-[30%]  w-full flex flex-col items-center">
@@ -108,7 +108,7 @@ export default function index() {
                             </h3>
 
                             <h6 className="font-light text-[20px]   tracking-wider text-center">
-                                Sq Carpet Area Of Ongoing Projects
+                                Sq ft. Carpet Area Of Ongoing Projects
                             </h6>
                         </div>
                     </div>

@@ -83,11 +83,11 @@ export default function Footer() {
                                 </div>
                                 <div className='flex lg:gap-16 gap-y-4 flex-col md:flex-row my-4'>
 
-                                    <p className='flex items-center gap-2 text-[20px]'><FaEnvelope className='footer-icon-color' /> innovate@alpineArchitects.net</p>
-                                    <p className='flex items-center gap-2 text-[20px]'><FaEnvelope className='footer-icon-color' /> nitesh@alpineArchitects.net</p></div>
+                                    <p className='flex items-center gap-2 text-[20px]'><FaEnvelope className='footer-icon-color' /> innovate@alpinearchitects.net</p>
+                                    <p className='flex items-center gap-2 text-[20px]'><FaEnvelope className='footer-icon-color' /> nitesh@alpinearchitects.net</p></div>
                                 <div className='my-3 flex flex-nowrap items-start lg:items-center gap-2'>
                                     <span className='text-[20px] mt-3 md:mt-0'><FaMapMarkerAlt className='footer-icon-color' /></span>
-                                    <p className='text-[20px] pr-8'> 407, Oracle Business Hub, Road no.16/Z, Wagle estate, Thane (W) 400604</p>
+                                    <p className='text-[20px] pr-8'> 407, Oracle Business Hub, Road no.16/Z, Wagle Estate, Thane (W) 400604</p>
                                 </div>
                                 <div className='flex gap-5 ml-6 mt-4 md:ml-0 z-20'>
                                     <a href="https://www.instagram.com/alpine_niteshkedare" target='blank'><FaInstagram className='footer-icon-color text-2xl' /></a>

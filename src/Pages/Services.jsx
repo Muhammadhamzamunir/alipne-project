@@ -271,7 +271,7 @@ export default function Services() {
   return (
     <>
 
-      
+
       <div className="  relative bg-no-repeat  lg:bottom-48  md:bottom-20 bottom-20 sm:bottom-5 md:bg-center lg:bg-top bg-contain " style={{
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1 )), url(${Services_bg})`
       }}>
@@ -305,6 +305,7 @@ export default function Services() {
           <h2 className="font-audiowide text-2xl mt-0 md:text-3xl pb-6 uppercase ">
             Exclusive Services
           </h2>
+
           <div className="  flex flex-col md:flex-row gap-4 justify-between mb-50 flex-wrap gap-y-10 text-center">
             <div data-aos="flip-up" class=" pt-8 p-4 md:w-[48%] lg:w-[32%] h-[370px] w-full bg-white border   hover:border-[#C1AE69]  flex flex-col items-center group">
 
@@ -557,7 +558,7 @@ export default function Services() {
 
               className="p-4 md:pl-0 md:w-full lg:w-[55%]">
               <h1 className="font-audiowide leading-9 text-2xl mb-2 mt-4 md:mt-0 ">
-                14 YEARS OF ArchitectURAL ARTISTRY
+                14 YEARS OF ARCHITECTURAL ARTISTRY
               </h1><br />
               <p className="font-light mb-10">
                 With a legacy spanning over 14 years, Alpine Architects has been

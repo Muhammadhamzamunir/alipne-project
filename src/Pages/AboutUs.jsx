@@ -423,7 +423,7 @@ export default function AboutUs() {
                   Nitesh Kedare
                 </h3>
                 <p className="font-light leading-loose tracking-wider">
-                  Principal Architects
+                  Principal Architect
                 </p>
               </div>
             </div>

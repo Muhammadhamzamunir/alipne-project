@@ -12,7 +12,7 @@ export default function Root() {
 
     setTimeout(() => {
       setIsLoading(false)
-    }, 4000)
+    }, 3600)
 
   }, [location.pathname]);
 
