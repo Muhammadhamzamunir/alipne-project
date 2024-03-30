@@ -34,7 +34,7 @@ export default function Footer() {
             <div data-aos="fade-left" className='flex items-center justify-center  flex-col h-[304px] md:h-[600px] '  >
                 <h3 className='md:text-2xl text-center font-audiowide px-2 lg:mt-4'  >Ready to transform visions into Architectural Marvels</h3>
                 <h3 className='md:mb-8 mb-5 text-gray-400 text-[19px] md:text-3xl  font-light tracking-wider' >Connect with us!</h3>
-                <Button text={"Lets Talk!"} to="/contact"  />
+                <Button text={"Lets Talk!"} to="/contact" />
 
             </div>
 
@@ -89,7 +89,7 @@ export default function Footer() {
                                     <p className='flex items-center gap-2 text-[20px]'><FaEnvelope className='footer-icon-color' /> innovate@alpinearchitects.net</p>
                                     <p className='flex items-center gap-2 text-[20px]'><FaEnvelope className='footer-icon-color' /> nitesh@alpinearchitects.net</p></div>
                                 <div className='my-3 flex flex-nowrap items-start lg:items-center gap-2'>
-                                    <span className='text-[20px] mt-3 md:mt-0'><FaMapMarkerAlt className='footer-icon-color' /></span>
+                                    <span className='text-[20px] mt-3 md:mt-0 '><FaMapMarkerAlt className='footer-icon-color' /></span>
                                     <p className='text-[20px] pr-8'> 407, Oracle Business Hub, Road no.16/Z, Wagle Estate, Thane (W) 400604</p>
                                 </div>
                                 <div className='flex gap-5 ml-6 mt-4 md:ml-0 z-20'>
@@ -106,17 +106,17 @@ export default function Footer() {
                 </div>
 
                 <div
-                    className="md:w-[72%] m-auto lg:flex hidden md:items-start md:pt-12 -pl-8 py-[31px] "
+                    className="md:w-[85%] m-auto lg:flex hidden md:items-center md:pt-12 -pl-8 py-[31px] "
                 // style={windowWidth < 1000 ? { backgroundImage: `url(${footer2_Bg2})`, backgroundColor: "#131313", backgroundSize: 'contain', backgroundRepeat: "no-repeat", backgroundPosition: "center" } : {}}
                 >
-                    <span className='pt-1  mr-1 text-[#828282]'> <FaCopyright /> </span>
-                    <h6 className='text-left mt-1 text-[13px] text-[#828282] lg:text-[13px] mb-2'> All Rights Reserved by Alpine Architects Pvt Ltd. | Designed & Developed by Digilligent Marketing X Tech Solutions</h6>
+                    <span className='pt-1  mr-1 text-[#828282] text-[12px] '> <FaCopyright width={0.7} /> </span>
+                    <h6 className='text-left mt-1 text-[13px] text-[#828282] lg:text-[13px] '> All Rights Reserved by Alpine Architects Pvt Ltd. | Designed & Developed by Digilligent Marketing X Tech Solutions</h6>
                 </div>
                 <div
                     className="flex lg:hidden pl-4 pt-[70px] pb-20 z-0 relative bottom-8 -left-2"
                     style={windowWidth < 1000 ? { backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.0)),url(${footer2_Bg2})`, backgroundColor: "#131313", backgroundSize: 'cover', backgroundRepeat: "no-repeat", backgroundPosition: "right" } : {}}
                 >
-                    <span className='pt-1  mr-1 text-[#828282]'> <FaCopyright /> </span>
+                    <span className='pt-1  mr-1 text-[#828282] text-[12px]'> <FaCopyright /> </span>
                     <h6 className='text-left mt-1 text-[13px] text-[#828282] lg:text-[13px] mb-2'> All Rights Reserved by Alpine Architects Pvt Ltd. | Designed & Developed by Digilligent Marketing X Tech Solutions</h6>
                 </div>
             </div>
