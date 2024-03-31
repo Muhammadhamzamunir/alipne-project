@@ -59,35 +59,17 @@ export default function ProjectDetailPage() {
     }, [projectData])
 
 
-    const handleUpArrowClick = () => {
+const handleUpArrowClick = () => {
         window.scrollTo({
             top: 0,
             behavior: "smooth",
         });
     }
-    useEffect(() => {
+useEffect(() => {
         handleUpArrowClick();
     }, [])
 
 
-
-    const responsive = {
-        desktop: {
-            breakpoint: { max: 3000, min: 1024 },
-            items: 2,
-            slidesToSlide: 2 // optional, default to 1.
-        },
-        tablet: {
-            breakpoint: { max: 1024, min: 464 },
-            items: 2,
-            slidesToSlide: 2 // optional, default to 1.
-        },
-        mobile: {
-            breakpoint: { max: 464, min: 0 },
-            items: 1,
-            slidesToSlide: 1 // optional, default to 1.
-        }
-    };
     const captionStyle = {
         fontSize: '2em',
         fontWeight: 'bold',
@@ -187,19 +169,7 @@ export default function ProjectDetailPage() {
                         <p className='font-light -mt-2 leading-loose tracking-wider'>
                             AREA-    {projectData[0].area}                  </p>
 
-                        {/* <style>{
-
-                        ` 
-                        @media screen and (min-width: 860px) {
-                        .carousel-image{
-                            max-width: auto;
-                        width: 1130px !important;
-                        height: 600px !important;
-                        object-fit: cover;
-                        border-radius: 0px !important;
-  }}`
-                    }
-                    </style> */}
+                       
                         <style>{
                             ` @media screen and (min-width: 860px) {
                         .carousel-image{
