@@ -1,6 +1,6 @@
 
 import { Carousel } from 'react-carousel-minimal';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Button from '../Components/Button';
 import { FaLocationDot } from "react-icons/fa6";
 import AliceCarousel from 'react-alice-carousel';
@@ -17,6 +17,7 @@ export default function ProjectDetailPage() {
     const isMobile = useMediaQuery({ maxWidth: 767 });
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
+    const carouselRef = useRef()
     const [currentIndex, setCurrentIndex] = useState(0);
     const { id } = useParams();
     const { fetchData, loader } = API_Call();
@@ -126,6 +127,52 @@ export default function ProjectDetailPage() {
         onSwipedLeft: () => nextPhoto(),
         onSwipedRight: () => prevPhoto(),
     });
+    useEffect(() => {
+        const handleButtonClick = () => {
+            // Get the carousel container element
+            const carouselContainer = carouselRef.current.querySelector('.carousel-container');
+
+
+            // Get the dots container element
+            const dotsContainer = carouselContainer.querySelector('.dots');
+
+            // Get all the dot elements
+            const dots = dotsContainer.querySelectorAll('.dot');
+
+
+            // Check if the last dot has the class 'active'
+            const lastDotIsActive = dots[dots.length - 1].classList.contains('active');
+
+
+            if (lastDotIsActive) {
+
+
+                window.scrollBy({
+                    top: 700,
+                    behavior: 'smooth'
+                });
+            }
+        };
+
+        // Wait for the next and previous buttons to be rendered
+        const waitForButtons = setInterval(() => {
+            const nextButton = document.querySelector('.next');
+
+
+            const prevButton = document.querySelector('.prev');
+
+
+            if (nextButton && prevButton) {
+                clearInterval(waitForButtons);
+                nextButton.addEventListener('click', handleButtonClick);
+                prevButton.addEventListener('click', handleButtonClick);
+            }
+        }, 100);
+
+        // Clean up interval on component unmount
+        return () => clearInterval(waitForButtons);
+    }, []);
+
 
     return (
         <>
@@ -172,10 +219,11 @@ export default function ProjectDetailPage() {
 
                         <div style={{ textAlign: "center", marginBottom: "0px" }}>
                             {verticalImagesData.length > 0 ? (
-                                <div style={{
+                                <div ref={carouselRef} style={{
                                     padding: "0 0px"
                                 }}>
                                     <Carousel
+
                                         data={verticalImagesData}
                                         time={2000}
                                         width="950px"
@@ -193,6 +241,7 @@ export default function ProjectDetailPage() {
                                         slideImageFit="cover"
                                         thumbnails={true}
                                         showNavBtn={true}
+
                                         thumbnailWidth="100px" touchMoveDefaultEvents={true}
                                         style={{
                                             textAlign: "center",
@@ -247,7 +296,7 @@ export default function ProjectDetailPage() {
                                 ))}
                             </AliceCarousel>
                         )}
-                     
+
                     </div>
 
 
@@ -266,14 +315,14 @@ export default function ProjectDetailPage() {
                         <span className='absolute top-0 right-0 z-50 p-2 '><Button text={"✕"} onClick={closeModal} /></span>
                         <div className="lg:pt-0 pt-36 flex flex-col items-center justify-center space-y-4">
                             <div className="flex items-center justify-center  w-full mt-8 top-22">
-                                <span className='absolute left-3 md:left-6 z-40 hidden lg:block '><Button text={"←"} onClick={prevPhoto} /></span>
+                                <span className='absolute left-3 md:left-2 z-40 hidden lg:block '><Button text={"←"} onClick={prevPhoto} /></span>
 
 
 
                                 <img src={horizontalImageData[currentPhotoIndex]?.image} alt="Modal" className="max-w-full w-[100%] lg:w-[85%]  md:h-[85vh] h-[270px]  object-fill" />
 
 
-                                <span className=' absolute right-3 md:right-6 z-40 hidden lg:block'><Button text={"→"} onClick={nextPhoto} /></span>
+                                <span className=' absolute right-3 md:right-[10px] z-40 hidden lg:block'><Button text={"→"} onClick={nextPhoto} /></span>
                             </div>
                             <div className="text-center">
 

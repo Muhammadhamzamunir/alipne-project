@@ -269,14 +269,14 @@ export default function ContactUs() {
                 `}
                 </style>
                 <div className="md:w-[80%] sm:w-full px-6 md:px-0 flex flex-col-reverse md:flex-row">
-                    <div className="min-h-[90vh] md:w-[56%] w-full lg:p-5">
+                    <div className="min-h-[90vh] md:w-[56%] w-full lg:p-5 ">
                         <h1 className="font-audiowide text-3xl pb-6">Contact Us</h1>
                         <p className="font-light leading-loose tracking-wider">
                             Got a project on your mind?
                             <br />
                             or
                             <br />
-                            Looking for the opportunity to work at Alpine Architect?
+                            Looking for the opportunity to work at Alpine Architects?
                             <br />
                             Let’s discuss in detail.
                         </p>
@@ -332,18 +332,18 @@ export default function ContactUs() {
 
 
                     {/* Large screen Sliders */}
-                    <div className="md:w-[41%] hidden lg:flex  relative justify-around  h-[700px] top-[-40px]  overflow-y-auto overflow-x-visible no-scrollbar">
+                    <div className="md:w-[41%] hidden lg:flex  relative justify-evenly h-[700px] top-[-40px]  overflow-y-auto overflow-x-visible no-scrollbar">
                         <div className="flex flex-col  gap-y-1 mb-2 md:mb-5  scrolling-images w-[45%]">
 
                             {
                                 heroImages.length > 0 ? (
 
-                                    heroImages?.map((image) => (
+                                    heroImages?.map((image, index) => (
                                         <div className="">
-                                            <img
+                                            <img key={index}
                                                 src={image}
                                                 alt=""
-                                                className="md:h-[300px] md:w-full mb-5"
+                                                className="md:h-[300px] md:w-full mb-5 "
                                             />
 
                                         </div>

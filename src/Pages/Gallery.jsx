@@ -196,23 +196,23 @@ export default function Gallery() {
             </div>
 
             <Modal show={isModalOpen} onClose={closeModal} size="4xl" className="backdrop-blur-lg min-h-[100vh] z-50 padding-0" {...handlers}>
-                <Modal.Body>
+                <Modal.Body className="m-0">
                     <div className="relative padding-0">
                         <span className='absolute top-0 right-0 z-50 p-2 '><Button text={"✕"} onClick={closeModal} /></span>
                         <div className="lg:pt-0 pt-36 flex flex-col items-center justify-center space-y-4">
                             <div className="flex items-center justify-center  w-full mt-8 top-22">
-                                <span className='absolute left-3 md:left-6 z-40 hidden lg:block '><Button text={"←"} onClick={prevPhoto} /></span>
+                                <span className='absolute left-3 md:left-2 z-40 hidden lg:block '><Button text={"←"} onClick={prevPhoto} /></span>
                                 {
                                     (currentPhototype == "horizontal") ? (
 
                                         <img src={filtered_horizontal_images[currentPhotoIndex]?.horizontal_image} alt="Modal" className="max-w-full w-[100%] lg:w-[85%]  md:h-[85vh] h-[270px]  object-fill" />
                                     ) :
                                         (
-                                            <img src={filtered_verticle_images[currentPhotoIndex]?.vertical_image} alt="Modal" className="max-w-full w-[100%] lg:w-[35%]  md:h-[90vh] h-[270px]  object-fill" />
+                                            <img src={filtered_verticle_images[currentPhotoIndex]?.vertical_image} alt="Modal" className="max-w-full w-[100%] lg:w-[30%]  md:h-[600px] h-[270px]  object-fill" />
                                         )
                                 }
 
-                                <span className=' absolute right-3 md:right-6 z-40 hidden lg:block'><Button text={"→"} onClick={nextPhoto} /></span>
+                                <span className=' absolute right-3 md:right-[10px] z-40 hidden lg:block'><Button text={"→"} onClick={nextPhoto} /></span>
                             </div>
                             {(currentPhototype == "horizontal") ?
                                 (<div className="text-center">

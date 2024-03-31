@@ -32,10 +32,10 @@ export default function Carousel_Diversity(props) {
       } else {
         data = await fetchData(`portfolio?category_id=${uniqueCategories[0].id}`);
       }
-      console.log("Data", data);
+      
 
       const filteredData = data.filter(d => d.id != opendProjectID);
-      console.log("Filtered", filteredData);
+      
       setCategoriesData(filteredData);
     }
 
