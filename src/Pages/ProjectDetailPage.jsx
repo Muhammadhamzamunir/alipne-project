@@ -13,6 +13,7 @@ import API_Call from '../Components/API_Call';
 import { useMediaQuery } from 'react-responsive';
 import { useSwipeable } from "react-swipeable";
 import { Modal } from 'flowbite-react';
+import ReactPlayer from 'react-player'
 export default function ProjectDetailPage() {
     const isMobile = useMediaQuery({ maxWidth: 767 });
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -59,13 +60,13 @@ export default function ProjectDetailPage() {
     }, [projectData])
 
 
-const handleUpArrowClick = () => {
+    const handleUpArrowClick = () => {
         window.scrollTo({
             top: 0,
             behavior: "smooth",
         });
     }
-useEffect(() => {
+    useEffect(() => {
         handleUpArrowClick();
     }, [])
 
@@ -169,7 +170,7 @@ useEffect(() => {
                         <p className='font-light -mt-2 leading-loose tracking-wider'>
                             AREA-    {projectData[0].area}                  </p>
 
-                       
+
                         <style>{
                             ` @media screen and (min-width: 860px) {
                         .carousel-image{
@@ -273,10 +274,10 @@ useEffect(() => {
                 </div>
                 {
                     projectData[0].url && (
-                    <div className='md:w-[73%] w-[85%] m-auto pt-1 pb-20 md:h-[584px] h-[300px]'>
-                    <ReactPlayer url={projectData[0].url} width={"100%"} height={"100%"} controls />
+                        <div className='md:w-[73%] w-[85%] m-auto pt-1 pb-20 md:h-[584px] h-[300px]'>
+                            <ReactPlayer url={projectData[0].url} width={"100%"} height={"100%"} controls />
 
-                </div>)
+                        </div>)
                 }
                 <Carousel_Diversity category={projectData[0].category} id={projectData[0].id} page="projectdetail" />
             </>) : (<div className="flex lg:h-[613px] justify-center items-center m-auto pt-2">
