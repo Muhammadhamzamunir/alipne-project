@@ -235,7 +235,7 @@ useEffect(() => {
                 </div>
 
 
-                <div className="md:flex md:mt-32 justify-center items-center w-full  py-3" >
+                <div className="md:flex md:mt-32 justify-center items-center w-full  pt-3" >
                     <div className="md:w-3/4 sm:w-full px-6 md:px-0 lg:-mt-64 ">
                         {horizontalImageData.length > 0 && (
                             <AliceCarousel
@@ -271,6 +271,13 @@ useEffect(() => {
 
 
                 </div>
+                {
+                    projectData[0].url && (
+                    <div className='md:w-[73%] w-[85%] m-auto pt-1 pb-20 md:h-[584px] h-[300px]'>
+                    <ReactPlayer url={projectData[0].url} width={"100%"} height={"100%"} controls />
+
+                </div>)
+                }
                 <Carousel_Diversity category={projectData[0].category} id={projectData[0].id} page="projectdetail" />
             </>) : (<div className="flex lg:h-[613px] justify-center items-center m-auto pt-2">
                 <img src="loading-gif.gif" alt="" className='w-[150px] bg-blend-multiply my-44' />
