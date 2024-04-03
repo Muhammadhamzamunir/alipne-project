@@ -36,6 +36,12 @@ p {
   /* font-family:Genos !important ; */
 }
 
+.awssld__timer,.awssld__bar--active,.awssld__bar {
+  height: 0 !important;
+}
+
+
+
 .awssld__content > img,
 .awssld__content > video {
   object-fit: contain !important;
