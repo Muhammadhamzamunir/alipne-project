@@ -4,8 +4,8 @@ import "react-multi-carousel/lib/styles.css";
 
 import services_crousal_bg from "../assets/images/services-crousal-bg.png";
 import './Services.css'
-import art from "../assets/images/art.jpeg";
-import art_small from "../assets/images/art_small.jpeg";
+import art from "../assets/images/art.jpg";
+import art_small from "../assets/images/art_small.jpg";
 import API_Call from '../Components/API_Call';
 import { useInView } from 'react-intersection-observer';
 
