@@ -212,7 +212,7 @@ export default function Gallery() {
                                         )
                                 }
 
-                                <span className=' absolute right-3 md:right-[15px] z-40 hidden lg:block'><Button text={"→"} onClick={nextPhoto} /></span>
+                                <span className=' absolute right-3 md:right-[13px] z-40 hidden lg:block'><Button text={"→"} onClick={nextPhoto} /></span>
                             </div>
                             {(currentPhototype == "horizontal") ?
                                 (<div className="text-center">
