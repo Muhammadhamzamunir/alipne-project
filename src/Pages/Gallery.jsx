@@ -198,7 +198,7 @@ export default function Gallery() {
             <Modal show={isModalOpen} onClose={closeModal} size="4xl" className="backdrop-blur-lg min-h-[100vh] z-50 padding-0" {...handlers}>
                 <Modal.Body className="m-0">
                     <div className="relative padding-0">
-                        <span className='absolute top-0 right-0 z-50 p-2 '><Button text={"✕"} onClick={closeModal} /></span>
+                        <span className='absolute top-0 right-0 z-50 p-2 '><Button text={"&times;"} onClick={closeModal} /></span>
                         <div className="lg:pt-0 pt-36 flex flex-col items-center justify-center space-y-4">
                             <div className="flex items-center justify-center  w-full mt-8 top-22">
                                 <span className='absolute left-3 md:left-2 z-40 hidden lg:block '><Button text={"←"} onClick={prevPhoto} /></span>
@@ -212,7 +212,7 @@ export default function Gallery() {
                                         )
                                 }
 
-                                <span className=' absolute right-3 md:right-[10px] z-40 hidden lg:block'><Button text={"→"} onClick={nextPhoto} /></span>
+                                <span className=' absolute right-3 md:right-[15px] z-40 hidden lg:block'><Button text={"→"} onClick={nextPhoto} /></span>
                             </div>
                             {(currentPhototype == "horizontal") ?
                                 (<div className="text-center">

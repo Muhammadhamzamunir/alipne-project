@@ -71,7 +71,11 @@ export default function Button({ text, onClick, to }) {
         style={{ fontFamily: "Genos" }}
       >
         {isHtmlEntity ? (
-          <span className='text-center pl-1 text-[20px] ' style={{ fontFamily: "Arial" }} dangerouslySetInnerHTML={{ __html: text }} />
+
+          text === "&times;" ? (<span className=' pt-[20px] ml-[4px] leading-[30px]   text-[30px] font-thin ' style={{ fontFamily: "Arial" }} dangerouslySetInnerHTML={{ __html: text }} />
+          ) : (<span className='text-center pl-1 text-[22px]  ' style={{ fontFamily: "Arial" }} dangerouslySetInnerHTML={{ __html: text }} />
+          )
+
         ) : (
           text
         )}

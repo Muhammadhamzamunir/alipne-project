@@ -1,20 +1,24 @@
 .button {
   --b: 1px;
-  --s: .45em;
-  --color: #C2C2C2;
+  --s: 0.45em;
+  --color: #c2c2c2;
 
-  padding: calc(.4em + var(--s)) calc(.9em + var(--s));
+  padding: calc(0.6em + var(--s)) calc(0.9em + var(--s));
   /* padding: 15px ; */
   color: var(--color);
   --_p: var(--s);
-  background:
-    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
-    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
-  transition: .3s linear, color 0s, background-color 0s;
+  background: conic-gradient(
+      from 90deg at var(--b) var(--b),
+      #0000 90deg,
+      var(--color) 0
+    )
+    var(--_p) var(--_p) / calc(100% - var(--b) - 2 * var(--_p))
+    calc(100% - var(--b) - 2 * var(--_p));
+  transition: 0.3s linear, color 0s, background-color 0s;
   outline: var(--b) solid #0000;
-  outline-offset: .6em;
+  outline-offset: 0.6em;
   font-size: 16px;
-
+  text-align: center;
   border: 0;
   /* height: 70px; Default height */
   user-select: none;
@@ -35,7 +39,7 @@
 .button:focus-visible {
   --_p: 0px;
   outline-color: var(--color);
-  outline-offset: .05em;
+  outline-offset: 0.05em;
 }
 
 .button:active {

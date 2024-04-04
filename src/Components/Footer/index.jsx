@@ -106,11 +106,11 @@ export default function Footer() {
                 </div>
 
                 <div
-                    className="md:w-[85%] m-auto lg:flex hidden md:items-center md:pt-12 -pl-8 py-[31px] "
+                    className="md:w-auto m-auto lg:flex mr-8 hidden md:items-center justify-center md:pt-12 -pl-8 py-[31px] "
                 // style={windowWidth < 1000 ? { backgroundImage: `url(${footer2_Bg2})`, backgroundColor: "#131313", backgroundSize: 'contain', backgroundRepeat: "no-repeat", backgroundPosition: "center" } : {}}
                 >
                     <span className='pt-1  mr-1 text-[#828282] text-[12px] '> <FaCopyright width={0.7} /> </span>
-                    <h6 className='text-left mt-1 text-[13px] text-[#828282] lg:text-[13px] '> All Rights Reserved by Alpine Architects Pvt Ltd. | Designed & Developed by Digilligent Marketing X Tech Solutions</h6>
+                    <h6 className='text-center mt-1 text-[13px] text-[#828282] lg:text-[13px] '> All Rights Reserved by Alpine Architects Pvt Ltd. | Designed & Developed by Digilligent Marketing X Tech Solutions</h6>
                 </div>
                 <div
                     className="flex lg:hidden pl-4 pt-[70px] pb-20 z-0 relative bottom-8 -left-2"
