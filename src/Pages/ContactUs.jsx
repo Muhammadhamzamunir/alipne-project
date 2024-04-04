@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import Button from "../Components/Button";
 import contact_bg from "../assets/images/contact-bg.png";
 import API_Call from "../Components/API_Call";
-
+import { useNavigate } from "react-router-dom";
 export default function ContactUs() {
-
+   const navigate = useNavigate();
     const [heroImages, setHeroImages] = useState([]);
     const { fetchData } = API_Call();
     let imagesArray = [];
@@ -13,61 +13,8 @@ export default function ContactUs() {
         const getData = async () => {
             try {
                 const data = await fetchData("banner?page=contact");
-                // const data = [
-                //     {
-                //         "id": 3,
-                //         "page": "services",
-                //         "images": [
-                //             {
-                //                 "id": 576,
-                //                 "url": "https://Architecture.flashcitytours.com/storage/576/WhatsApp-Image-2024-03-05-at-5.24.28-PM.jpeg"
-                //             },
-                //             {
-                //                 "id": 577,
-                //                 "url": "https://Architecture.flashcitytours.com/storage/577/WhatsApp-Image-2024-03-05-at-5.24.29-PM.jpeg"
-                //             },
-                //             {
-                //                 "id": 578,
-                //                 "url": "https://Architecture.flashcitytours.com/storage/578/WhatsApp-Image-2024-03-05-at-5.24.29-PM-(1).jpeg"
-                //             }
-                //         ]
-                //     }, {
-                //         "id": 3,
-                //         "page": "services",
-                //         "images": [
-                //             {
-                //                 "id": 576,
-                //                 "url": "https://Architecture.flashcitytours.com/storage/576/WhatsApp-Image-2024-03-05-at-5.24.28-PM.jpeg"
-                //             },
-                //             {
-                //                 "id": 577,
-                //                 "url": "https://Architecture.flashcitytours.com/storage/577/WhatsApp-Image-2024-03-05-at-5.24.29-PM.jpeg"
-                //             },
-                //             {
-                //                 "id": 578,
-                //                 "url": "https://Architecture.flashcitytours.com/storage/578/WhatsApp-Image-2024-03-05-at-5.24.29-PM-(1).jpeg"
-                //             }
-                //         ]
-                //     }, {
-                //         "id": 3,
-                //         "page": "services",
-                //         "images": [
-                //             {
-                //                 "id": 576,
-                //                 "url": "https://Architecture.flashcitytours.com/storage/576/WhatsApp-Image-2024-03-05-at-5.24.28-PM.jpeg"
-                //             },
-                //             {
-                //                 "id": 577,
-                //                 "url": "https://Architecture.flashcitytours.com/storage/577/WhatsApp-Image-2024-03-05-at-5.24.29-PM.jpeg"
-                //             },
-                //             {
-                //                 "id": 578,
-                //                 "url": "https://Architecture.flashcitytours.com/storage/578/WhatsApp-Image-2024-03-05-at-5.24.29-PM-(1).jpeg"
-                //             }
-                //         ]
-                //     }
-                // ]
-                console.log(("data", data));
+               
+               
                 data.forEach(element => {
                     element.images.forEach((image) => {
                         imagesArray.push(image.url)
@@ -110,19 +57,16 @@ export default function ContactUs() {
             body: JSON.stringify(formData)
         })
             .then(response => {
-                // console.log(response);
-                // if (!response.ok) {
-                //     throw new Error('Network response was not ok');
-                // }
                 return response.json();
             })
             .then(data => {
-                // Handle success response
-                console.log('Response:', data);
+               
+               
                 if (data.message) {
-                    alert(data.message);
+                    alert("The form has been submitted successfully");
+                    navigate('/')
                 }
-                // Optionally reset the form fields after successful submission
+                
                 setFormData({
                     name: '',
                     phone: '',
