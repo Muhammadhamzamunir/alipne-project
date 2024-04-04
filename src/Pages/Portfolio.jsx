@@ -139,7 +139,7 @@ export default function Portfolio() {
 
                     <div
                         data-aos="fade-right"
-                        className='w-full relative group lg:w-[67%] lg:h-[414px] h-[200px] '
+                        className='w-full relative group lg:w-[67%] lg:h-[479px] h-[200px] '
                         style={{ position: 'relative', cursor: 'pointer' }}
 
                     >
@@ -166,13 +166,13 @@ export default function Portfolio() {
                 )}
 
                 {
-                    filteredData[startingIndex + 1]?.vertical_image && (<div data-aos="fade-right" className="w-[48.8%] relative group lg:w-[30%] lg:h-[414px] h-[265px]" style={{ position: 'relative', cursor: 'pointer' }}
+                    filteredData[startingIndex + 1]?.vertical_image && (<div data-aos="fade-right" className="w-[48.8%] relative group lg:w-[30%] lg:h-[479px] h-[265px]" style={{ position: 'relative', cursor: 'pointer' }}
                     >
                         <Link to={`/project/${filteredData[startingIndex + 1]?.id}`}>
                             <img className='object-cover h-full transition duration-500 ease-in-out hover:opacity-50'
                                 src={filteredData[startingIndex + 1]?.vertical_image}
                                 alt={""}
-                                style={{ width: "100%", display: "block", }}
+                                style={{ width: "100%", display: "block", height:"100%" }}
 
                             />
                             <div className="absolute bottom-[10px] h-[80px] text-white flex items-end justify-between w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100">
