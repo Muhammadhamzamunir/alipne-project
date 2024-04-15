@@ -14,7 +14,7 @@ export default function Portfolio() {
   const [filteredData, setFilteredData] = useState([]);
   const navigate = useNavigate();
 
-  let filteredCategories = [];
+  let filteredCategories = ['Residential','Commercial','Hospitality','Institutional','Industrial & Infrastructure','Landscape & Urbanism','Master Planning'];
   let allPortofolioData = [];
 
   const getData = async () => {
