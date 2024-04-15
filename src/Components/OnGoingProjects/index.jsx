@@ -60,7 +60,7 @@ export default function OnGoingProjects() {
               ongoingProjects ? (ongoingProjects.slice(0, 3).map((project, index) => (
                 <div key={index} className="w-full h-[236px] relative group cursor-pointer" >
 
-                  <Link to={`/ongoing-project/${project?.id}`}>
+                  <Link to={`/ongoing-project/${project.id}?from=/`}>
 
                     <img src={project.horizontal_image?.[0]?.url} alt="" className="w-full h-[236px] object-cover transition duration-500 ease-in-out hover:opacity-50" />
 
@@ -117,7 +117,7 @@ export default function OnGoingProjects() {
               >
                 {ongoingProjects.slice(0, 5).sort((a, b) => b.id - a.id).map((project, index) => (
                   <div key={index} className="w-[508px] h-[336px] relative group cursor-pointer">
-                    <Link to={`/ongoing-project/${project.id}`}>
+                    <Link to={`/ongoing-project/${project.id}?from=/`}>
                       <img
                         src={project.horizontal_image?.[0]?.url}
                         alt=""

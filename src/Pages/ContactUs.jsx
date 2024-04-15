@@ -287,7 +287,7 @@ export default function ContactUs() {
                                             <img key={index}
                                                 src={image}
                                                 alt=""
-                                                className="md:h-[300px] md:w-full mb-5 "
+                                                className="md:h-[300px] object-cover md:w-full mb-5 "
                                             />
 
                                         </div>
@@ -305,7 +305,7 @@ export default function ContactUs() {
                                             <img
                                                 src={image}
                                                 alt=""
-                                                className="md:h-[300px] md:w-full mb-5"
+                                                className="md:h-[300px] object-cover md:w-full mb-5"
                                             />
                                         </div>
                                     ))

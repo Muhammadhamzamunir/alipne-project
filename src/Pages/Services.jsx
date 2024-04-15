@@ -25,8 +25,8 @@ export default function Services() {
   useEffect(() => {
     const getData = async () => {
       try {
-        const data = await fetchData("banner?page=services");
-        const byTheNumberData = await fetchData("byTheNumber");
+         const data = await fetchData("banner?page=services");
+        // const byTheNumberData = await fetchData("byTheNumber");
         const testimonialData = await fetchData("testimonial");
 
         // setByTheNumber(byTheNumberData)
@@ -56,23 +56,7 @@ export default function Services() {
     handleUpArrowClick();
   })
 
-  // const responsive = {
-  //   desktop: {
-  //     breakpoint: { max: 3000, min: 1024 },
-  //     items: 1,
-  //     slidesToSlide: 2
-  //   },
-  //   tablet: {
-  //     breakpoint: { max: 1024, min: 464 },
-  //     items: 3,
-  //     slidesToSlide: 3, // optional, default to 1.
-  //   },
-  //   mobile: {
-  //     breakpoint: { max: 464, min: 0 },
-  //     items: 1,
-  //     slidesToSlide: 1, // optional, default to 1.
-  //   },
-  // };
+ 
   const responsive_reviews = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -205,24 +189,26 @@ export default function Services() {
 
   const renderImages = () => {
     return (
-      // <div className='flex w-full overflow-x-auto'>
       <div
         ref={galleryRef}
-        className="w-full  md:w-full flex items-center justify-center overflow-x-scroll no-scrollbar"
+        className="w-full md:w-full flex items-center justify-center overflow-x-scroll no-scrollbar"
         title='Press left or Right arrow of keyboard'
       >
-        {
-          heroImages?.map((image, index) => (
-
-            <img src={image} alt="" key={index} className={`w-[184px] h-[245px] mr-5 ${index % 2 !== 0 ? "mt-20 " : ""}`} />
-
-          ))
-        }
+        {heroImages?.map((image, index) => (
+          <img
+            src={image}
+            alt=""
+            key={index}
+            
+            className={`w-[184px] h-[245px] mr-5  ${
+              index % 2 !== 0 ? "mt-20 " : ""
+            }`}
+          />
+        ))}
       </div>
-    )
-
-
+    );
   };
+  
 
   const handleSlideChange = (oldIndex, newIndex) => {
     setCurrentSlide(newIndex);
@@ -272,7 +258,7 @@ export default function Services() {
     <>
 
 
-      <div className="  relative bg-no-repeat  lg:bottom-48  md:bottom-20 bottom-20 sm:bottom-5 md:bg-center lg:bg-top bg-contain " style={{
+      <div  className="  relative bg-no-repeat  lg:bottom-48  md:bottom-20 bottom-20 sm:bottom-5 md:bg-center lg:bg-top bg-contain " style={{
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1 )), url(${Services_bg})`
       }}>
         <div className="md:flex pt-32 md:-mt-10 justify-center items-center w-full  p-1  mb-2 md:mb-0">
@@ -298,7 +284,7 @@ export default function Services() {
       </div>
 
 
-      <div className="md:flex justify-center items-center w-full lg:-mt-28">
+      <div  className="md:flex justify-center items-center w-full lg:-mt-28">
         <div data-aos="fade-down"
 
           className="md:w-3/4 sm:w-full px-6 md:px-0 mb-20">

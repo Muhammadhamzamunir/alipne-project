@@ -503,6 +503,8 @@ p {
   max-width: 100% !important;
 }
 
+
+
 @media screen and (min-width: 860px) {
   .dots {
     bottom: -400px !important  ;
@@ -510,7 +512,7 @@ p {
 
   .thumbnails img {
     width: 174px;
-    height: 186px;
+    height: 206px;
     object-fit: cover;
     margin-top: 170px;
   }

@@ -13,11 +13,17 @@ import API_Call from '../Components/API_Call';
 import { useMediaQuery } from 'react-responsive';
 import { useSwipeable } from "react-swipeable";
 import { Modal } from 'flowbite-react';
-import ReactPlayer from 'react-player'
+import ReactPlayer from 'react-player';
+import { useLocation } from 'react-router-dom';
 export default function OngoingProjectListDetail() {
     const isMobile = useMediaQuery({ maxWidth: 767 });
     const { id } = useParams();
     const carouselRef = useRef()
+    const location = useLocation();
+    const queryParams = new URLSearchParams(location.search);
+    const previousPage = queryParams.get('from');
+
+    
     const { fetchData, loader } = API_Call();
     const [projectData, setProjectData] = useState();
     const [verticalImagesData, setverticalImagesData] = useState([]);
@@ -162,9 +168,14 @@ export default function OngoingProjectListDetail() {
     return (
         <>
             {projectData ? (<>
-                <div className="md:flex justify-center  lg:h-[1087px] md:h-[90vh] h-auto w-full relative lg:bottom-44 md:bottom-12 bottom-20 sm:bottom-5  mb-2 md:mb-0  bg-cover bg-rigth py-3 bg-top" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.0), rgba(13, 13, 13, 0.1)), url(${detailPage_bg_1}),url(${detailPage_bg_2})`, backgroundRepeat: "no-repeat", backgroundPosition: "100% 100%", backgroundSize: "100% 100%" }}>
+                <div className="md:flex justify-center  lg:h-[1110px] md:h-[90vh] h-auto w-full relative lg:bottom-44 md:bottom-12 bottom-20 sm:bottom-5  mb-2 md:mb-0  bg-cover bg-rigth py-3 bg-top" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.0), rgba(13, 13, 13, 0.1)), url(${detailPage_bg_1}),url(${detailPage_bg_2})`, backgroundRepeat: "no-repeat", backgroundPosition: "100% 100%", backgroundSize: "100% 100%" }}>
                     <div className="md:w-3/4 sm:w-full px-6 pt-12 md:px-0">
-                        <h6 className='mb-1 mt-3 text-amber-600 text-[#C1AE69]'>Home &gt; Ongoing Project &gt; {projectData[0].project_name}</h6>
+
+                            {
+                                previousPage === "/" ? (<h6 className='mb-1 mt-3 text-amber-600 text-[#C1AE69]'>Home  &gt; {projectData[0].project_name}</h6>
+                                ) : (<h6 className='mb-1 mt-3 text-amber-600 text-[#C1AE69]'>Home &gt; Ongoing Project &gt; {projectData[0].project_name}</h6>
+                                )
+                            }
                         <div className='flex items-center m-0'>
                             <h3 className='font-audiowide lg:text-2xl  text-1xl  uppercase md:mr-8 mr-2'> {projectData[0].project_name}</h3>
                             <p className='font-light flex items-center md:gap-[6px] gap-1  leading-loose tracking-wider' style={{ marginBottom: "0px !important" }}><FaLocationDot />  {projectData[0].location} </p>
@@ -273,10 +284,10 @@ export default function OngoingProjectListDetail() {
                 </div>
                 {
                     projectData[0].url && (
-                    <div className='md:w-[73%] w-[85%] m-auto pt-1 pb-20 md:h-[584px] h-[300px]'>
-                    <ReactPlayer url={projectData[0].url} width={"100%"} height={"100%"} controls />
+                        <div className='md:w-[73%] w-[85%] m-auto pt-1 pb-20 md:h-[584px] h-[300px]'>
+                            <ReactPlayer url={projectData[0].url} width={"100%"} height={"100%"} controls />
 
-                </div>)
+                        </div>)
                 }
                 <Carousel_Diversity category={projectData[0].category} id={projectData[0].id} page="ongoingProject" />
             </>) : (<div className="flex lg:h-[613px] justify-center items-center m-auto pt-2">
