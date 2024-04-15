@@ -4,13 +4,15 @@ import background_image from "../assets/images/blog-detail-bg.png";
 import Blogs from '../Components/Blogs';
 import API_Call from '../Components/API_Call';
 import { useParams } from 'react-router-dom';
-
+import { useLocation } from 'react-router-dom';
 export default function BlogDetailPage() {
     const { fetchData } = API_Call();
     const [blogData, setBlogData] = useState([]);
     const [totalNumberofWords, settotalNumberofWords] = useState();
     const { id } = useParams();
-
+    const location = useLocation();
+    const queryParams = new URLSearchParams(location.search);
+    const previousPage = queryParams.get('from');
     // Fetching data 
     const getData = async () => {
         try {
@@ -67,7 +69,12 @@ export default function BlogDetailPage() {
                 ? (
                     <div className="md:flex justify-center items-center w-full relative lg:bottom-24 md:bottom-1 bottom-0 sm:bottom-5 md:mb-0">
                         <div className="md:w-3/4 sm:w-full px-6 md:px-0">
-                            <h6 className='mb-2 text-amber-600 text-[#C1AE69]'>Home &gt; Blog list &gt; Blog detail</h6><br/>
+
+                            {
+                                previousPage == '/' ? (<h6 className='mb-2 text-amber-600 text-[#C1AE69]'>Home &gt; Blog detail</h6>) : (<h6 className='mb-2 text-amber-600 text-[#C1AE69]'>Home &gt; Blog list &gt; Blog detail</h6>)
+                            }
+
+                            <br />
                             <h1 className='font-audiowide text-[20px] md:text-3xl pb-3 uppercase'>{blogData[0].title}</h1>
                             <p className='font-light leading-loose tracking-wider'>
                                 {getContentSlice(0, 1)}

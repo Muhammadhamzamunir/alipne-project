@@ -104,7 +104,7 @@ export default function Blogs() {
 
               {blogs.slice(0, 3).map((blog, index) => (
                 <div key={index} className='w-full lg:w-[32%] h-[190px] border-none lg:h-[203px] relative group cursor-pointer ' >
-                  <Link to={`/blog/${blog?.id}`}>
+                  <Link to={`/blog/${blog?.id}?from=/`}>
 
                     <img src={blog.hero_image} alt="" className='object-fill w-full h-full transition duration-500 ease-in-out hover:opacity-50' loading='lazy' />
                     <div className='absolute bottom-[10px] text-white flex items-center justify-between w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100'>
