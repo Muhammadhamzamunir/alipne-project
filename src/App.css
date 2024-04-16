@@ -511,8 +511,8 @@ p {
   }
 
   .thumbnails img {
-    width: 168px;
-    height: 216px;
+    width: 164px;
+    height: 206px;
     object-fit: cover;
     margin-top: 170px;
   }
