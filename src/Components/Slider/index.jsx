@@ -43,10 +43,17 @@ const HeroSectionSlider = ({ slides }) => {
 
 
                 data.forEach(element => {
+                  
                     element.images.forEach((image) => {
-                        images.push(image.url)
-                    })
+                        images.push(image.url);
+                    });
+                
+                    
+                    element.horizontal_images.forEach((image) => {
+                        images.push(image.url);
+                    });
                 });
+                
                 setHeroImages(images);
             } catch (error) {
                 console.error("Error fetching data:", error);

@@ -14,12 +14,6 @@ export default function Gallery() {
     try {
       const data = await fetchData("gallery");
 
-
-
-
-      console.log(galleryData);
-
-
       data?.forEach((element, index) => {
         if (index % 2 == 0) {
           galleryImagesArray.push({ "url": element.verticle_image[0].url, "id": element.id })
@@ -81,7 +75,7 @@ export default function Gallery() {
       if (slideTimer) {
         scrollGallery();
       }
-      console.log("sttoped");
+   
     });
 
     // Clear interval when component unmounts
