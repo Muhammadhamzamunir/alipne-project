@@ -47,9 +47,10 @@ export default function ContactUs() {
         setFormData({ ...formData, [name]: value });
     };
     const handleSubmit = (event) => {
+        console.log(formData);
         event.preventDefault();
 
-        fetch('https://Architecture.flashcitytours.com/api/user/contact', {
+        fetch('https://arc.shellcode.co.in/api/user/contact', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
