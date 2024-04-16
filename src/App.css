@@ -516,8 +516,7 @@ p {
     object-fit: cover;
     margin-top: 170px;
   }
-  h1,
-  h2 {
+  h1,h2 {
     font-size: 28px !important;
   }
 }
