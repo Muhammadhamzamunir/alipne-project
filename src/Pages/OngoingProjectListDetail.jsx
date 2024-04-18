@@ -140,7 +140,7 @@ export default function OngoingProjectListDetail() {
 
 
                 window.scrollBy({
-                    top: 700,
+                    top: 600,
                     behavior: 'smooth'
                 });
             }

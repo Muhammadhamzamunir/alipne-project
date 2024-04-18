@@ -374,7 +374,7 @@ export default function AboutUs() {
               </div>
               <div className="w-full md:w-3/4 md:pr-16">
                 <h1 className="font-audiowide text-3xl pb-3 uppercase">
-                  DConstruction Documentation
+                  Construction Documentation
                 </h1>
                 <p className="font-light leading-loose tracking-wider block pb-[30px]">
                   {" "}
