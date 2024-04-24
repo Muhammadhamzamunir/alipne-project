@@ -21,7 +21,7 @@ export default function Gallery() {
     const [contentList, setContentList] = useState([]);
     const [scrollPercent, setScrollPercent] = useState(0);
     const { fetchData } = API_Call();
-    const categories = ["All", "Residential", "Commercial", "Exterior Facade Design Specialist", "Master Planning", "Hospitality", "Institutional", "Insdustrial & Infrastructure", "Landscape & Urbanism", "Insdustrial & Infrastructure"];
+    const categories = ["All", "Residential", "Commercial","Hospitality",   "Institutional",  "Industrial & Infrastructure", "Landscape & Urbanism","Master Planning", "Exterior Facade Design Specialist",];
 
     useEffect(() => {
         fetchDataFromAPI();
