@@ -603,7 +603,7 @@ export default function AboutUs() {
                     alt="Featured"
                     className="w-full object-fill h-full pr-2 md:pr-0  opacity-100 transition duration-300 ease-in-out group-hover:opacity-30"
                   />
-                  <div className='absolute bottom-[50px] md:bottom-[0px] text-white flex justify-between w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100'>
+                  <div className='absolute bottom-[0px] md:bottom-[0px] text-white flex justify-between w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100'>
                     <h3 className='font-light ml-2 bottom-2'>{data.thumbnail_description}</h3>
                   </div>
                 </div>
@@ -624,8 +624,8 @@ export default function AboutUs() {
                 <span className='absolute top-0 right-0 z-50 p-2 '>
                   <Button text={"✕"} onClick={closeModal} />
                 </span>
-                <div className="lg:pt-0 pt-36 flex flex-col items-center justify-center space-y-4">
-                  <div className="flex items-center justify-center w-full mt-8 top-22">
+                <div className="lg:pt-0 pt-20 flex flex-col items-center justify-center space-y-4">
+                  <div className="flex items-center justify-center w-full md:mt-8 top-22">
                     <span className='absolute left-3 md:left-6 z-40 hidden lg:block '>
                       <Button text={"←"} onClick={prevPhoto} />
                     </span>
