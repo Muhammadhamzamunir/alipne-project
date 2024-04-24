@@ -109,13 +109,13 @@ export default function BlogDetailPage() {
 
                                 <div className=' flex my-12'>
                                     {blogData[0].verticle_image[0] && (
-                                        <img src={blogData[0].verticle_image[0].url} alt="" className='w-[32%] md:h-[571px] h-[350px] mr-3' />
+                                        <img src={blogData[0].verticle_image[0].url} alt="" className='w-[32%] md:h-[571px] h-[320px] md:mr-3 mr-1' />
                                     )}
                                     {blogData[0].verticle_image[1] && (
-                                        <img src={blogData[0].verticle_image[1].url} alt="" className='w-[32%] md:h-[571px] h-[350px] mr-3' />
+                                        <img src={blogData[0].verticle_image[1].url} alt="" className='w-[32%] md:h-[571px] h-[320px] md:mr-3 mr-1' />
                                     )}
                                     {blogData[0].verticle_image[2] && (
-                                        <img src={blogData[0].verticle_image[2].url} alt="" className='w-[32%] md:h-[571px] h-[350px] ' />
+                                        <img src={blogData[0].verticle_image[2].url} alt="" className='w-[32%] md:h-[571px] h-[320px] ' />
                                     )}
                                 </div>
 
