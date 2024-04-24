@@ -4,7 +4,7 @@ import background_image from "../assets/images/blog-detail-bg.png";
 import Blogs from '../Components/Blogs';
 import API_Call from '../Components/API_Call';
 import { useParams } from 'react-router-dom';
-import { useLocation } from 'react-router-dom';
+import { useLocation,Link } from 'react-router-dom';
 export default function BlogDetailPage() {
     const { fetchData } = API_Call();
     const [blogData, setBlogData] = useState([]);
@@ -71,7 +71,7 @@ export default function BlogDetailPage() {
                         <div className="md:w-3/4 sm:w-full px-6 md:px-0">
 
                             {
-                                previousPage == '/' ? (<h6 className='mb-2 text-amber-600 text-[#C1AE69]'>Home &gt; Blog detail</h6>) : (<h6 className='mb-2 text-amber-600 text-[#C1AE69]'>Home &gt; Blog list &gt; Blog detail</h6>)
+                                previousPage == '/' ? (<h6 className='mb-2 text-amber-600 text-[#C1AE69] uppercase  '><Link to='/'>Home</Link> &gt; Blog detail</h6>) : (<h6 className='mb-2 text-amber-600 text-[#C1AE69] uppercase'><Link to='/'>Home</Link> &gt; <Link to='/blogs'>Blog list</Link>  &gt; Blog detail</h6>)
                             }
 
                             <br />

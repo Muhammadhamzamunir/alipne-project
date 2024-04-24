@@ -14,7 +14,7 @@ import { useMediaQuery } from 'react-responsive';
 import { useSwipeable } from "react-swipeable";
 import { Modal } from 'flowbite-react';
 import ReactPlayer from 'react-player';
-import { useLocation } from 'react-router-dom';
+import { useLocation,Link } from 'react-router-dom';
 export default function ProjectDetailPage() {
     const isMobile = useMediaQuery({ maxWidth: 767 });
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -167,8 +167,8 @@ export default function ProjectDetailPage() {
                 <div className="md:flex justify-center bg-top  lg:h-[1110px] md:h-[90vh] h-auto w-full relative lg:bottom-44 md:bottom-12 bottom-20 sm:bottom-5  mb-2 md:mb-0  bg-cover bg-rigth py-3" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.0), rgba(13, 13, 13, 0.1)), url(${detailPage_bg_1}),url(${detailPage_bg_2})`, backgroundRepeat: "no-repeat", backgroundPosition: "100% 100%", backgroundSize: "100% 100%" }}>
                     <div className="md:w-3/4 sm:w-full px-6 pt-12 md:px-0">
                         {
-                            previousPage == '/' ? (<h6 className='mb-3 mt-3 text-amber-600 text-[#C1AE69]'>Home  &gt; {projectData[0].project_name}</h6>
-                            ) : (<h6 className='mb-3 mt-3 text-amber-600 text-[#C1AE69]'>Home &gt; Portfolio &gt; {projectData[0].project_name}</h6>
+                            previousPage == '/' ? (<h6 className='mb-3 mt-3 text-amber-600 text-[#C1AE69] uppercase'><Link to='/' >Home</Link>  &gt; {projectData[0].project_name}</h6>
+                            ) : (<h6 className='mb-3 mt-3 text-amber-600 text-[#C1AE69] uppercase'><Link to='/' >Home</Link> &gt;<Link to='/portfolio'>Portfolio</Link>  &gt; {projectData[0].project_name}</h6>
                             )
                         }
                         <div className='flex items-center m-0'>

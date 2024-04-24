@@ -14,7 +14,7 @@ import { useMediaQuery } from 'react-responsive';
 import { useSwipeable } from "react-swipeable";
 import { Modal } from 'flowbite-react';
 import ReactPlayer from 'react-player';
-import { useLocation } from 'react-router-dom';
+import { useLocation,Link } from 'react-router-dom';
 export default function OngoingProjectListDetail() {
     const isMobile = useMediaQuery({ maxWidth: 767 });
     const { id } = useParams();
@@ -172,8 +172,8 @@ export default function OngoingProjectListDetail() {
                     <div className="md:w-3/4 sm:w-full px-6 pt-12 md:px-0">
 
                             {
-                                previousPage === "/" ? (<h6 className='mb-1 mt-3 text-amber-600 text-[#C1AE69]'>Home  &gt; {projectData[0].project_name}</h6>
-                                ) : (<h6 className='mb-1 mt-3 text-amber-600 text-[#C1AE69]'>Home &gt; Ongoing Project &gt; {projectData[0].project_name}</h6>
+                                previousPage === "/" ? (<h6 className='mb-1 mt-3 text-amber-600 text-[#C1AE69] uppercase'><Link to='/' >Home</Link>  &gt; {projectData[0].project_name}</h6>
+                                ) : (<h6 className='mb-1 mt-3 text-amber-600 text-[#C1AE69] uppercase'><Link to='/' >Home</Link> &gt; <Link to='/on-going-project-list'>Ongoing Project</Link>  &gt; {projectData[0].project_name}</h6>
                                 )
                             }
                         <div className='flex items-center m-0'>

@@ -578,9 +578,9 @@ export default function AboutUs() {
           <h1 className="font-audiowide text-3xl py-4 uppercase mt-16">featured</h1>
 
           <Carousel
-            autoPlay={true}
-            autoPlaySpeed={6000}
-            infinite={true}
+            autoPlay={false}
+            // autoPlaySpeed={6000}
+            infinite={false}
             swipeable={true}
             draggable={true}
             showDots={false}
@@ -593,16 +593,17 @@ export default function AboutUs() {
             {featured.length > 0 ? (
               featured.map((data, index) => (
                 <div
-                  className="w-full md:w-[245px] h-[360px] relative group"
+                  className=" w-[255px]  h-[360px] relative group"
                   key={index}
                   onClick={() => openModal(index)}
                 >
+             
                   <img
                     src={data.featured_imaged}
                     alt="Featured"
                     className="w-full object-fill h-full pr-2 md:pr-0  opacity-100 transition duration-300 ease-in-out group-hover:opacity-30"
                   />
-                  <div className='absolute bottom-[50px] md:bottom-[26px] text-white flex justify-between w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100'>
+                  <div className='absolute bottom-[50px] md:bottom-[0px] text-white flex justify-between w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100'>
                     <h3 className='font-light ml-2 bottom-2'>{data.thumbnail_description}</h3>
                   </div>
                 </div>
