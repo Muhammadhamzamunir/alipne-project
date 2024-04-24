@@ -107,15 +107,15 @@ export default function BlogDetailPage() {
 
 
 
-                                <div className='hidden lg:flex my-12'>
+                                <div className=' flex my-12'>
                                     {blogData[0].verticle_image[0] && (
-                                        <img src={blogData[0].verticle_image[0].url} alt="" className='w-[32%] h-[571px] mr-3' />
+                                        <img src={blogData[0].verticle_image[0].url} alt="" className='w-[32%] md:h-[571px] h-[350px] mr-3' />
                                     )}
                                     {blogData[0].verticle_image[1] && (
-                                        <img src={blogData[0].verticle_image[1].url} alt="" className='w-[32%] h-[571px] mr-3' />
+                                        <img src={blogData[0].verticle_image[1].url} alt="" className='w-[32%] md:h-[571px] h-[350px] mr-3' />
                                     )}
                                     {blogData[0].verticle_image[2] && (
-                                        <img src={blogData[0].verticle_image[2].url} alt="" className='w-[32%] h-[571px] ' />
+                                        <img src={blogData[0].verticle_image[2].url} alt="" className='w-[32%] md:h-[571px] h-[350px] ' />
                                     )}
                                 </div>
 
