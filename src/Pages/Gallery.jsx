@@ -199,8 +199,8 @@ export default function Gallery() {
                 <Modal.Body className="m-0">
                     <div className="relative padding-0">
                         <span className='absolute top-0 right-0 z-50 p-2 '><Button text={"&times;"} onClick={closeModal} /></span>
-                        <div className="lg:pt-0 pt-36 flex flex-col items-center justify-center space-y-4">
-                            <div className="flex items-center justify-center  w-full mt-8 top-22">
+                        <div className="lg:pt-0 pt-20 flex flex-col items-center justify-center space-y-4">
+                            <div className="flex items-center justify-center  w-full md:mt-8 top-22">
                                 <span className='absolute left-3 md:left-2 z-40 hidden lg:block '><Button text={"←"} onClick={prevPhoto} /></span>
                                 {
                                     (currentPhototype == "horizontal") ? (
@@ -208,7 +208,7 @@ export default function Gallery() {
                                         <img src={filtered_horizontal_images[currentPhotoIndex]?.horizontal_image} alt="Modal" className="max-w-full w-[100%] lg:w-[85%]  md:h-[85vh] h-[270px]  object-fill" />
                                     ) :
                                         (
-                                            <img src={filtered_verticle_images[currentPhotoIndex]?.vertical_image} alt="Modal" className="max-w-full w-[100%] lg:w-[30%]  md:h-[600px] h-[270px]  object-fill" />
+                                            <img src={filtered_verticle_images[currentPhotoIndex]?.vertical_image} alt="Modal" className="max-w-full w-[95%] lg:w-[30%]  md:h-[600px] h-[5500px]  object-fill" />
                                         )
                                 }
 

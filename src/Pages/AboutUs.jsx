@@ -632,7 +632,7 @@ export default function AboutUs() {
                     <img
                       src={featured.length > 0 ? featured[currentPhotoIndex]?.featured_imaged || "" : ""}
                       alt="Modal"
-                      className="max-w-full w-[95%] lg:w-[30%]  md:h-[600px] h-[80vh]  object-fill"
+                      className="max-w-full w-[95%] lg:w-[30%]  md:h-[600px] h-[550px]  object-fill"
                     />
                     <span className='absolute right-3 md:right-[13px] z-40 hidden lg:block'>
                       <Button text={"→"} onClick={nextPhoto} />
