@@ -74,7 +74,7 @@ export default function Footer() {
                     <div className="flex z-20 flex-col md:flex-row flex-1">
                         <div className="md:basis-1/4 flex items-center  md:justify-end md:pl-10 pl-3">
                             <Link to="/">
-                                {/* <img src={logo} alt="" className="   h-60 bg-blend-multiply" /> */}
+                               
                                 <img src={footer_logo} alt="" className="mt-12 md:mt-4  h-40 bg-blend-multiply" />
 
                             </Link>
@@ -92,7 +92,7 @@ export default function Footer() {
                                     <span className='text-[20px] mt-3 md:mt-0 '><FaMapMarkerAlt className='footer-icon-color' /></span>
                                     <p className='text-[20px] pr-8'> 407, Oracle Business Hub, Road no.16/Z, Wagle Estate, Thane (W) 400604</p>
                                 </div>
-                                <div className='flex gap-5 ml-6 mt-4 md:ml-0 z-20'>
+                                <div className='flex gap-5 ml-6 mt-4 md:ml-0 z-20 max-w-[200px]'>
                                     <a href="https://www.instagram.com/alpine_niteshkedare" target='blank'><FaInstagram className='footer-icon-color text-2xl' /></a>
                                     <a href="https://www.youtube.com/channel/UCdRvNSO0jybsN3y47FT9eQA" target='blank'><FaYoutube className='footer-icon-color text-2xl' /></a>
                                     <a href="https://www.linkedin.com/company/alpine-Architects" target='blank'><FaLinkedin className='footer-icon-color text-2xl' /></a>
@@ -104,14 +104,16 @@ export default function Footer() {
                     </div>
 
                 </div>
-
+                {/* //will show only on web */}
                 <div
-                    className="md:w-auto m-auto lg:flex mr-8 hidden md:items-center justify-center md:pt-12 -pl-8 py-[31px] "
-                // style={windowWidth < 1000 ? { backgroundImage: `url(${footer2_Bg2})`, backgroundColor: "#131313", backgroundSize: 'contain', backgroundRepeat: "no-repeat", backgroundPosition: "center" } : {}}
-                >
-                    <span className='pt-1  mr-1 text-[#828282] text-[12px] '> <FaCopyright width={0.7} /> </span>
-                    <h6 className='text-center mt-1 text-[13px] text-[#828282] lg:text-[13px] '> All Rights Reserved by Alpine Architects Pvt Ltd. | Designed & Developed by Digilligent Marketing X Tech Solutions</h6>
+                    className="md:w-auto  lg:flex mr-8 hidden items-center justify-center md:pt-12 -pl-8 py-[31px]  "
+                ><div className='flex items-center'>
+                        <span className='pt-1  mr-1 text-[#828282] text-[12px] '> <FaCopyright width={0.7} /> </span>
+                        <h6 className=' mt-1 text-[13px] text-[#828282] lg:text-[13px] '> All Rights Reserved by Alpine Architects Pvt Ltd. | Designed & Developed by Digilligent Marketing X Tech Solutions</h6>
+
+                    </div>
                 </div>
+                {/* //will show only on mobile */}
                 <div
                     className="flex lg:hidden pl-4 pt-[70px] pb-20 z-0 relative bottom-8 -left-2"
                     style={windowWidth < 1000 ? { backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.0)),url(${footer2_Bg2})`, backgroundColor: "#131313", backgroundSize: 'cover', backgroundRepeat: "no-repeat", backgroundPosition: "right" } : {}}
