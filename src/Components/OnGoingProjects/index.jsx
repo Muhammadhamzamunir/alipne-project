@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState,useRef } from 'react';
 import Button from '../Button';
 import 'react-multi-carousel/lib/styles.css';
 import './index.css';
@@ -27,18 +27,19 @@ export default function OnGoingProjects() {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
       items: 1,
-      slidesToSlide: 1
+      slidesToSlide: .75,
+      // partialVisibilityGutter: 40
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
       items: 1,
-      slidesToSlide: 1
+      slidesToSlide: 1,partialVisibilityGutter: 40
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
       items: 1,
       slidesToSlide: 1,
-      partialVisibilityGutter: 5
+      partialVisibilityGutter: 5,partialVisibilityGutter: 40
     }
   };
   return (
@@ -111,11 +112,12 @@ export default function OnGoingProjects() {
                 showDots={false}
                 responsive={responsive}
                 keyBoardControl={true}
-                customTransition="all .5"
-                transitionDuration={500}
+                customTransition="all 1s ease-in-out"
+                transitionDuration={1000}
+                partialVisbile={true}
 
               >
-                {ongoingProjects.slice(0, 5).sort((a, b) => b.id - a.id).map((project, index) => (
+                {ongoingProjects.slice(0, 8).sort((a, b) => b.id - a.id).map((project, index) => (
                   <div key={index} className="w-[508px] h-[336px] relative group cursor-pointer">
                     <Link to={`/ongoing-project/${project.id}?from=/`}>
                       <img
@@ -137,7 +139,12 @@ export default function OnGoingProjects() {
                     </Link>
                   </div>
                 ))}
-              </Carousel>) : (<div className="flex h-32 justify-center items-center m-auto p-[150px]">
+              </Carousel>
+            
+             
+            
+            
+            ) : (<div className="flex h-32 justify-center items-center m-auto p-[150px]">
                 <img src="loading-gif.gif" alt="" className='w-[50px]  my-44' />
 
               </div>)

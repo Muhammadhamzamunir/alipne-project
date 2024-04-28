@@ -150,7 +150,7 @@ export default function Portfolio() {
             <ul ref={leftscrollbar} className='tab-list flex lg:flex-col gap-y-4 whitespace-wrap text-xl lg:h-auto lg:max-h-[552px] portfolio-links'>
               {
                 allCategories.map((category) => (
-                  <li key={category} className={activeCategory === category ? "active pr-8 lg:pr-0 xl:mx-0" : "pr-8 lg:pr-0 xl:mx-0"}>
+                  <li key={category} className={activeCategory === category ? "active pr-8 lg:pr-0 xl:mx-0 uppercase" : "pr-8 lg:pr-0 xl:mx-0 uppercase"}>
                     <a href="#" onClick={(event) => handleClick(event, category)} className='xl:mx-0'>
                       {category}
                     </a>
@@ -244,8 +244,8 @@ export default function Portfolio() {
                   </div>
 
                   {filteredData[3]?.url && (<div className='lg:basis-[358px] xl:basis-[40%] md:block hidden  h-[179px] lg:h-[100%] cursor-pointer ' onClick={() => navigate(`/project/${filteredData[3].id}`)}>
-                    <div className='relative group'>
                       <Link to={`/project/${filteredData[3].id}?from=/`}>
+                    <div className='relative group'>
                         <img src={filteredData[3]?.url} alt="No Data" className='object-fill w-full h-[216px] lg:h-[632px] transition duration-500 ease-in-out hover:opacity-50' loading='lazy' />
                         <div className='absolute bottom-[10px] text-white flex items-center justify-between w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100'>
                           <h3 className='ml-2 w-[ 95%] text-[22px]  break-all'>{filteredData[3]?.project_name}</h3>
@@ -258,8 +258,8 @@ export default function Portfolio() {
                             </svg>
 
                           </span> </div>
-                      </Link>
                     </div>
+                      </Link>
                   </div>)}
 
 

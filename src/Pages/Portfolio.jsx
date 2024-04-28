@@ -139,7 +139,7 @@ export default function Portfolio() {
 
                     <div
                         data-aos="fade-right"
-                        className='w-full relative group lg:w-[67%] lg:h-[479px] h-[200px] '
+                        className='w-full relative group lg:w-[67%]  lg:h-[479px] xl:h-[479px] h-[200px] '
                         style={{ position: 'relative', cursor: 'pointer' }}
 
                     >
@@ -166,7 +166,7 @@ export default function Portfolio() {
                 )}
 
                 {
-                    filteredData[startingIndex + 1]?.vertical_image && (<div data-aos="fade-right" className="w-[48.8%] relative group lg:w-[30%] lg:h-[479px] h-[265px]" style={{ position: 'relative', cursor: 'pointer' }}
+                    filteredData[startingIndex + 1]?.vertical_image && (<div data-aos="fade-right" className="w-[48.8%]  relative group lg:w-[30%]  lg:h-[479px] xl:h-[479px] h-[265px]" style={{ position: 'relative', cursor: 'pointer' }}
                     >
                         <Link to={`/project/${filteredData[startingIndex + 1]?.id}`}>
                             <img className='object-cover h-full transition duration-500 ease-in-out hover:opacity-50'
@@ -250,7 +250,7 @@ export default function Portfolio() {
                     </div>)
                 }
                 {
-                    filteredData[startingIndex + 4]?.vertical_image && (<div data-aos="fade-right" className="w-[48.8%]  relative group lg:w-[32%] lg:h-[479px] h-[265px] " style={{ position: 'relative', cursor: 'pointer' }}   >
+                    filteredData[startingIndex + 4]?.vertical_image && (<div data-aos="fade-right" className="w-[48.8%]  relative group lg:w-[32%] xl:m-0 lg:h-[479px] h-[265px] " style={{ position: 'relative', cursor: 'pointer' }}   >
                         <Link to={`/project/${filteredData[startingIndex + 4]?.id}`}>
                             <img className='object-cover h-full transition duration-500 ease-in-out hover:opacity-50'
                                 src={filteredData[startingIndex + 4]?.vertical_image}

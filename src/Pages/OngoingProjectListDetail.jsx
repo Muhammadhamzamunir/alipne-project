@@ -221,7 +221,7 @@ export default function OngoingProjectListDetail() {
                                         pauseIconColor="white"
                                         pauseIconSize="40px"
                                         slideBackgroundColor="darkgrey"
-                                        slideImageFit="cover"
+                                        slideImageFit="fill"
                                         thumbnails={true}
                                         showNavBtn={true}
                                         thumbnailWidth="100px" touchMoveDefaultEvents={true}
@@ -230,7 +230,8 @@ export default function OngoingProjectListDetail() {
                                             maxWidth: "850px",
                                             maxHeight: "500px",
                                             margin: "40px auto",
-                                            borderRadius: "0px"
+                                            borderRadius: "0px",
+                                            
                                         }}
                                     />
                                 </div>

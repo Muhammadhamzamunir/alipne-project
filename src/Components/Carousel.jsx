@@ -74,7 +74,7 @@ export default function Carousel_Diversity(props) {
     slidesToScroll: 1,
 
     arrows: true,
-    autoplay: true,
+    autoplay: false,
     responsive: [
       {
         breakpoint: 1024,

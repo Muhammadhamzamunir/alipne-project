@@ -4,7 +4,7 @@ import background_image from "../assets/images/blog-detail-bg.png";
 import Blogs from '../Components/Blogs';
 import API_Call from '../Components/API_Call';
 import { useParams } from 'react-router-dom';
-import { useLocation,Link } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 export default function BlogDetailPage() {
     const { fetchData } = API_Call();
     const [blogData, setBlogData] = useState([]);
@@ -45,23 +45,54 @@ export default function BlogDetailPage() {
         handleUpArrowClick();
     }, []);
 
-    const getContentSlice = (start, end) => {
-        const wordsPerSection = Math.floor(totalNumberofWords / 4);
-        const startIndex = start * wordsPerSection;
-        const endIndex = end * wordsPerSection;
+    // const getContentSlice = (start, end) => {
+    //     const wordsPerSection = Math.floor(totalNumberofWords / 4);
+    //     const startIndex = start * wordsPerSection;
+    //     const endIndex = end * wordsPerSection;
 
-        return blogData[0]?.content
-            .split(' ')
-            .slice(startIndex, endIndex)
-            .join(' ')
-            .split('\n')
-            .map((line, index) => (
-                <React.Fragment key={index}>
-                    {line}
-                    <br />
-                </React.Fragment>
-            ));
+    //     return blogData[0]?.content
+    //         .split(' ')
+    //         .slice(startIndex, endIndex)
+    //         .join(' ')
+    //         .split('\n')
+    //         .map((line, index) => (
+    //             <React.Fragment key={index}>
+    //                 {line}
+    //                 <br />
+    //             </React.Fragment>
+    //         ));
+    // };
+
+
+
+    const getContentSlice = (partNumber) => {
+        const content = blogData[0]?.content;
+        if (!content) return [];
+    
+        const sentences = content.split('.'); // Remove empty strings
+        console.log(sentences);
+        const numberOfSentences = sentences.length;
+        const sentencesPerPart = Math.floor(numberOfSentences / 4);
+    
+        const startIdx = (partNumber - 1) * sentencesPerPart;
+        const endIdx = Math.min(partNumber * sentencesPerPart, numberOfSentences);
+    
+        const contentSlice = sentences.slice(startIdx, endIdx).join('. ') + '.';
+    
+        return contentSlice.split('\n').map((line, index) => (
+            <React.Fragment key={index}>
+                {line}
+                <br />
+            </React.Fragment>
+        ));
     };
+    
+    
+    
+
+
+
+
 
     return (
         <>
@@ -77,7 +108,7 @@ export default function BlogDetailPage() {
                             <br />
                             <h1 className='font-audiowide text-[20px] md:text-3xl pb-3 uppercase'>{blogData[0].title}</h1>
                             <p className='font-light leading-loose tracking-wider'>
-                                {getContentSlice(0, 1)}
+                                {getContentSlice(1)}
                             </p>
                             {blogData[0].hero_image && (
                                 <img src={blogData[0].hero_image} alt="NO Image" className='w-full lg:h-[500px] h-[180px] object-cover aspect-square my-8' />
@@ -85,7 +116,7 @@ export default function BlogDetailPage() {
 
                             <div className='bg-cover' style={{ backgroundImage: ` url(${background_image})` }}>
                                 <p className='font-light leading-loose tracking-wider'>
-                                    {getContentSlice(1, 2)}
+                                    {getContentSlice(2)}
                                 </p>
 
                                 <div className="flex flex-col lg:flex-row gap-y-8 my-12">
@@ -102,14 +133,20 @@ export default function BlogDetailPage() {
                                 </div>
 
                                 <p className='font-light leading-loose tracking-wider'>
-                                    {getContentSlice(2, 3)}
+                                    {getContentSlice(3)}
                                 </p>
 
 
 
-                                <div className=' flex my-12'>
+
+                                <div className='flex my-12   '>
                                     {blogData[0].verticle_image[0] && (
-                                        <img src={blogData[0].verticle_image[0].url} alt="" className='w-[32%] md:h-[571px] h-[320px] md:mr-3 mr-1' />
+                                        <img src={blogData[0].verticle_image[0].url} alt=""
+
+                                            // className='w-[32%]  md:h-[571px] h-[320px] md:mr-3 mr-1'
+                                            className={`w-[32%] md:h-[571px] h-[320px] md:mr-3 mr-1 oneImageOfBlog ${blogData[0].verticle_image.length === 1 && 'self-start md:self-start '}`}
+
+                                        />
                                     )}
                                     {blogData[0].verticle_image[1] && (
                                         <img src={blogData[0].verticle_image[1].url} alt="" className='w-[32%] md:h-[571px] h-[320px] md:mr-3 mr-1' />
@@ -119,8 +156,9 @@ export default function BlogDetailPage() {
                                     )}
                                 </div>
 
+
                                 <p className='font-light leading-loose tracking-wider'>
-                                    {getContentSlice(3, 4)}
+                                    {getContentSlice(4)}
                                 </p>
                             </div>
                         </div>

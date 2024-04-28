@@ -217,7 +217,7 @@ export default function ProjectDetailPage() {
                                         pauseIconColor="white"
                                         pauseIconSize="40px"
                                         slideBackgroundColor="darkgrey"
-                                        slideImageFit="cover"
+                                        slideImageFit="fill"
                                         thumbnails={true}
                                         showNavBtn={true}
 
