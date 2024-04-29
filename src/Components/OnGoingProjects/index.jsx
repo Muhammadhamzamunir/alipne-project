@@ -39,7 +39,7 @@ export default function OnGoingProjects() {
       breakpoint: { max: 464, min: 0 },
       items: 1,
       slidesToSlide: 1,
-      partialVisibilityGutter: 5,partialVisibilityGutter: 40
+      
     }
   };
   return (
