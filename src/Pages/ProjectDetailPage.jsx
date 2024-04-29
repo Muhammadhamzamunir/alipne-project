@@ -174,7 +174,7 @@ export default function ProjectDetailPage() {
                         }
                         <div className='flex items-center m-0'>
                             <h3 className='font-audiowide lg:text-2xl text-1xl  uppercase md:mr-8 mr-2'> {projectData[0].project_name}</h3>
-                            <p className='font-light flex items-center md:gap-[6px] gap-[2px]   leading-loose tracking-wider' style={{ marginBottom: "0px !important" }}><FaLocationDot /> {projectData[0].location}</p>
+                            <p className='font-light flex items-center md:gap-[6px] gap-[2px] flex-nowrap   leading-loose tracking-wider' style={{ marginBottom: "0px !important" }}><FaLocationDot /> {projectData[0].location}</p>
                         </div>
                         <p className='font-light -mt-2 leading-loose tracking-wider'>
                             AREA-    {projectData[0].area}                  </p>
