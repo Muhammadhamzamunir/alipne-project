@@ -177,7 +177,7 @@ p {
     --s: 0.35em;
     --color: #c2c2c2;
   
-    padding: calc(0.1em + var(--s)) calc(0.55em + var(--s)) !important;
+    padding: calc(0.1em + var(--s)) calc(0.6em + var(--s)) !important;
     color: var(--color);
     --_p: var(--s);
     background: conic-gradient(
@@ -198,7 +198,7 @@ p {
     --s: 0.35em;
     --color: #c2c2c2;
     color: black !important;
-    padding: calc(0.1em + var(--s)) calc(0.55em + var(--s)) !important;
+    padding: calc(0.1em + var(--s)) calc(0.6em + var(--s)) !important;
     color: var(--color);
     --_p: var(--s);
     background: conic-gradient(
@@ -214,12 +214,12 @@ p {
   }
   .prev::after {
     /* margin-top: 4px; */
-   font-size: 15px;
+   font-size: 16px;
   }
   .next::after {
     /* margin-top: 4px; */
     
-    font-size: 15px;
+    font-size: 16px;
   }
   .slick-prev {
     display: none !important;
