@@ -282,13 +282,13 @@ p {
     display: none !important;
   }
   .thumbnails img {
-    width: 90px;
-    height: 120px !important;
+    width: 70px;
+    height: 100px !important;
     object-fit: fill;
   }
   .carousel-image {
-    width: 145px !important;
-    height: 228px !important;
+    width: 165px !important;
+    height: 258px !important;
     object-fit: cover;
     border-radius: 0px !important;
   }
