@@ -220,7 +220,7 @@ export default function Portfolio() {
                       }
 
                       {
-                        filteredData[2]?.url && (<div className='relative group  w-[210px] lg:h-[375px] xl:w-[50%] h-[259px] object-fill cursor-pointer' onClick={() => navigate(`/project/${filteredData[2].id}`)}>
+                        filteredData[2]?.url && (<div className='relative group  w-[210px] lg:h-[375px] xl:w-[50%] h-[259px] object-fill cursor-pointer' >
                           <Link to={`/project/${filteredData[2].id}?from=/`}>
                             <img src={filteredData[2]?.url} alt="No Data" className=' w-full h-full lg:h-full transition duration-500 ease-in-out hover:opacity-50' loading='lazy' />
 
@@ -243,9 +243,9 @@ export default function Portfolio() {
                     </div>
                   </div>
 
-                  {filteredData[3]?.url && (<div className='lg:basis-[358px] xl:basis-[40%] md:block hidden  h-[179px] lg:h-[100%] cursor-pointer ' onClick={() => navigate(`/project/${filteredData[3].id}`)}>
-                      <Link to={`/project/${filteredData[3].id}?from=/`}>
+                  {filteredData[3]?.url && (<div className='lg:basis-[358px] xl:basis-[40%] md:block hidden  h-[179px] lg:h-[100%] cursor-pointer '>
                     <div className='relative group'>
+                      <Link to={`/project/${filteredData[3].id}?from=/`}>
                         <img src={filteredData[3]?.url} alt="No Data" className='object-fill w-full h-[216px] lg:h-[632px] transition duration-500 ease-in-out hover:opacity-50' loading='lazy' />
                         <div className='absolute bottom-[10px] text-white flex items-center justify-between w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100'>
                           <h3 className='ml-2 w-[ 95%] text-[22px]  break-all'>{filteredData[3]?.project_name}</h3>
@@ -258,8 +258,8 @@ export default function Portfolio() {
                             </svg>
 
                           </span> </div>
-                    </div>
                       </Link>
+                    </div>
                   </div>)}
 
 

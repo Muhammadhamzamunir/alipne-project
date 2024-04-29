@@ -8,7 +8,8 @@ import 'react-alice-carousel/lib/alice-carousel.css';
 import detailPage_bg_1 from '../assets/images/DetailPage/detailPage-bg1.png';
 import detailPage_bg_2 from '../assets/images/DetailPage/detailPage-bg-2.png';
 import { useParams } from 'react-router-dom';
-import Carousel_Diversity from '../Components/Carousel';
+
+import Carousel_Diversity from '../Components/ProjectDiversityCarousel/Carousel';
 import API_Call from '../Components/API_Call';
 import { useMediaQuery } from 'react-responsive';
 import { useSwipeable } from "react-swipeable";
