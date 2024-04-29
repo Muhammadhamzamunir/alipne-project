@@ -6,71 +6,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* background-color:pink; */
+  
 }
 body {
   color: #c2c2c2;
   background-color: #131313;
   font-family: Genos;
   max-width: 1380px;
-  /* min-width: 1380px ; */
-
-}
-@media screen and (min-width: 1380px) {
-  * {
   
-    margin: 0 auto;
-    
-    
-    
-  }
-  
-  .oneImageOfBlog{
-    margin: 0 ;
-  }
- 
+
 }
-
-
-
-
-
-
-
-
-
-
-.carousel-item-padding-40-px {
-  /* padding: 0 5px; */
-}
-
-.carousel-container {
-  /* margin: 10px; */
-}
-
-.carousel-item-padding-40-px img {
-  /* width: 100%;
-  height: 400px;  */
-  /* object-fit: cover;
-  border-radius: 10px; */
-  z-index: 99999;
-}
-
-/* .carousel-item-padding-40-px:not(:first-child) {
-  transform: translateX(0%); 
-} */
-
-
-
-
-
-
-
-
-
-
-
-
 
 h1,
 h2 {
@@ -86,37 +31,28 @@ span {
 p {
   font-size: 20px;
   color: #fff !important;
-  /* font-family:Genos !important ; */
-}
-
-.awssld__timer,.awssld__bar--active,.awssld__bar {
-  height: 0 !important;
-}
-
-
-
-.awssld__content > img,
-.awssld__content > video {
-  object-fit: contain !important;
-  background-color: transparent !important;
-}
-.slick-slide {
-  padding-left: 0 !important;
-}
-.awssld {
-  --content-background-color: transparent !important;
-}
-.react-multi-carousel-track li {
-  width: auto !important;
+  
 }
 .font-audiowide {
   font-family: Audiowide;
 }
-.slide {
-  justify-content: flex-start;
+
+
+/* exrta large screen styling -------------------------------------------------- */
+@media screen and (min-width: 1380px) {
+  * {
+    margin: 0 auto; 
+  }
+  
+  .oneImageOfBlog{
+    margin: 0 ;
+  }
+ 
 }
 
-/* footer icon color and styling */
+
+
+/* footer icon color and styling ---------------------------------------------------- */
 .footer-icon-color * {
   color: #c1ae69 !important;
 }
@@ -131,7 +67,7 @@ p {
   font-size: 20px;
 }
 
-/* COntact Us Page Form Styling */
+/* Contact Us Page Form Styling ----------------------------------------------------- */
 .contact-container {
   display: flex;
   justify-content: center;
@@ -192,7 +128,7 @@ p {
   min-height: 120px;
   resize: none;
 }
-
+/* mobile screen ------------------------------------------------------------------------- */
 @media only screen and (max-width: 860px) {
   .portfolio-links {
     white-space: nowrap;
@@ -238,10 +174,10 @@ p {
 
   .prev {
     --b: 1px;
-    --s: 0.45em;
+    --s: 0.35em;
     --color: #c2c2c2;
   
-    padding: calc(0.2em + var(--s)) calc(0.7em + var(--s)) !important;
+    padding: calc(0.1em + var(--s)) calc(0.5em + var(--s)) !important;
     color: var(--color);
     --_p: var(--s);
     background: conic-gradient(
@@ -257,11 +193,12 @@ p {
     color: black !important;
   }
   .next {
+  
     --b: 1px;
-    --s: 0.45em;
+    --s: 0.35em;
     --color: #c2c2c2;
     color: black !important;
-    padding: calc(0.2em + var(--s)) calc(0.7em + var(--s)) !important;
+    padding: calc(0.1em + var(--s)) calc(0.5em + var(--s)) !important;
     color: var(--color);
     --_p: var(--s);
     background: conic-gradient(
@@ -275,6 +212,15 @@ p {
   
     right: 0% !important;
   }
+  .prev::after {
+    margin-top: 4px;
+   font-size: 15px;
+  }
+  .next::after {
+    margin-top: 4px;
+  
+    font-size: 15px;
+  }
   .slick-prev {
     display: none !important;
   }
@@ -285,23 +231,82 @@ p {
     width: 70px;
     height: 100px !important;
     object-fit: fill;
+    margin-top: 50px;
   }
+  
   .carousel-image {
-    width: 165px !important;
-    height: 258px !important;
+    width: 190px !important;
+    height: 295px !important;
     object-fit: cover;
     border-radius: 0px !important;
+    margin-bottom: 20px;
   }
 
   .dots {
-    bottom: -148px !important;
+    bottom: -178px !important;
   }
   .p-6 {
     padding: 0 !important;
   }
 }
 
-/* about us page steps card borde style */
+
+/* large screen styling -------------------------------------------------------------- */
+@media screen and (min-width: 860px) {
+  .dots {
+    bottom: -400px !important  ;
+  }
+
+  .thumbnails img {
+    width: 152px;
+    height: 200px;
+    object-fit: fill;
+    margin-top: 170px;
+  }
+  h1,h2 {
+    font-size: 28px !important;
+  }
+  .prev {
+    --b: 1px;
+    --s: 0.45em;
+    --color: #c2c2c2;
+  
+    padding: calc(0.5em + var(--s)) calc(0.9em + var(--s)) !important;
+    color: var(--color);
+    --_p: var(--s);
+    background: conic-gradient(
+        from 90deg at var(--b) var(--b),
+        #0000 90deg,
+        var(--color) 0
+      )
+      var(--_p) var(--_p) / calc(100% - var(--b) - 2 * var(--_p))
+      calc(100% - var(--b) - 2 * var(--_p)) !important;
+    transition: 0.3s linear, color 0s, background-color 0s !important;
+  
+    left: -13% !important;
+    color: black !important;
+  }
+  .next {
+    --b: 1px;
+    --s: 0.45em;
+    --color: #c2c2c2;
+    color: black !important;
+    padding: calc(0.5em + var(--s)) calc(0.9em + var(--s)) !important;
+    color: var(--color);
+    --_p: var(--s);
+    background: conic-gradient(
+        from 90deg at var(--b) var(--b),
+        #0000 90deg,
+        var(--color) 0
+      )
+      var(--_p) var(--_p) / calc(100% - var(--b) - 2 * var(--_p))
+      calc(100% - var(--b) - 2 * var(--_p)) !important;
+    transition: 0.3s linear, color 0s, background-color 0s !important;
+  
+    right: -13% !important;
+  }
+}
+/* about us page steps card borde style ---------------------------------------------------- */
 .alice-carousel__dots-item .__active {
   width: 100px !important;
 }
@@ -427,7 +432,7 @@ p {
   right: 10px;
 }
 
-/* hero Section slider dots style */
+/* hero Section slider dots style ------------------------------------------------------------------------*/
 .awssld__bullets button {
   width: 4px !important;
   height: 4px !important;
@@ -445,7 +450,7 @@ p {
   bottom: -30px !important ;
 }
 
-/* services page slider styling */
+/* services page slider styling ------------------------------------------------------------- */
 .control-dots {
   bottom: -35px !important ;
 }
@@ -500,7 +505,7 @@ p {
   width: 200px ;
 } */
 
-/* project detail page carousel */
+/* project detail page carousel---------------------------------------------------- */
 .alice-carousel__prev-btn-item span {
   display: block;
   width: 100px;
@@ -526,18 +531,19 @@ p {
   margin-top: 0 !important;
 }
 
-
+/* some basic styling -------------------------------------------------------------- */
 .prev::after {
   content: "\2190";
   position: absolute;
   color: white;
-  left: 23px;
+  left: 20px;
 }
 .next::after {
   content: "\2192";
   position: absolute;
   color: white;
-  left: 23px;
+  left: 20px;
+  
 }
 
 
@@ -555,60 +561,7 @@ p {
 
 
 
-@media screen and (min-width: 860px) {
-  .dots {
-    bottom: -400px !important  ;
-  }
 
-  .thumbnails img {
-    width: 152px;
-    height: 200px;
-    object-fit: fill;
-    margin-top: 170px;
-  }
-  h1,h2 {
-    font-size: 28px !important;
-  }
-  .prev {
-    --b: 1px;
-    --s: 0.45em;
-    --color: #c2c2c2;
-  
-    padding: calc(0.5em + var(--s)) calc(0.9em + var(--s)) !important;
-    color: var(--color);
-    --_p: var(--s);
-    background: conic-gradient(
-        from 90deg at var(--b) var(--b),
-        #0000 90deg,
-        var(--color) 0
-      )
-      var(--_p) var(--_p) / calc(100% - var(--b) - 2 * var(--_p))
-      calc(100% - var(--b) - 2 * var(--_p)) !important;
-    transition: 0.3s linear, color 0s, background-color 0s !important;
-  
-    left: -13% !important;
-    color: black !important;
-  }
-  .next {
-    --b: 1px;
-    --s: 0.45em;
-    --color: #c2c2c2;
-    color: black !important;
-    padding: calc(0.5em + var(--s)) calc(0.9em + var(--s)) !important;
-    color: var(--color);
-    --_p: var(--s);
-    background: conic-gradient(
-        from 90deg at var(--b) var(--b),
-        #0000 90deg,
-        var(--color) 0
-      )
-      var(--_p) var(--_p) / calc(100% - var(--b) - 2 * var(--_p))
-      calc(100% - var(--b) - 2 * var(--_p)) !important;
-    transition: 0.3s linear, color 0s, background-color 0s !important;
-  
-    right: -13% !important;
-  }
-}
 .carousel-item {
   width: auto !important;
   height: auto !important;
@@ -623,4 +576,25 @@ p {
   height: 4px;
   border-radius: 10px;
   background-color: #fff;
+}
+.awssld__timer,.awssld__bar--active,.awssld__bar {
+  height: 0 !important;
+}
+
+.awssld__content > img,
+.awssld__content > video {
+  object-fit: contain !important;
+  background-color: transparent !important;
+}
+.slick-slide {
+  padding-left: 0 !important;
+}
+.awssld {
+  --content-background-color: transparent !important;
+}
+.react-multi-carousel-track li {
+  width: auto !important;
+}
+.slide {
+  justify-content: flex-start;
 }
