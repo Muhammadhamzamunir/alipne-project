@@ -114,16 +114,16 @@ export default function OnGoingProjects() {
                 keyBoardControl={true}
                 customTransition="all 1s ease-in-out"
                 transitionDuration={1000}
-                partialVisbile={true}
+                
 
               >
                 {ongoingProjects.slice(0, 8).sort((a, b) => b.id - a.id).map((project, index) => (
-                  <div key={index} className="w-[508px] h-[336px] relative group cursor-pointer">
+                  <div key={index} className="w-[508px] xl:w-[580px] h-[336px] relative group cursor-pointer">
                     <Link to={`/ongoing-project/${project.id}?from=/`}>
                       <img
                         src={project.horizontal_image?.[0]?.url}
                         alt=""
-                        className="w-[508px] h-[336px] object-fill transition duration-500 ease-in-out hover:opacity-50"
+                        className="w-[508px] xl:w-[580px] h-[336px] object-fill transition duration-500 ease-in-out hover:opacity-50"
                       />
                       <div className='absolute bottom-[10px] text-white flex justify-between w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100'>
                         <h3 className='ml-2 text-[22px]'>{project.project_name}</h3>
