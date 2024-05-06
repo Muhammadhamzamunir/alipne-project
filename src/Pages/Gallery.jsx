@@ -208,7 +208,7 @@ export default function Gallery() {
                                         <img src={filtered_horizontal_images[currentPhotoIndex]?.horizontal_image} alt="Modal" className="max-w-full w-[100%] lg:w-[85%]  md:h-[85vh] h-[270px]  object-fill" />
                                     ) :
                                         (
-                                            <img src={filtered_verticle_images[currentPhotoIndex]?.vertical_image} alt="Modal" className="max-w-full w-[95%] lg:w-[30%]  md:h-[600px] h-[450px]  object-fill" />
+                                            <img src={filtered_verticle_images[currentPhotoIndex]?.vertical_image} alt="Modal" className="max-w-full w-[68%] lg:w-[30%]  md:h-[600px] h-[450px]  object-fill" />
                                         )
                                 }
 
