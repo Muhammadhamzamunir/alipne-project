@@ -507,7 +507,7 @@ export default function AboutUs() {
                 Krunal Darji
               </h3>
               <p className="font-light leading-loose tracking-wider">
-                (Architectural Assistance) Proficient in Presentation drawing
+                (Architectural Assistant) Proficient in Presentation drawing
                 and 3d Visualizing tools. His role combines as one who delivers
                 technical drawing with modern technologies.
               </p>
