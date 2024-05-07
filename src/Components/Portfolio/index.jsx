@@ -151,7 +151,7 @@ export default function Portfolio() {
               {
                 allCategories.map((category) => (
                   <li key={category} className={activeCategory === category ? "active pr-8 lg:pr-0 xl:mx-0 uppercase" : "pr-8 lg:pr-0 xl:mx-0 uppercase"}>
-                    <a href="#" onClick={(event) => handleClick(event, category)} className='xl:mx-0'>
+                    <a href="#" onClick={(event) => handleClick(event, category)} className='xl:mx-0 uppercase'>
                       {category}
                     </a>
                   </li>

@@ -105,7 +105,9 @@ export default function Carousel_Diversity(props) {
 
               {
                 categoriesData.length > 0 && categoriesData.sort((a, b) => b.id - a.id).map((category,index) => (
-                  <div key={index} className='w-full lg:w-[32%] h-[190px] lg:h-[203px] relative group cursor-pointer'>
+                 
+                  category.horizontal_image[0] && (
+                 <div key={index} className='w-full lg:w-[32%] h-[190px] lg:h-[203px] relative group cursor-pointer'>
                     <Link to={page === "ongoingProject" ? `/ongoing-project/${category.id}` : `/project/${category.id}`}>
                       <img src={category.horizontal_image[0]?.url} alt="" className='object-fill w-full h-full transition duration-500 ease-in-out hover:opacity-50' loading='lazy' />
                       <div className='absolute bottom-[10px] text-white flex justify-between items-center w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100'>
@@ -119,7 +121,7 @@ export default function Carousel_Diversity(props) {
                       </div>
                     </Link>
                   </div>
-
+                  )
 
                 ))
               }

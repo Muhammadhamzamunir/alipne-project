@@ -89,7 +89,7 @@ export default function Portfolio() {
 
                 <div className="flex  overflow-x-auto  no-scrollbar md:ml-[14%] ml-5" style={{ whiteSpace: 'nowrap', overflowX: 'auto' }}>
                     {uniqueCategories?.map((category, index) => (
-                        <div key={index} style={{ fontSize: "22px" }} className={`cursor-pointer mr-8 pb-2 font-light  ${activeCategory === category ? " border-b-2 border-white-500" : ""}`} onClick={() => setActiveCategory(category)}>
+                        <div key={index} style={{ fontSize: "22px" }} className={`cursor-pointer mr-8 pb-2 font-light uppercase  ${activeCategory === category ? " border-b-2 border-white-500 uppercase" : "uppercase"}`} onClick={() => setActiveCategory(category)}>
                             {category}
                         </div>
                     ))}

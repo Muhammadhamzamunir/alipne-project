@@ -200,7 +200,7 @@ export default function Services() {
             alt=""
             key={index}
             
-            className={`w-[184px] h-[245px] mr-5  ${
+            className={`w-[154px] h-[245px] mr-5  ${
               index % 2 !== 0 ? "mt-20 " : ""
             }`}
           />
