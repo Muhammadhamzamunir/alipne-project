@@ -15,7 +15,7 @@ import { useMediaQuery } from 'react-responsive';
 import { useSwipeable } from "react-swipeable";
 import { Modal } from 'flowbite-react';
 import ReactPlayer from 'react-player';
-import { useLocation,Link } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 export default function OngoingProjectListDetail() {
     const isMobile = useMediaQuery({ maxWidth: 767 });
     const { id } = useParams();
@@ -24,7 +24,7 @@ export default function OngoingProjectListDetail() {
     const queryParams = new URLSearchParams(location.search);
     const previousPage = queryParams.get('from');
 
-    
+
     const { fetchData, loader } = API_Call();
     const [projectData, setProjectData] = useState();
     const [verticalImagesData, setverticalImagesData] = useState([]);
@@ -172,11 +172,11 @@ export default function OngoingProjectListDetail() {
                 <div className="md:flex justify-center  lg:h-[1110px] md:h-[90vh] h-auto w-full relative lg:bottom-44 md:bottom-12 bottom-20 sm:bottom-5  mb-2 md:mb-0  bg-cover bg-rigth py-3 bg-top" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.0), rgba(13, 13, 13, 0.1)), url(${detailPage_bg_1}),url(${detailPage_bg_2})`, backgroundRepeat: "no-repeat", backgroundPosition: "100% 100%", backgroundSize: "100% 100%" }}>
                     <div className="md:w-3/4 sm:w-full px-6 pt-12 md:px-0">
 
-                            {
-                                previousPage === "/" ? (<h6 className='mb-1 mt-3 text-amber-600 text-[#C1AE69] uppercase'><Link to='/' >Home</Link>  &gt; {projectData[0].project_name}</h6>
-                                ) : (<h6 className='mb-1 mt-3 text-amber-600 text-[#C1AE69] uppercase'><Link to='/' >Home</Link> &gt; <Link to='/on-going-project-list'>Ongoing Project</Link>  &gt; {projectData[0].project_name}</h6>
-                                )
-                            }
+                        {
+                            previousPage === "/" ? (<h6 className='mb-1 mt-3 text-amber-600 text-[#C1AE69] uppercase'><Link to='/' >Home</Link>  &gt; {projectData[0].project_name}</h6>
+                            ) : (<h6 className='mb-1 mt-3 text-amber-600 text-[#C1AE69] uppercase'><Link to='/' >Home</Link> &gt; <Link to='/on-going-project-list'>Ongoing Project</Link>  &gt; {projectData[0].project_name}</h6>
+                            )
+                        }
                         <div className='flex items-center m-0'>
                             <h3 className='font-audiowide lg:text-2xl  text-1xl  uppercase md:mr-8 mr-2'> {projectData[0].project_name}</h3>
                             <p className='font-light flex items-center md:gap-[6px] gap-1 flex-nowrap  leading-loose tracking-wider' style={{ marginBottom: "0px !important" }}><FaLocationDot />  {projectData[0].location} </p>
@@ -232,7 +232,7 @@ export default function OngoingProjectListDetail() {
                                             maxHeight: "500px",
                                             margin: "40px auto",
                                             borderRadius: "0px",
-                                            
+
                                         }}
                                     />
                                 </div>
