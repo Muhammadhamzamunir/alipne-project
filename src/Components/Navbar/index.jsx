@@ -70,7 +70,7 @@ export default function Navbar() {
 
                     <span className='mt-8 xl:ml-0 z-50 md:mt-10'><Button text={"Menu"} onClick={toggleMenuBar} /></span>
 
-                    <img src={logo} alt="" className="z-50 mt-6 xl:ml-[80%]   md:pt-1 lg:mt-0 w-[58px] h-[98px] lg:w-[146px] lg:h-[238px] bg-blend-multiply " />
+                    <img src={logo} alt="" className="z-50 mt-6 xl:ml-[79%]   md:pt-1 lg:mt-0 w-[58px] h-[98px] lg:w-[146px] lg:h-[238px] bg-blend-multiply " />
                 </div>
 
                 <div ref={menuBar} className={`menu-bar px-2 absolute left-32 top-8 z-50 transition-opacity duration-700 opacity-0 ${!menuOpen ? "hidden" : "block"}`}>

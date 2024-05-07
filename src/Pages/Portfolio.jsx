@@ -133,13 +133,13 @@ export default function Portfolio() {
     function imagesContainer(filteredData, startingIndex = 0) {
 
         return (
-            <div className='flex gap-2 mb-4 flex-wrap m-auto'>
+            <div className='flex gap-2 mb-4  flex-wrap m-auto'>
 
-                {filteredData[startingIndex]?.horizontal_image && (
+                {filteredData[startingIndex]?.horizontal_image ?(
 
                     <div
                         data-aos="fade-right"
-                        className='w-full relative group lg:w-[67%]  lg:h-[479px] xl:h-[479px] h-[200px] '
+                        className='w-full relative group lg:w-[67%] 2xl:w-[68%]  lg:h-[479px]   xl:h-[479px] h-[200px] '
                         style={{ position: 'relative', cursor: 'pointer' }}
 
                     >
@@ -163,13 +163,20 @@ export default function Portfolio() {
                             </div>
                         </Link>
                     </div>
+                ):(
+                    <div
+                    data-aos="fade-right"
+                    className='w-full relative group lg:w-[65%]  lg:h-[479px]   xl:h-[479px] h-[200px] '
+                    style={{ position: 'relative', cursor: 'pointer' }}
+
+                ></div> 
                 )}
 
                 {
                     filteredData[startingIndex + 1]?.vertical_image && (<div data-aos="fade-right" className="w-[48.8%]  relative group lg:w-[30%]  lg:h-[479px] xl:h-[479px] h-[265px]" style={{ position: 'relative', cursor: 'pointer' }}
                     >
                         <Link to={`/project/${filteredData[startingIndex + 1]?.id}`}>
-                            <img className='object-fill h-full transition duration-500 ease-in-out hover:opacity-50'
+                            <img className='object-fill h-full transition duration-500  ease-in-out hover:opacity-50'
                                 src={filteredData[startingIndex + 1]?.vertical_image}
                                 alt={""}
                                 style={{ width: "100%", display: "block", height: "100%" }}

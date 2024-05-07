@@ -126,7 +126,7 @@ export default function OnGoingProjectList() {
         return (
             <div className='flex gap-2 mb-4 flex-wrap m-auto'>
 
-                {filteredData[startingIndex]?.horizontal_image && (
+                {filteredData[startingIndex]?.horizontal_image ? (
 
                     <div
                         data-aos="fade-right"
@@ -154,7 +154,12 @@ export default function OnGoingProjectList() {
                             </div>
                         </Link>
                     </div>
-                )}
+                ):(<div
+                    data-aos="fade-right"
+                    className='w-full relative group lg:w-[67%]  lg:h-[479px]   xl:h-[479px] h-[200px] '
+                    style={{ position: 'relative', cursor: 'pointer' }}
+
+                ></div> )}
 
                 {
                     filteredData[startingIndex + 1]?.vertical_image && (<div data-aos="fade-right" className="w-[48.8%] relative group lg:w-[30%] lg:h-[479px] h-[265px]" style={{ position: 'relative', cursor: 'pointer' }}
