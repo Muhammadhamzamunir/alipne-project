@@ -600,3 +600,7 @@ p {
 .slide {
   justify-content: flex-start;
 }
+
+.carousel-image{
+  border-radius: 0px !important;
+}

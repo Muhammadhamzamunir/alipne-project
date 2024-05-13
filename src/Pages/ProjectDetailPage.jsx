@@ -14,7 +14,7 @@ import { useMediaQuery } from 'react-responsive';
 import { useSwipeable } from "react-swipeable";
 import { Modal } from 'flowbite-react';
 import ReactPlayer from 'react-player';
-import { useLocation,Link } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 export default function ProjectDetailPage() {
     const isMobile = useMediaQuery({ maxWidth: 767 });
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -181,7 +181,7 @@ export default function ProjectDetailPage() {
 
 
                         <style>{
-                            ` @media screen and (min-width: 860px) {
+                            ` @media screen and (min-width: 960px) {
                         .carousel-image{
     width: 450px !important;
     height: 638px !important;
@@ -192,7 +192,19 @@ export default function ProjectDetailPage() {
   .slick-slide {
     padding: 0 15px; /* Adjust as needed */
   }
-}`
+}
+@media screen and (min-width: 860px) {
+    .carousel-image{
+width: 350px !important;
+height: 638px !important;
+
+}
+.slick-slide {
+    padding: 0 15px; 
+  }
+
+}
+`
                         }
                         </style>
 

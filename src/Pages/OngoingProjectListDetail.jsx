@@ -185,7 +185,7 @@ export default function OngoingProjectListDetail() {
                             AREA-   {projectData[0].area}           </p>
 
                         <style>{
-                            ` @media screen and (min-width: 860px) {
+                            ` @media screen and (min-width: 960px) {
                         .carousel-image{
     width: 450px !important;
     height: 638px !important;
@@ -193,9 +193,20 @@ export default function OngoingProjectListDetail() {
     border-radius: 0px !important;
   }
   .slick-slide {
-    padding: 0 15px; /* Adjust as needed */
+    padding: 0 15px; 
   }
 
+
+}
+@media screen and (min-width: 860px) {
+    .carousel-image{
+width: 350px !important;
+height: 638px !important;
+
+}
+.slick-slide {
+    padding: 0 15px; 
+  }
 
 }`
                         }
@@ -307,7 +318,7 @@ export default function OngoingProjectListDetail() {
 
 
 
-                                <img src={horizontalImageData[currentPhotoIndex]?.image} alt="Modal" className="max-w-full w-[100%] lg:w-[85%]  md:h-[85vh] h-[270px]  object-fill" />
+                                <img src={horizontalImageData[currentPhotoIndex]?.image} alt="Modal" className="max-w-full w-[100%] lg:w-[85%]  md:h-[85vh] max-h-[700px]  h-[270px]   object-fill" />
 
 
                                 <span className=' absolute right-3 md:right-[15px] z-40 hidden lg:block'><Button text={"→"} onClick={nextPhoto} /></span>
