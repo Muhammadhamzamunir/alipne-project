@@ -30,27 +30,11 @@ export default function AboutUs() {
       try {
         const data = await fetchData("studio");
         const featuredData = await fetchData("featured");
-        console.log(featuredData);
-        // const featuredData = [{
-        //   "id": 20,
-        //   "thumbnail_description": "Edit Featured",
-        //   "featured_imaged": "https://Architecture.flashcitytours.com/storage/497/9e9abdb2-6c21-4d0d-8eb6-e4b82c3c476c'"
-        // }, {
-        //   "id": 20,
-        //   "thumbnail_description": "Edit Featured",
-        //   "featured_imaged": "https://Architecture.flashcitytours.com/storage/497/9e9abdb2-6c21-4d0d-8eb6-e4b82c3c476c'"
-        // }, {
-        //   "id": 20,
-        //   "thumbnail_description": "Edit Featured",
-        //   "featured_imaged": "https://Architecture.flashcitytours.com/storage/497/9e9abdb2-6c21-4d0d-8eb6-e4b82c3c476c'"
-        // }, {
-        //   "id": 20,
-        //   "thumbnail_description": "Edit Featured",
-        //   "featured_imaged": "https://Architecture.flashcitytours.com/storage/497/9e9abdb2-6c21-4d0d-8eb6-e4b82c3c476c'"
-        // }]
+        // console.log(featuredData);
+
         setStudioImages(data);
         setfeatured(featuredData);
-        console.log(featuredData);
+        // console.log(featuredData);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -528,16 +512,16 @@ export default function AboutUs() {
           </div>
           {studioImages ? (
             <AutoplaySlider
-              className="my-slider w-full lg:h-[85vh] md:h-[589px] h-[180px] object-fill mt-3 lg:mt-0 mb-5"
+              className="my-slider w-full lg:h-[490px] md:h-[589px] h-[180px] object-fill mt-3 lg:mt-0 mb-5"
               bullets={false}
               buttons={false}
               play={true}
               interval={2000}
             >
               {
-                studioImages?.studio_images.map((image) => (
+                studioImages?.studio_images.map((image,index) => (
 
-                  <div data-src={image.url} className="w-full h-full my-6 object-fill " loading="lazy" />
+                  <div data-src={image.url} key={index} className="w-full h-full my-6 object-fill " loading="lazy" />
 
                 )
 
@@ -549,15 +533,7 @@ export default function AboutUs() {
             </AutoplaySlider>) : "Loading"
           }
 
-          {/* <div data-src={studio} className="w-full h-full my-6 " />
-            <div data-src={studio} className="w-full h-full my-6 " />
-            <div data-src={studio} className="w-full h-full my-6 " /> */}
-          {/* <img
-            src={studio}
-            alt="Studio"
-            loading="lazy"
-            className="w-full my-6 aspect-auto"
-          /> */}
+         
           <p className="font-light leading-loose tracking-wider">
             A Nexus of Innovation and Comfort At the core of Alpine Architects is
             its cutting-edge studio, not merely a workplace but a haven for
@@ -597,7 +573,7 @@ export default function AboutUs() {
                   key={index}
                   onClick={() => openModal(index)}
                 >
-             
+
                   <img
                     src={data.featured_imaged}
                     alt="Featured"
@@ -617,22 +593,23 @@ export default function AboutUs() {
             show={isModalOpen}
             onClose={closeModal}
             size="4xl"
-            className="backdrop-blur-lg min-h-[100vh] z-50 padding-0"
+            className="backdrop-blur-lg min-h-[100vh] w-full z-50 padding-0 "
           >
-            <Modal.Body>
-              <div className="relative padding-0">
-                <span className='absolute top-0 right-0 z-50 p-2 '>
+            {/* <Modal.Body>
+              <div className="relative padding-0 w-full">
+                <span className='absolute top-0 right-0 z-50 p-2  '>
                   <Button text={"✕"} onClick={closeModal} />
                 </span>
                 <div className="lg:pt-0 pt-20 flex flex-col items-center justify-center space-y-4">
-                  <div className="flex items-center justify-center w-full md:mt-8 top-22">
+                            <div className="flex items-center justify-center  w-full md:mt-8 top-22">
                     <span className='absolute left-3 md:left-6 z-40 hidden lg:block '>
                       <Button text={"←"} onClick={prevPhoto} />
                     </span>
                     <img
                       src={featured.length > 0 ? featured[currentPhotoIndex]?.featured_imaged || "" : ""}
                       alt="Modal"
-                      className="max-w-full w-[95%] lg:w-[30%]  md:h-[600px] h-[450px]  object-fill"
+                      className="max-w-full w-[68%] lg:w-[30%]  md:h-[600px] h-[450px]  object-fill"
+                      // className="max-w-full w-[95%] lg:w-[30%]  md:h-[600px] h-[450px]  object-fill"
                     />
                     <span className='absolute right-3 md:right-[13px] z-40 hidden lg:block'>
                       <Button text={"→"} onClick={nextPhoto} />
@@ -643,108 +620,31 @@ export default function AboutUs() {
                   </div>
                 </div>
               </div>
-            </Modal.Body>
-          </Modal>
-          {/* <Carousel
+            </Modal.Body> */}
+            <Modal.Body className="m-0">
+              <div className="relative padding-0">
+                <span className='absolute top-0 right-0 z-50 p-2 '><Button text={"&times;"} onClick={closeModal} /></span>
+                <div className="lg:pt-0 pt-20 flex flex-col items-center justify-center space-y-4">
+                  <div className="flex items-center justify-center  w-full md:mt-8 top-22">
+                  <span className='absolute left-3 md:left-6 z-40 hidden lg:block '>
+                      <Button text={"←"} onClick={prevPhoto} />
+                    </span>                    <img
+                      src={featured.length > 0 ? featured[currentPhotoIndex]?.featured_imaged || "" : ""}
+                      alt="Modal"
+                      className="max-w-full w-[68%] lg:w-[30%]  md:h-[600px] h-[450px]  object-fill"
 
-            autoPlay={true}
-            autoPlaySpeed={3000}
-            infinite={true}
-            swipeable={true}
-            draggable={true}
-            showDots={false}
-            responsive={responsive}
-            keyBoardControl={true}
-            // customTransition="all .5"
-            transitionDuration={500}
-            containerClass=""
-          >
-            {
-              featured.length > 0 ? (featured.map((data, index) => {
-                <div className=" w-full md:w-[245px]  h-[360px] relative group" key={index}>
-                  <img
-                    src={data.featured_imaged}
-                    alt="Featured"
-                    className="w-full h-full pr-2 md:pr-0 object-contain  opacity-100 transition duration-300 ease-in-out group-hover:opacity-50"
-                    onClick={() => openModal(index)}
-                  />
-                  <div className='absolute bottom-[50px] md:bottom-[26px] text-white flex justify-between w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100'>
-                    <h3 className='font-light ml-2 bottom-2'>{data.thumbnail_description}</h3>
-
+                    />
+                    <span className='absolute right-3 md:right-[13px] z-40 hidden lg:block'>
+                      <Button text={"→"} onClick={nextPhoto} />
+                    </span>                  </div>
+                  <div className="text-center">
+                    {currentPhotoIndex + 1} of {featured.length}
                   </div>
                 </div>
-
-              })) : (<div>"Loading Data"</div>)
-            }
-
-
-
-          </Carousel> */}
-          {/* 
-
-            <div className=" w-full md:w-[245px]  h-[360px] relative group">
-              <img
-                src={featured}
-                alt="Featured"
-                className="w-full h-full pr-2  md:pr-0 object-contain  opacity-100 transition duration-300 ease-in-out group-hover:opacity-50"
-                onClick={() => openModal(1)}
-              />
-              <div className='absolute bottom-[20px] text-white flex justify-between w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100'>
-                <h3 className='font-light ml-2'>publication- THANE BIZNET-
-                  VOL 02 NO.1 MAY-JUNE 2023</h3>
-
               </div>
-            </div>
+            </Modal.Body>
+          </Modal>
 
-
-
-
-
-            <div className=" w-full md:w-[245px]  h-[360px] relative group">
-              <img
-                src={featured}
-                alt="Featured"
-                className="w-full h-full pr-2 md:pr-0 object-contain  opacity-100 transition duration-300 ease-in-out group-hover:opacity-50"
-                onClick={() => openModal(1)}
-              />
-              <div className='absolute bottom-[20px] text-white flex justify-between w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100'>
-                <h3 className='font-light ml-2 '>publication- THANE BIZNET-
-                  VOL 02 NO.1 MAY-JUNE 2023</h3>
-
-              </div>
-            </div>
-
-
-
-
-
-            <div className=" w-full md:w-[245px]  h-[360px] relative group">
-              <img
-                src={featured}
-                alt="Featured"
-                className="w-full h-full pr-2 md:pr-0 object-contain  opacity-100 transition duration-300 ease-in-out group-hover:opacity-50"
-                onClick={() => openModal(1)}
-              />
-              <div className='absolute bottom-[20px] text-white flex justify-between w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100'>
-                <h3 className='font-light ml-2'>publication- THANE BIZNET-
-                  VOL 02 NO.1 MAY-JUNE 2023</h3>
-
-              </div>
-            </div>
-            <div className=" w-full md:w-[245px]  h-[360px] relative group">
-              <img
-                src={featured}
-                alt="Featured"
-                className="w-full h-full pr-2 md:pr-0 object-contain  opacity-100 transition duration-300 ease-in-out group-hover:opacity-50"
-                onClick={() => openModal(1)}
-              />
-              <div className='absolute bottom-[20px] text-white flex justify-between w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100'>
-                <h3 className='font-light ml-2'>publication- THANE BIZNET-
-                  VOL 02 NO.1 MAY-JUNE 2023</h3>
-
-              </div>
-            </div>
- */}
 
 
 
@@ -752,39 +652,7 @@ export default function AboutUs() {
         </div>
       </div>
 
-      {/* <Modal
-        show={isModalOpen}
-        onClose={closeModal}
-        size="4xl"
-        className="backdrop-blur-lg min-h-[100vh]"
-      >
-        <Modal.Body>
-          <div className="relative">
-            <span className="absolute top-0 right-0 z-50 p-2 ">
-              <Button text={"✕"} onClick={closeModal} />
-            </span>
 
-            <div className="flex flex-col items-center justify-center space-y-4">
-              <div className="flex items-center justify-center w-full">
-                <span className="absolute left-3 md:left-6 z-40 ">
-                  <Button text={"←"} onClick={prevPhoto} />
-                </span>
-                <img
-                  src={featured}
-                  alt="Modal"
-                  className="max-w-full  h-[80vh]  object-contain"
-                />
-                <span className=" absolute right-3 md:right-6 z-40">
-                  <Button text={"→"} onClick={nextPhoto} />
-                </span>
-              </div>
-              <div className="text-center">
-                Image 1 of 4
-              </div>
-            </div>
-          </div>
-        </Modal.Body>
-      </Modal> */}
 
       <OnGoingProjects />
     </>

@@ -195,7 +195,7 @@ export default function Gallery() {
                 ))}
             </div>
 
-            <Modal show={isModalOpen} onClose={closeModal} size="4xl" className="backdrop-blur-lg min-h-[100vh] z-50 padding-0" {...handlers}>
+            <Modal show={isModalOpen} onClose={closeModal} size="4xl" className="backdrop-blur-lg min-h-[100vh] w-full z-50 padding-0" {...handlers}>
                 <Modal.Body className="m-0">
                     <div className="relative padding-0">
                         <span className='absolute top-0 right-0 z-50 p-2 '><Button text={"&times;"} onClick={closeModal} /></span>
@@ -205,7 +205,7 @@ export default function Gallery() {
                                 {
                                     (currentPhototype == "horizontal") ? (
 
-                                        <img src={filtered_horizontal_images[currentPhotoIndex]?.horizontal_image} alt="Modal" className="max-w-full w-[100%] lg:w-[85%]  md:h-[85vh] h-[270px]  object-fill" />
+                                        <img src={filtered_horizontal_images[currentPhotoIndex]?.horizontal_image} alt="Modal" className="max-w-full w-[100%] lg:w-[85%]  md:h-[85vh] max-h-[700px]  h-[270px] object-contain" />
                                     ) :
                                         (
                                             <img src={filtered_verticle_images[currentPhotoIndex]?.vertical_image} alt="Modal" className="max-w-full w-[68%] lg:w-[30%]  md:h-[600px] h-[450px]  object-fill" />
