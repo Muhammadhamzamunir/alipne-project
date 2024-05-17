@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Button from '../Components/Button';
 import API_Call from '../Components/API_Call';
 import { Link, useNavigate } from 'react-router-dom';
@@ -8,9 +8,40 @@ export default function Portfolio() {
     const [filteredData, setFilteredData] = useState([]);
     const [activeCategory, setActiveCategory] = useState("All");
     const [uniqueCategories, setUniqueCategories] = useState([]);
-    const [displayedImagesCount, setDisplayedImagesCount] = useState(6);
+    const [displayedImagesCount, setDisplayedImagesCount] = useState(7);
     const [contentList, setContentList] = useState([]);
     const categories = ["All", "Residential", "Commercial", "Hospitality", "Institutional", "Industrial & Infrastructure", "Landscape & Urbanism", "Master Planning", "Exterior Facade Design Specialist",];
+    const containerRef = useRef(null);
+
+    useEffect(() => {
+        const container = containerRef.current;
+
+        const handleKeydown = (event) => {
+            if (!container) return;
+
+            if (event.key === 'ArrowLeft') {
+                container.scrollBy({ left: -100, behavior: 'smooth' });
+            } else if (event.key === 'ArrowRight') {
+                container.scrollBy({ left: 100, behavior: 'smooth' });
+            }
+        };
+
+        const handleWheel = (event) => {
+            if (!container) return;
+
+            event.preventDefault();
+            container.scrollBy({ left: event.deltaY, behavior: 'smooth' });
+        };
+
+        window.addEventListener('keydown', handleKeydown);
+        container.addEventListener('wheel', handleWheel);
+
+        return () => {
+            window.removeEventListener('keydown', handleKeydown);
+            container.removeEventListener('wheel', handleWheel);
+        };
+    }, []);
+
 
     const navigate = useNavigate();
     const getData = async () => {
@@ -31,7 +62,7 @@ export default function Portfolio() {
                     "project_name": item.project_name
                 };
             });
-
+            setDisplayedImagesCount(7);
             setUniqueCategories(categories);
             setAllImages(allDataImages);
             setFilteredData(allDataImages);
@@ -57,8 +88,9 @@ export default function Portfolio() {
     }
 
     const handleLoadMoreClick = () => {
-        setDisplayedImagesCount(prevCount => prevCount + 6);
-        let newLoadedImages = imagesContainer(filteredData, displayedImagesCount)
+        console.log(displayedImagesCount);
+        setDisplayedImagesCount(prevCount => prevCount + 7);
+        let newLoadedImages = imagesContainer(filteredData, displayedImagesCount);
         setContentList((prevContentList) => [...prevContentList, newLoadedImages]);
     }
 
@@ -87,9 +119,18 @@ export default function Portfolio() {
                     </div>
                 </div>
 
-                <div className="flex  overflow-x-auto  no-scrollbar md:ml-[14%] ml-5" style={{ whiteSpace: 'nowrap', overflowX: 'auto' }}>
+                <div
+                    ref={containerRef}
+                    className="flex overflow-x-auto no-scrollbar md:ml-[14%] ml-5"
+                    style={{ whiteSpace: 'nowrap' }}
+                >
                     {uniqueCategories?.map((category, index) => (
-                        <div key={index} style={{ fontSize: "22px" }} className={`cursor-pointer mr-8 pb-2 font-light uppercase  ${activeCategory === category ? " border-b-2 border-white-500 uppercase" : "uppercase"}`} onClick={() => setActiveCategory(category)}>
+                        <div
+                            key={index}
+                            style={{ fontSize: "22px" }}
+                            className={`cursor-pointer mr-8 pb-2 font-light uppercase ${activeCategory === category ? "border-b-2 border-white-500" : ""}`}
+                            onClick={() => setActiveCategory(category)}
+                        >
                             {category}
                         </div>
                     ))}
@@ -104,6 +145,7 @@ export default function Portfolio() {
                             {imagesContainer(filteredData, 0)}
 
                             {contentList.map((content, index) => (
+
                                 <div key={index}>{content}</div>
 
                             ))}
@@ -135,7 +177,7 @@ export default function Portfolio() {
         return (
             <div className='flex gap-2 mb-4  flex-wrap m-auto'>
 
-                {filteredData[startingIndex]?.horizontal_image ? (
+                {filteredData[startingIndex]?.id ? (
 
                     <div
                         data-aos="fade-right"
@@ -173,7 +215,7 @@ export default function Portfolio() {
                 )}
 
                 {
-                    filteredData[startingIndex + 1]?.vertical_image && (<div data-aos="fade-right" className="w-[48.8%]  relative group lg:w-[30%]  lg:h-[479px] xl:h-[479px] h-[265px]" style={{ position: 'relative', cursor: 'pointer' }}
+                    filteredData[startingIndex + 1]?.id && (<div data-aos="fade-right" className="w-[48.8%]  relative group lg:w-[30%]  lg:h-[479px] xl:h-[479px] h-[265px]" style={{ position: 'relative', cursor: 'pointer' }}
                     >
                         <Link to={`/project/${filteredData[startingIndex + 1]?.id}`}>
                             <img className='object-fill h-full transition duration-500  ease-in-out hover:opacity-50'
@@ -201,7 +243,7 @@ export default function Portfolio() {
                     </div >)
                 }
                 {
-                    filteredData[startingIndex + 2]?.vertical_image ? (<div data-aos="fade-right" className='w-[48.8%] relative group lg:w-[32%] lg:h-[479px] h-[265px] ' style={{ position: 'relative', cursor: 'pointer' }}  >
+                    filteredData[startingIndex + 2]?.id ? (<div data-aos="fade-right" className='w-[48.8%] relative group lg:w-[32%] lg:h-[479px] h-[265px] ' style={{ position: 'relative', cursor: 'pointer' }}  >
                         <Link to={`/project/${filteredData[startingIndex + 2]?.id}`}>
                             <img className=' object-fill h-full transition duration-500 ease-in-out hover:opacity-50'
                                 src={filteredData[startingIndex + 2]?.vertical_image}
@@ -231,7 +273,7 @@ export default function Portfolio() {
 
 
                 {
-                    filteredData[startingIndex + 3]?.vertical_image ? (
+                    filteredData[startingIndex + 3]?.id ? (
                         <div data-aos="fade-right" className="w-[48.8%] relative group lg:w-[32.1%] lg:h-[479px] h-[265px] " style={{ position: 'relative', cursor: 'pointer' }}   >
                             <Link to={`/project/${filteredData[startingIndex + 3]?.id}`}>
                                 <img className='object-fill h-full transition duration-500 ease-in-out hover:opacity-50'
@@ -258,7 +300,7 @@ export default function Portfolio() {
                             </Link>
                         </div>) : (
                         <div data-aos="fade-right" className="w-[48.8%] relative group lg:w-[32.1%] lg:h-[479px] h-[265px] " style={{ position: 'relative', cursor: 'pointer' }}   >
-                            
+
                         </div>)
                 }
                 {
@@ -286,7 +328,7 @@ export default function Portfolio() {
 
                             </div>
                         </Link>
-                    </div>): (<div data-aos="fade-right" className="w-[48.8%] relative group lg:w-[32.1%] lg:h-[479px] h-[265px] " style={{ position: 'relative', cursor: 'pointer' }}   ></div>
+                    </div>) : (<div data-aos="fade-right" className="w-[48.8%] relative group lg:w-[32.1%] lg:h-[479px] h-[265px] " style={{ position: 'relative', cursor: 'pointer' }}   ></div>
                     )
                 }
                 <div className='flex flex-wrap md:gap-1 gap-3 lg:gap-2 w-full'>
@@ -310,7 +352,7 @@ export default function Portfolio() {
                             </div>)}
 
                     {
-                        filteredData[startingIndex + 6]?.horizontal_image && (
+                        filteredData[startingIndex + 6]?.id && (
                             <div data-aos="fade-right" className='w-full relative group lg:w-[48.5%] lg:h-[289px] h-[200px] transition duration-500 ease-in-out hover:opacity-50' style={{ position: 'relative', cursor: 'pointer' }}>
                                 <Link to={`/project/${filteredData[startingIndex + 6]?.id}`}>
                                     <img className='object-fill  transition w-full h-full duration-500 ease-in-out group-hover:opacity-50' src={filteredData[startingIndex + 6]?.horizontal_image} alt={""} style={{ width: "100%", display: "block" }} />

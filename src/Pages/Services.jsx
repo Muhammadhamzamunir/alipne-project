@@ -187,27 +187,59 @@ export default function Services() {
 
 
 
+  // const renderImages = () => {
+  //   return (
+  //     <div
+  //       ref={galleryRef}
+  //       className="w-full md:w-full flex items-center justify-center overflow-x-scroll no-scrollbar"
+  //       title='Press left or Right arrow of keyboard'
+  //     >
+  //       {heroImages?.map((image, index) => (
+  //         <img
+  //           src={image}
+  //           alt=""
+  //           key={index}
+            
+  //           className={` h-[245px] mr-4  ${
+  //             index % 2 !== 0 ? "mt-20 " : ""
+  //           }`}
+  //         />
+  //       ))}
+  //     </div>
+  //   );
+  // };
+
   const renderImages = () => {
     return (
       <div
         ref={galleryRef}
         className="w-full md:w-full flex items-center justify-center overflow-x-scroll no-scrollbar"
-        title='Press left or Right arrow of keyboard'
+        title="Press left or Right arrow of keyboard"
       >
         {heroImages?.map((image, index) => (
-          <img
-            src={image}
-            alt=""
+          <div
             key={index}
-            
-            className={`w-[154px] h-[245px] mr-5  ${
-              index % 2 !== 0 ? "mt-20 " : ""
+            className={`flex-none w-[184px] h-[245px] mr-4 overflow-hidden ${
+              index % 2 !== 0 ? "mt-20" : ""
             }`}
-          />
+          >
+            <img
+              src={image}
+              alt=""
+              className="w-full h-full object-fill"
+              style={{
+                width: "100%",
+                height: "100%",
+              }}
+            />
+          </div>
         ))}
       </div>
     );
   };
+  
+  
+  
   
 
   const handleSlideChange = (oldIndex, newIndex) => {

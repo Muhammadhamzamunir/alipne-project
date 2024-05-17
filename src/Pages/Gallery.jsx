@@ -1,6 +1,6 @@
 import { useSwipeable } from "react-swipeable";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,useRef } from 'react';
 import { Modal } from 'flowbite-react';
 import Button from '../Components/Button';
 import API_Call from "../Components/API_Call";
@@ -59,7 +59,36 @@ export default function Gallery() {
             setContentList((prevContentList) => [...prevContentList, newLoadedImages]);
         }
     }, [scrollPercent])
+    const containerRef = useRef(null);
 
+    useEffect(() => {
+        const container = containerRef.current;
+
+        const handleKeydown = (event) => {
+            if (!container) return;
+
+            if (event.key === 'ArrowLeft') {
+                container.scrollBy({ left: -100, behavior: 'smooth' });
+            } else if (event.key === 'ArrowRight') {
+                container.scrollBy({ left: 100, behavior: 'smooth' });
+            }
+        };
+
+        const handleWheel = (event) => {
+            if (!container) return;
+
+            event.preventDefault();
+            container.scrollBy({ left: event.deltaY, behavior: 'smooth' });
+        };
+
+        window.addEventListener('keydown', handleKeydown);
+        container.addEventListener('wheel', handleWheel);
+
+        return () => {
+            window.removeEventListener('keydown', handleKeydown);
+            container.removeEventListener('wheel', handleWheel);
+        };
+    }, []);
 
     const fetchDataFromAPI = async () => {
         let verticle = [];
@@ -178,13 +207,30 @@ export default function Gallery() {
                     </div>
                 </div>
 
-                <div className="flex  overflow-x-auto  no-scrollbar md:ml-[12%] pl-2 mb-8 ml-5" style={{ whiteSpace: 'nowrap', overflowX: 'auto' }}>
+                {/* <div className="flex  overflow-x-auto  no-scrollbar md:ml-[12%] pl-2 mb-8 ml-5" style={{ whiteSpace: 'nowrap', overflowX: 'auto' }}>
                     {uniqueCategories?.map((category, index) => (
                         <div key={index} style={{ fontSize: "22px" }} className={`cursor-pointer mr-8 pb-2 font-light uppercase  ${activeCategory === category ? " border-b-2 border-white-500 uppercase" : "uppercase"}`} onClick={() => setActiveCategory(category)}>
                             {category}
                         </div>
                     ))}
+                </div> */}
+
+<div
+            ref={containerRef}
+            className="flex overflow-x-auto no-scrollbar md:ml-[14%] ml-5"
+            style={{ whiteSpace: 'nowrap' }}
+        >
+            {uniqueCategories?.map((category, index) => (
+                <div
+                    key={index}
+                    style={{ fontSize: "22px" }}
+                    className={`cursor-pointer mr-8 pb-2 font-light uppercase ${activeCategory === category ? "border-b-2 border-white-500" : ""}`}
+                    onClick={() => setActiveCategory(category)}
+                >
+                    {category}
                 </div>
+            ))}
+        </div>
 
                 {
                     imagesContainer(filtered_verticle_images, filtered_horizontal_images, 0, 0)

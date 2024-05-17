@@ -30,7 +30,7 @@ export default function OnGoingProjectList() {
                     "project_name": item.project_name
                 };
             });
-
+            setDisplayedImagesCount(7)
             setUniqueCategories(categories);
             setAllImages(allDataImages.sort((a, b) => b.id - a.id));
             setFilteredData(allDataImages);
@@ -56,7 +56,7 @@ export default function OnGoingProjectList() {
     }
 
     const handleLoadMoreClick = () => {
-        setDisplayedImagesCount(prevCount => prevCount + 6);
+        setDisplayedImagesCount(prevCount => prevCount + 7);
         let newLoadedImages = imagesContainer(filteredData, displayedImagesCount)
         setContentList((prevContentList) => [...prevContentList, newLoadedImages]);
     }
