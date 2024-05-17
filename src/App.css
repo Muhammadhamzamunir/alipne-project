@@ -156,12 +156,6 @@ p {
     display: none;
   }
 }
-
-@media only screen and (max-width: 500px) {
-  .prev,.next{
-    font-size: 16px !important;
-  }
-}
 @media only screen and (max-width: 768px) {
   .carousel .slide {
     padding: 0;
@@ -195,16 +189,16 @@ p {
       var(--_p) var(--_p) / calc(100% - var(--b) - 2 * var(--_p))
       calc(100% - var(--b) - 2 * var(--_p)) !important;
     transition: 0.3s linear, color 0s, background-color 0s !important;
-  /* font-size: 10px !important; */
+  
     left: 0% !important;
-    /* color: black !important; */
+    color: black !important;
   }
   .next {
   
     --b: 1px;
     --s: 0.35em;
     --color: #c2c2c2;
-    /* color: black !important; */
+    
     padding: calc(0.1em + var(--s)) calc(0.6em + var(--s)) !important;
     color: var(--color);
     --_p: var(--s);
@@ -289,15 +283,15 @@ p {
       var(--_p) var(--_p) / calc(100% - var(--b) - 2 * var(--_p))
       calc(100% - var(--b) - 2 * var(--_p)) !important;
     transition: 0.3s linear, color 0s, background-color 0s !important;
-  font-size: 0px !important;
+  
     left: -13% !important;
-    /* color: black !important; */
+    
   }
   .next {
     --b: 1px;
     --s: 0.45em;
     --color: #c2c2c2;
-    /* color: black !important; */
+    
     padding: calc(0.5em + var(--s)) calc(0.9em + var(--s)) !important;
     color: var(--color);
     --_p: var(--s);
@@ -539,7 +533,7 @@ p {
 }
 
 /* some basic styling -------------------------------------------------------------- */
-/* .prev::after {
+.prev::after {
   content: "\2190";
   position: absolute;
   color: white;
@@ -552,7 +546,7 @@ p {
   color: white;
   left: 20px;
   top: 27%;
-} */
+}
 
 
 .thumbnails {
