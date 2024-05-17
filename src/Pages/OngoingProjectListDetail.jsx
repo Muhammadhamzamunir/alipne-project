@@ -318,7 +318,7 @@ height: 638px !important;
 
 
 
-                                <img src={horizontalImageData[currentPhotoIndex]?.image} alt="Modal" className="max-w-full w-[100%] lg:w-[85%]  md:h-[85vh] max-h-[700px]  h-[270px]   object-fill" />
+                                <img src={horizontalImageData[currentPhotoIndex]?.image} alt="Modal" className="max-w-full w-[100%] lg:w-[85%]  md:h-[85vh] max-h-[700px]  h-[240px]   object-fill" />
 
 
                                 <span className=' absolute right-3 md:right-[15px] z-40 hidden lg:block'><Button text={"→"} onClick={nextPhoto} /></span>

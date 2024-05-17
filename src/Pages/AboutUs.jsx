@@ -108,7 +108,7 @@ export default function AboutUs() {
   return (
     <>
       <div className="md:flex justify-center items-center w-full relative lg:bottom-28 md:bottom-1 bottom-0 sm:bottom-5 mb-2 md:mb-0">
-        <div className="lg:w-3/4 md:w-full w-full px-6 lg:px-0">
+        <div className="md:w-3/4 w-full px-6 lg:px-0">
           <div>
             <h1
               data-aos="fade-down"
@@ -390,7 +390,7 @@ export default function AboutUs() {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="lg:w-3/4 md:w-full w-full px-6 lg:px-0 ">
+        <div className="md:w-3/4  w-full px-6 lg:px-0 ">
           <h1 className="font-audiowide text-2xl md:text-3xl pb-6 uppercase">
             Meet the Team behind the Innovation!
           </h1>
@@ -403,7 +403,7 @@ export default function AboutUs() {
                 className="w-[100%] m-auto   object-cover h-[400px] lg:h-auto"
               />
               <div className="p-4 ">
-                <h3 className="font-audiowide text-2xl  ">
+                <h3 className="font-audiowide text-2xl  uppercase ">
                   Nitesh Kedare
                 </h3>
                 <p className="font-light leading-loose tracking-wider">
@@ -459,7 +459,7 @@ export default function AboutUs() {
                 className="w-[100%] m-auto  object-cover h-[400px] lg:h-auto"
               />
               <div className="p-4">
-                <h3 className="font-audiowide text-2xl  ">
+                <h3 className="font-audiowide text-2xl uppercase  ">
                   Ruby Kedare
                 </h3>
                 <p className="font-light leading-loose tracking-wider">
@@ -477,9 +477,9 @@ export default function AboutUs() {
             className="flex flex-col gap-y-4 md:flex-row"
           >
             <div className="p-4 basis-1/2 bg-[#242424] md:mr-4">
-              <h3 className="font-audiowide text-2xl  uppercase">
+              <h6 className="font-audiowide md:text-[21px] font-normal  text-[18px]">
                 Ashish Patil
-              </h3>
+              </h6>
               <p className="font-light leading-loose tracking-wider">
                 (Project Coordinator) His versatile skilled expertise is in
                 making of working drawing and site supervision. He plays a
@@ -487,9 +487,9 @@ export default function AboutUs() {
               </p>
             </div>
             <div className="p-4 basis-1/2 bg-[#242424]">
-              <h3 className="font-audiowide text-2xl  uppercase">
+              <h6 className="font-audiowide font-normal md:text-[21px] text-[18px] ">
                 Krunal Darji
-              </h3>
+              </h6>
               <p className="font-light leading-loose tracking-wider">
                 (Architectural Assistant) Proficient in Presentation drawing
                 and 3d Visualizing tools. His role combines as one who delivers
