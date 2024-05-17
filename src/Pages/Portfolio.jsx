@@ -215,7 +215,7 @@ export default function Portfolio() {
                 )}
 
                 {
-                    filteredData[startingIndex + 1]?.id && (<div data-aos="fade-right" className="w-[48.8%]  relative group lg:w-[30%]  lg:h-[479px] xl:h-[479px] h-[265px]" style={{ position: 'relative', cursor: 'pointer' }}
+                    filteredData[startingIndex + 1]?.id && (<div data-aos="fade-right" className="w-[48.7%]  relative group lg:w-[30%]  lg:h-[479px] xl:h-[479px] h-[265px]" style={{ position: 'relative', cursor: 'pointer' }}
                     >
                         <Link to={`/project/${filteredData[startingIndex + 1]?.id}`}>
                             <img className='object-fill h-full transition duration-500  ease-in-out hover:opacity-50'
@@ -243,7 +243,7 @@ export default function Portfolio() {
                     </div >)
                 }
                 {
-                    filteredData[startingIndex + 2]?.id ? (<div data-aos="fade-right" className='w-[48.8%] relative group lg:w-[32%] lg:h-[479px] h-[265px] ' style={{ position: 'relative', cursor: 'pointer' }}  >
+                    filteredData[startingIndex + 2]?.id ? (<div data-aos="fade-right" className='w-[48.7%] relative group lg:w-[32%] lg:h-[479px] h-[265px] ' style={{ position: 'relative', cursor: 'pointer' }}  >
                         <Link to={`/project/${filteredData[startingIndex + 2]?.id}`}>
                             <img className=' object-fill h-full transition duration-500 ease-in-out hover:opacity-50'
                                 src={filteredData[startingIndex + 2]?.vertical_image}
@@ -267,14 +267,14 @@ export default function Portfolio() {
 
                             </div>
                         </Link>
-                    </div>) : (<div data-aos="fade-right" className="w-[48.8%] relative group lg:w-[32.1%] lg:h-[479px] h-[265px] " style={{ position: 'relative', cursor: 'pointer' }}   ></div>
+                    </div>) : (<div data-aos="fade-right" className="w-[48.7%] relative group lg:w-[32.1%] lg:h-[479px] h-[265px] " style={{ position: 'relative', cursor: 'pointer' }}   ></div>
                     )
                 }
 
 
                 {
                     filteredData[startingIndex + 3]?.id ? (
-                        <div data-aos="fade-right" className="w-[48.8%] relative group lg:w-[32.1%] lg:h-[479px] h-[265px] " style={{ position: 'relative', cursor: 'pointer' }}   >
+                        <div data-aos="fade-right" className="w-[48.7%] relative group lg:w-[32.1%] lg:h-[479px] h-[265px] " style={{ position: 'relative', cursor: 'pointer' }}   >
                             <Link to={`/project/${filteredData[startingIndex + 3]?.id}`}>
                                 <img className='object-fill h-full transition duration-500 ease-in-out hover:opacity-50'
                                     src={filteredData[startingIndex + 3]?.vertical_image}
@@ -299,12 +299,12 @@ export default function Portfolio() {
                                 </div>
                             </Link>
                         </div>) : (
-                        <div data-aos="fade-right" className="w-[48.8%] relative group lg:w-[32.1%] lg:h-[479px] h-[265px] " style={{ position: 'relative', cursor: 'pointer' }}   >
+                        <div data-aos="fade-right" className="w-[48.7%] relative group lg:w-[32.1%] lg:h-[479px] h-[265px] " style={{ position: 'relative', cursor: 'pointer' }}   >
 
                         </div>)
                 }
                 {
-                    filteredData[startingIndex + 4]?.vertical_image ? (<div data-aos="fade-right" className="w-[48.8%]  relative group lg:w-[32%] xl:m-0 lg:h-[479px] h-[265px] " style={{ position: 'relative', cursor: 'pointer' }}   >
+                    filteredData[startingIndex + 4]?.vertical_image ? (<div data-aos="fade-right" className="w-[48.7%]  relative group lg:w-[32%] xl:m-0 lg:h-[479px] h-[265px] " style={{ position: 'relative', cursor: 'pointer' }}   >
                         <Link to={`/project/${filteredData[startingIndex + 4]?.id}`}>
                             <img className='object-fill h-full transition duration-500 ease-in-out hover:opacity-50'
                                 src={filteredData[startingIndex + 4]?.vertical_image}
@@ -328,7 +328,7 @@ export default function Portfolio() {
 
                             </div>
                         </Link>
-                    </div>) : (<div data-aos="fade-right" className="w-[48.8%] relative group lg:w-[32.1%] lg:h-[479px] h-[265px] " style={{ position: 'relative', cursor: 'pointer' }}   ></div>
+                    </div>) : (<div data-aos="fade-right" className="w-[48.7%] relative group lg:w-[32.1%] lg:h-[479px] h-[265px] " style={{ position: 'relative', cursor: 'pointer' }}   ></div>
                     )
                 }
                 <div className='flex flex-wrap md:gap-1 gap-3 lg:gap-2 w-full'>
