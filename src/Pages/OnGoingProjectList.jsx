@@ -162,7 +162,7 @@ export default function OnGoingProjectList() {
                 ></div> )}
 
                 {
-                    filteredData[startingIndex + 1]?.vertical_image && (<div data-aos="fade-right" className="w-[48.8%] relative group lg:w-[30%] lg:h-[479px] h-[265px]" style={{ position: 'relative', cursor: 'pointer' }}
+                    filteredData[startingIndex + 1]?.vertical_image && (<div data-aos="fade-right" className="w-[48.5%] relative group lg:w-[30%] lg:h-[479px] h-[265px]" style={{ position: 'relative', cursor: 'pointer' }}
                     >
                         <Link to={`/ongoing-project/${filteredData[startingIndex + 1]?.id}`}>
                             <img className='object-fill h-full transition duration-500 ease-in-out hover:opacity-50'
@@ -219,7 +219,7 @@ export default function OnGoingProjectList() {
 
 
                 {
-                    filteredData[startingIndex + 3]?.vertical_image && (<div data-aos="fade-right" className="w-[48.8%] relative group lg:w-[32.1%] lg:h-[479px] h-[265px] " style={{ position: 'relative', cursor: 'pointer' }}   >
+                    filteredData[startingIndex + 3]?.vertical_image && (<div data-aos="fade-right" className="w-[48.5%] relative group lg:w-[32.1%] lg:h-[479px] h-[265px] " style={{ position: 'relative', cursor: 'pointer' }}   >
                         <Link to={`/ongoing-project/${filteredData[startingIndex + 3]?.id}`}>
                             <img className='object-fill h-full transition duration-500 ease-in-out hover:opacity-50'
                                 src={filteredData[startingIndex + 3]?.vertical_image}
